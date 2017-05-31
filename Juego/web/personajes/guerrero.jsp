@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Wei?er Hase</title>
+        <title>Weiser Hase</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/normalize.css">
@@ -177,17 +177,11 @@ and open the template in the editor.
                                                                             -Como no esperas que no dude, cuando estoy a punto de enviar a mi hijo en una b?squeda suicida ? reprocha mi padre ante la declaraci?n de Wave.<br>
                                                                             -Es su destino y t? lo sabes Hercio, no puedes seguir esquivando la verdad ? agrega Wave con un tono m?s firme.<br>
                                                                             -Lo s? y eso es lo que me preocupa, es el legado que ella dejo, pero es una gran carga para alguien que apenas cumpli? veinte a?os la semana pasada ? dice mi padre con un tono de tristeza. <br>
-<<<<<<< HEAD
                                                                             -Mira Hercio se que lo que te preocupa es la Torre, pero el debe hacerlo, esa espada le perteneci? desde su nacimiento ahora debe reclamarla.<br>
                                                                             Al darme cuenta que el ambiente tenso que emana de la biblioteca se fue procedo a la misma.<br>
                                                                             -Buenos d?as padre, Wave ? saludo a mi padre y al mago real con naturalidad, tratando de ocultar el hecho que escuche la conversaci?n anterior.<br>
                                                                             Ah Draicon al fin llegas, ven si?ntate. 
-=======
--Mira Hercio se que lo que te preocupa es la Torre, pero el debe hacerlo, esa espada le perteneci? desde su nacimiento ahora debe reclamarla.<br>
-Al darme cuenta que el ambiente tenso que emana de la biblioteca se fue procedo a la misma.<br>
--Buenos d?as padre, Wave ? saludo a mi padre y al mago real con naturalidad, tratando de ocultar el hecho que escuche la conversaci?n anterior.<br>
-Ah Draicon al fin llegas, ven si?ntate. 
->>>>>>> refs/remotes/origin/webApp
+
                                                                         
                                                                         </p>
                                                                     </div>
@@ -254,11 +248,10 @@ Ah Draicon al fin llegas, ven si?ntate.
                                                                         <br>
                                                                         <img src="../imagenes/eve01.jpg" class="u-max-full-width">
                                                                         <p>Pero, no puedo evitar pensar lo que me espera en esa torre, que tipo de peligros habitaran el interior de la torre, la incesante cantidad de trampas y acertijos que me esperan.
-<<<<<<< HEAD
                                                                            Perdido en mis pensamientos sobre la torre caigo dormido.</p>
-=======
-Perdido en mis pensamientos sobre la torre caigo dormido.</p>
->>>>>>> refs/remotes/origin/webApp
+                                                                        <p>Perdido en mis pensamientos sobre la torre caigo dormido.</p>
+
+                                                                    
                                                                     </div>
                                                                 </div>
                                                                     Continuar abajo
@@ -334,21 +327,15 @@ Perdido en mis pensamientos sobre la torre caigo dormido.</p>
                                                                 <div class="row">
                                                                     <div class="four columns textos">
                                                                        <p>Es una extra?a masa de baba de color azul, un Limo, pese a la s?bita iluminaci?n del cuarto el Limo aun no se percata de mi presencia, y al observarlo bien puedo ver que tiene algo en su interior. Pese a mi poca experiencia en batalla podr?a vencer al Limo para conseguir lo que sea que tenga en su interior, tal vez me sea de utilidad.
-<<<<<<< HEAD
+
                                                                         El limo parece percatarse de mi presencia y empieza a retorcerse, a contraerse, como si me estuviera advirtiendo que no me acercara. Avanzo hacia el limo con mi espada en mano y *Scuash* al golpearlo el limo se retuerce, *Scuash* golpeo nuevamente, enseguida noto que mi espada se ve rara.
-=======
- El limo parece percatarse de mi presencia y empieza a retorcerse, a contraerse, como si me estuviera advirtiendo que no me acercara. Avanzo hacia el limo con mi espada en mano y *Scuash* al golpearlo el limo se retuerce, *Scuash* golpeo nuevamente, enseguida noto que mi espada se ve rara.
->>>>>>> refs/remotes/origin/webApp
                                                                     </p>
                                                                     </div>
                                                                     
                                                                     <div class="four columns textos">
                                                                         <p>Seg?n parece el Limo derrite mi espada cada vez que esta lo golpea, pero el Limo se debilita perdiendo tama?o y consistencia, por lo que golpeo una vez m?s *Scuash*. El Limo se desase, o mejor dicho se derrite, dejando tras de s? el contenido de su estomago.
-<<<<<<< HEAD
                                                                         Es un cofre con una llave de forma rara dentro, el dise?o de la llave consiste en la parte trasera adornada con una peque?a gema roja dentro de lo que parece ser remolino tallado, mientras que la parte delantera parece una especie de E.                                                                        </p>
-=======
- Es un cofre con una llave de forma rara dentro, el dise?o de la llave consiste en la parte trasera adornada con una peque?a gema roja dentro de lo que parece ser remolino tallado, mientras que la parte delantera parece una especie de E.                                                                        </p>
->>>>>>> refs/remotes/origin/webApp
+
                                                                     </div>
                                                                     <div class="four columns textos">
                                                                         <img src="../imagenes/llave-e.jpg" class="u-max-full-width">
@@ -396,23 +383,18 @@ Perdido en mis pensamientos sobre la torre caigo dormido.</p>
                                                                 <div class="row">
                                                                     <div class="four columns textos">
                                                                        <p>  Investigo un poco las habitaciones y el vest?bulo para ver si encuentro alguna otra cosa de utilidad pero no encuentro nada en especial, creo que no lo puedo posponer mas debo abrir la puerta central.
-<<<<<<< HEAD
                                                                             Coloco las llaves en el orificio que corresponden, pero sigo sin entender la palabra ?Retav?. 
-=======
- Coloco las llaves en el orificio que corresponden, pero sigo sin entender la palabra ?Retav?. 
->>>>>>> refs/remotes/origin/webApp
+
+
                                                                        </p>
                                                                     </div>
                                                                     
                                                                     <div class="four columns textos">
                                                                         <p>  ?Qu? significa eso?
-<<<<<<< HEAD
                                                                             Luego de pensar un poco, opte por acomodarlo al azar, sin conseguir nada.<br>
                                                                             Segu? investigando para ver si consegu?a algo, encontr? una palabra en Lat?n escrita en la tablilla que abr? en la habitaci?n izquierda, al pensar un poco y confirmar que ambas pose?an las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves chaola la puerta finalmente cedi?.                                            </div>
-=======
- Luego de pensar un poco, opte por acomodarlo al azar, sin conseguir nada.
- Segu? investigando para ver si consegu?a algo, encontr? una palabra en Lat?n escrita en la tablilla que abr? en la habitaci?n izquierda, al pensar un poco y confirmar que ambas pose?an las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves chaola la puerta finalmente cedi?.                                            </div>
->>>>>>> refs/remotes/origin/webApp
+
+
                                                                     <div class="four columns textos">
                                                                         
                                                                         <p> Aqu? va el anagrama </p>
