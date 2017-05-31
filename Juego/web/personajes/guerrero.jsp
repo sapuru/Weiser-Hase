@@ -382,7 +382,7 @@ and open the template in the editor.
                                                                 <div class="container">
                                                                 <div class="row">
                                                                     <div class="four columns textos">
-                                                                       <p>  Investigo un poco las habitaciones y el vest?bulo para ver si encuentro alguna otra cosa de utilidad pero no encuentro nada en especial, creo que no lo puedo posponer mas debo abrir la puerta central.
+                                                                       <p>  Investigo un poco las habitaciones y el vestibulo para ver si encuentro alguna otra cosa de utilidad pero no encuentro nada en especial, creo que no lo puedo posponer mas debo abrir la puerta central.
                                                                             Coloco las llaves en el orificio que corresponden, pero sigo sin entender la palabra ?Retav?. 
 
 
@@ -390,14 +390,15 @@ and open the template in the editor.
                                                                     </div>
                                                                     
                                                                     <div class="four columns textos">
-                                                                        <p>  ?Qu? significa eso?
+                                                                        <p>  ¿Que significa eso?
                                                                             Luego de pensar un poco, opte por acomodarlo al azar, sin conseguir nada.<br>
-                                                                            Segu? investigando para ver si consegu?a algo, encontr? una palabra en Lat?n escrita en la tablilla que abr? en la habitaci?n izquierda, al pensar un poco y confirmar que ambas pose?an las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves chaola la puerta finalmente cedi?.                                            </div>
+                                                                            Segu? investigando para ver si conseguia algo, encontre una palabra en Latin escrita en la tablilla que abr? en la habitaci?n izquierda, al pensar un poco y confirmar que ambas pose?an las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves chaola la puerta finalmente cedi?.</p>                                            
+                                                                    </div>
 
 
                                                                     <div class="four columns textos">
                                                                         
-                                                                        <p> Aqu? va el anagrama </p>
+                                                                        <p> Aqui va el anagrama </p>
                                                                     </div>
                                                                 </div>
                                                                     Continuar -->
@@ -413,29 +414,20 @@ and open the template in the editor.
                                                                 <div class="row">
                                                                     <div class="four columns textos">
                                                                         <p>Era una sala un poco m?s grande que la sala anterior, por suerte estaba iluminada pero no por antorchas, sino por unos objetos raros adheridos a la pared que brillaban con una luz blanca brillante era como la luz de la luna llena.<br>
-                                                                            En el centro de la habitaci?n hab?a una secci?n elevada con una escalera de piedra en esa secci?n elevada hay algo parecido a una mesa con flores blancas a su alrededor que reluc?an con la luz blanca de los extra?os objetos en la pared.<br>
-                                                                       <p>Era una sala un poco m?s grande que la sala anterior, por suerte estaba iluminada pero no por antorchas, sino por unos objetos raros adheridos a la pared que brillaban con una luz blanca brillante era como la luz de la luna llena.
-                                                                           En el centro de la habitaci?n hab?a una secci?n elevada con una escalera de piedra en esa secci?n elevada hay algo parecido a una mesa con flores blancas a su alrededor que reluc?an con la luz blanca de los extra?os objetos en la pared.<br>
-                                                                       </p>
+                                                                            En el centro de la habitaci?n hab?a una secci?n elevada con una escalera de piedra en esa secci?n elevada hay algo parecido a una mesa con flores blancas a su alrededor que reluc?an con la luz blanca de los extra?os objetos en la pared.</p>
                                                                     </div>
                                                                     
                                                                     <div class="four columns textos">
                                                                         <p>   Al acercarme puedo sentir un crujido bajo mis pies, no puedo distinguir que lo provoca, dado que la antorcha que pose?a anteriormente se apago ahora solo me queda guiarme por la tenue luz blanca de la habitaci?n.<br>
-                                                                            Ya a los pies de la escalera, siento un escalofri? y al ver hacia atr?s no logro ver nada raro por lo que prosigo a  subir hacia la secci?n, en la mitad de la escalera oigo un ruido detr?s de m?, al darme la vuelta pude ver que causaba ese extra?o sonido.<br>                                          
+                                                                            Ya a los pies de la escalera, siento un escalofri? y al ver hacia atr?s no logro ver nada raro por lo que prosigo a  subir hacia la secci?n, en la mitad de la escalera oigo un ruido detr?s de m?, al darme la vuelta pude ver que causaba ese extra?o sonido.</p>                                          
                                                                     </div>
                                                                     <div class="four columns textos">
                                                                         
                                                                         <p>  Como no lo pens? que mas podr?a causar ese sonido, esqueletos, todos los que aparentemente estaban en el suelo se est?n poniendo de pie y vienen hacia m?.<br>
                                                                             Sus cuencas oculares brillan con un extra?o color carmes?<br>
-                                                                            Ahora todo tiene sentido, eso que est? en la secci?n elevada no es una mesa, es un ata?d. Que se supone que haga ahora, mi espada no ser? suficiente para vencerlos, despu?s de la pelea con el limo quedo en mal estado.<br></p>
+                                                                            Ahora todo tiene sentido, eso que est? en la secci?n elevada no es una mesa, es un ata?d. Que se supone que haga ahora, mi espada no ser? suficiente para vencerlos, despu?s de la pelea con el limo quedo en mal estado.</p>
                                                                         
-                                                                        <p>   Al acercarme puedo sentir un crujido bajo mis pies, no puedo distinguir que lo provoca, dado que la antorcha que pose?a anteriormente se apago ahora solo me queda guiarme por la tenue luz blanca de la habitaci?n.
- Ya a los pies de la escalera, siento un escalofri? y al ver hacia atr?s no logro ver nada raro por lo que prosigo a  subir hacia la secci?n, en la mitad de la escalera oigo un ruido detr?s de m?, al darme la vuelta pude ver que causaba ese extra?o sonido.                                          </div>
-                                                                    <div class="four columns textos">
-                                                                        
-                                                                        <p>  Como no lo pens? que mas podr?a causar ese sonido, esqueletos, todos los que aparentemente estaban en el suelo se est?n poniendo de pie y vienen hacia m?.
- Sus cuencas oculares brillan con un extra?o color carmes?
- Ahora todo tiene sentido, eso que est? en la secci?n elevada no es una mesa, es un ata?d. Que se supone que haga ahora, mi espada no ser? suficiente para vencerlos, despu?s de la pelea con el limo quedo en mal estado.</p>
+                                                                         
                                                                     </div>
                                                                 </div>
                                                                     Continuar -->
@@ -444,7 +436,7 @@ and open the template in the editor.
 				</div>
                                 </li>
                                 
-                                                                                                                                <li>
+                                <li>
 				<div class="cd-slider-content">
 					<div class="content-wrapper">
                                                                 <div class="container">
