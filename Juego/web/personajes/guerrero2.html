@@ -43,6 +43,20 @@
         <title>Capítulo 1 - Rastros del Legado Perdido</title>
 
         <!-- Objects -->
+
+        <obj id="mapa" inventoryName="Mapa">
+            <action id="Examinar">
+                <span style="italic">insertar aquí ilustración con el mapa</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('mazoAntiguo')</when>
+                Guardo el mapa, me va a ser de utilidad.
+                {{ story.putInInventory('mazoAntiguo'); }}
+            </action>
+        </obj>
+
+
         <obj id="cristalAlma" inventoryName="Cristal de Alma">
             <action id="Examinar">
                 <span style="italic">"Los cristales de alma se unen a la persona que los toca, conservando su esencia, para que si en caso de que esa persona perezca darle otra oportunidad, y as? cambiar su destino, pero el cristal solo es capaz de devolver la vida dos veces. Por lo que recuerda posible usuario de piedra de alma, aprende de tu errores y no los repitas, no podr?s repetir tus errores eternamente."</span>
@@ -150,25 +164,23 @@
         <page id="pag3">
 
           <p>  Hay rumores de que la espada es tan fría que necesitas los guantes de su antiguo portador para poder usarla, yo no creo en esas historias pero por alguna razón la gran mayoría de las personas del reino s?.<br>
-              - Bueno mejor voy a la biblioteca a ve a nuestro pdre.<br>
+              - Bueno mejor voy a la biblioteca a ver a nuestro padre.<br>
               -Si, mejor date prisa y no lo hagas esperar.<br>
-              Con eso dicho parto hacia la biblioteca a ver a mi padre, mi padre es Hercio Drac el rey de toda Altaria, nuestro castillo esta a los pies del monte Reinheit y se extiende mas all? del bosque Altum hacia el pueblo Feuer, despu?s se encuentra lo que la gente llama Los Prados una llanura casi infinita a la vista con cientos de lugares aun por descubrir, seg?n los libros de literatura antigua los pueblo r?nicos como los Militum un pueblo de guerreros que utilizaban las runas ancestrales como armas para su expansi?n, y los Meisters incre?bles arquitectos que maravillaron a los primero exploradores que llegaron al continente hace ya mucho tiempo, habitaban gran parte de Los Prados.<br>
-              Ahora mismo no se sabe que fue de aquellos pueblos ancestrales, solo quedan restos de su antiguo estilo de vida, aun se conservan algunas tradiciones del antiguo pueblo de los Zuerts lo que originalmente habitaban este sector antes de el reino de Altaria y de los que seg?n mi padre descendemos, El mago Wave dice que por mis venas corre la sangre de Velix el capit?n del nav?o de colonizaci?n de la corona imperial. <br>
+              Con eso dicho parto hacia la biblioteca a ver a mi padre, mi padre es Hercio Drac el rey de toda Altaria, nuestro castillo esta a los pies del monte Reinheit y se extiende mas allá del bosque Altum hacia el pueblo Feuer, después se encuentra lo que la gente llama Los Prados una llanura casi infinita a la vista con cientos de lugares aun por descubrir, según los libros de literatura antigua los pueblo rúnicos como los Militum un pueblo de guerreros que utilizaban las runas ancestrales como armas para su expansión, y los Meisters increíbles arquitectos que maravillaron a los primeros exploradores que llegaron al continente hace ya mucho tiempo, habitaban gran parte de Los Prados.<br>
+              Ahora mismo no se sabe que fue de aquellos pueblos ancestrales, solo quedan restos de su antiguo estilo de vida, aun se conservan algunas tradiciones del antiguo pueblo de los Zuerts lo que originalmente habitaban este sector antes de el reino de Altaria y de los que según mi padre descendemos. El mago Wave dice que por mis venas corre la sangre de Velix el capitán del navío de colonización de la corona imperial. <br>
           </p>
                       <p><show paragraph="parrafo6">continuar</show>.</p>
 
                    <paragraph id="parrafo6">
-                     <p> Al llegar a la puerta de la biblioteca puedo o?r a mi padre al otro lado conversando con Wave, aparentemente est?n hablando de la b?squeda de la espada.<br>
-                         -Sabes que es lo correcto y aun as? dudas - le dice Wave a mi padre con un tono de desaprobaci?n.<br>
-                         -Como no esperas que no dude, cuando estoy a punto de enviar a mi hijo en una b?squeda suicida ? reprocha mi padre ante la declaraci?n de Wave.<br>
-                         -Es su destino y t? lo sabes Hercio, no puedes seguir esquivando la verdad ? agrega Wave con un tono m?s firme.<br>
-                         -Lo s? y eso es lo que me preocupa, es el legado que ella dejo, pero es una gran carga para alguien que apenas cumpli? veinte a?os la semana pasada ? dice mi padre con un tono de tristeza. <br>
-                         -Mira Hercio se que lo que te preocupa es la Torre, pero el debe hacerlo, esa espada le perteneci? desde su nacimiento ahora debe reclamarla.<br>
+                     <p> Al llegar a la puerta de la biblioteca puedo oír a mi padre al otro lado conversando con Wave, aparentemente están hablando de la búsqueda de la espada.<br>
+                         -Sabes que es lo correcto y aun así dudas - le dice Wave a mi padre con un tono de desaprobación.<br>
+                         -Como no esperas que no dude, cuando estoy a punto de enviar a mi hijo en una búsqueda suicida - reprocha mi padre ante la declaración de Wave.<br>
+                         -Es su destino y tú lo sabes Hercio, no puedes seguir esquivando la verdad - agrega Wave con un tono más firme.<br>
+                         -Lo sé y eso es lo que me preocupa, es el legado que ella dejó, pero es una gran carga para alguien que apenas cumplió veinte años la semana pasada - dice mi padre con un tono de tristeza. <br>
+                         -Mira Hercio sé que lo que te preocupa es la Torre, pero el debe hacerlo, esa espada le perteneció desde su nacimiento, ahora debe reclamarla.<br>
                          Al darme cuenta que el ambiente tenso que emana de la biblioteca se fue procedo a la misma.<br>
-                         -Buenos d?as padre, Wave ? saludo a mi padre y al mago real con naturalidad, tratando de ocultar el hecho que escuche la conversaci?n anterior.<br>
-                         Ah Draicon al fin llegas, ven si?ntate.
-
-
+                         -Buenos días padre, Wave - saludo a mi padre y al mago real con naturalidad, tratando de ocultar el hecho que escuche la conversación anterior.<br>
+                         Ah Draicon al fin llegas, ven siéntate.
                      </p>
 
                   <p><turn to="pag4">Página Siguiente</turn></p>
@@ -179,27 +191,27 @@
 
         <page id="pag4">
 
-          <p>Mi padre me invita a la mesa central de la biblioteca, una mesa de madera con un enorme mapa en el centro con todos los lugares de inter?s. Mientras me siento el mago Wave empieza con la explicaci?n del porque me citaron en la biblioteca.<br>
-              -Hoy te citamos en la biblioteca, por la naturaleza de la misi?n que te encomendaremos.<br>
-              - Como sabes hijo, aun nos faltan algunos fragmentos del equipo del guerrero drag?n ? agrega mi padre.<br>
-              -Si, los guanteletes y la espada ? prosigue Wave ? t? debes recuperar sus guantes y espada, que se encuentran en la torre Amnant.<br>
-              -No sabemos con exactitud que puedas encontrar dentro de la torre ? agrega Wave ? no te mentir? Draicon, es una misi?n peligrosa pero solo t? puedes llevarla a cabo.<br>
-              -Entender? sino puedes hacerlo Draicon ? dice mi padre con un tono de preocupaci?n ? si lo deseas puedo envi?<br>
-              -No, lo hare padre ? detengo a mi padre antes de que prosiga ? esto no ser? distinto a cuando ayude a buscar los dem?s fragmentos de la armadura.<br>
-              -De hecho, si lo ser? ? agrega Wave.<br>
-              -?A qu? te refieres Wave? ? no me gusta hacia d?nde va esto.<br>
+          <p>Mi padre me invita a la mesa central de la biblioteca, una mesa de madera con un enorme mapa en el centro con todos los lugares de interés. Mientras me siento el mago Wave empieza con la explicación del porque me citaron en la biblioteca.<br>
+              -Hoy te citamos en la biblioteca, por la naturaleza de la misión que te encomendaremos.<br>
+              - Como sabes hijo, aun nos faltan algunos fragmentos del equipo del guerrero dragón - agrega mi padre.<br>
+              -Si, los guanteletes y la espada - prosigue Wave - tú debes recuperar sus guantes y espada, que se encuentran en la torre Amnant.<br>
+              -No sabemos con exactitud que puedas encontrar dentro de la torre - agrega Wave - no te mentiré Draicon, es una misión peligrosa pero solo tú puedes llevarla a cabo.<br>
+              -Entenderé sino puedes hacerlo Draicon - dice mi padre con un tono de preocupación - si lo deseas puedo envi...<br>
+              -No, lo haré padre - detengo a mi padre antes de que prosiga - esto no será distinto a cuando ayude a buscar los demás fragmentos de la armadura.<br>
+              -De hecho, si lo será - agrega Wave.<br>
+              -¿A qué te refieres Wave? - no me gusta hacia dónde va esto.<br>
               -Debes ir solo Draicon.<br>
           </p>
                       <p><show paragraph="parrafo8">continuar</show>.</p>
 
                    <paragraph id="parrafo8">
-                     <p>?Solo? No tengo la suficiente experiencia en batalla como para enfrentar lo que sea que este dentro de esa torre, pero ya dije que si .Por no mencionar lo que mi padre y Wave estaban discutiendo, debo hacerlo y lograr recuperar esa espada.<br>
+                     <p>¿Solo? No tengo la suficiente experiencia en batalla como para enfrentar lo que sea que este dentro de esa torre, pero ya dije que si. Por no mencionar lo que mi padre y Wave estaban discutiendo, debo hacerlo y lograr recuperar esa espada.<br>
                          -No importa si debo ir solo, lo hare.<br>
-                         -Que no se hable mas entonces ? concluye Wave ? partir?s hacia la torre ahora mismo.<br>
-                         -Supongo que no hay nada m?s que decir al respecto ? agrega mi padre ? hay un caballo, ya listo, en el establo.<br>
-                         -Aqu? tienes un mapa, te deseo suerte Draicon ? concluye mi padre, aun preocupado.<br>
+                         -Que no se hable mas entonces - concluye Wave - partirás hacia la torre ahora mismo.<br>
+                         -Supongo que no hay nada más que decir al respecto - agrega mi padre - hay un caballo, ya listo, en el establo.<br>
+                         -Aquí tienes un <interact with="mapa">mapa</interact>, te deseo suerte Draicon - concluye mi padre, aun preocupado.<br>
                          Supongo que solo queda ponerme en marcha hacia la torre.<br>
-                         Pero primero busco el equipo necesario para el viaje, creo que para hacer una fogata necesito semillas de Flor ?gnea, una peque?a cantimplora, adem?s de un poco de cuerda y una manta lo suficientemente grande para improvisar un peque?o refugio y creo que llevare una espada de la armer?a, solo por si acaso.<br>
+                         Pero primero busco el equipo necesario para el viaje, creo que para hacer una fogata necesito semillas de Flor ígnea, una pequeña cantimplora, además de un poco de cuerda y una manta lo suficientemente grande para improvisar un pequeño refugio y creo que llevare una espada de la armería, solo por si acaso.<br>
 
                      </p>
 
@@ -211,14 +223,14 @@
 
         <page id="pag5">
 
-            <p>Seg?n los reportes de los exploradores la torre esta a un d?a y medio del castillo y es posible armar un peque?o campamento en el templo Percusor, una edificaci?n de forma rectangular con una puerta que no da a ning?n cuarto, solo al horizonte.<br>
-                El viaje hacia a la torre no fue nada especial, al llegar a un peque?o poblado de camino hacia la torre com? un poco y rellene la cantimplora y contin?e mi viaje.<br>
-                Al acercarse la noche puedo alcanzar a ver el templo Precursor, al llegar al templo, dejo al caballo atado en donde pienso armar mi campamento, busco unas ramas y las ato de forma que al ponerles la manta encima cree un refugio para poder pasar la noche, para crear una fogata utilizo las semillas de flor ?gnea,
+            <p>Según los reportes de los exploradores la torre esta a un día y medio del castillo y es posible armar un pequeño campamento en el templo Percusor, una edificación de forma rectangular con una puerta que no da a ningún cuarto, solo al horizonte.<br>
+                El viaje hacia a la torre no fue nada especial, al llegar a un pequeño poblado de camino hacia la torre comí un poco y rellene la cantimplora y continué mi viaje.<br>
+                Al acercarse la noche puedo alcanzar a ver el templo Precursor, al llegar al templo, dejo al caballo atado en donde pienso armar mi campamento, busco unas ramas y las ato de forma que al ponerles la manta encima cree un refugio para poder pasar la noche, para crear una fogata utilizo las semillas de flor ígnea,
                  dado que si pones varias sobre la madera esta se prendera fuego, con el campamento listo, ahora que solo queda descansar.<br>
                       <p><show paragraph="parrafo10">continuar</show>.</p>
 
                    <paragraph id="parrafo10">
-                     <p>Pero, no puedo evitar pensar lo que me espera en esa torre, que tipo de peligros habitaran el interior de la torre, la incesante cantidad de trampas y acertijos que me esperan.
+                     <p>Pero, no puedo evitar pensar lo que me espera en esa torre, qué tipo de peligros habitaran el interior de la torre, la incesante cantidad de trampas y acertijos que me esperan.
                         Perdido en mis pensamientos sobre la torre caigo dormido.</p>
 
 
@@ -228,26 +240,24 @@
 
         <page id="pag6">
 
-          <p>Esta sensaci?n, ?D?nde estoy?, todos esta vacio y hace frio, no puedo ver nada a mi alrededor y creo que estoy cayendo.<br>
-              -Un segundo, ??no estar? muerto verdad!? ? se me escapan esas palabras debido a la exaltaci?n.<br>
-              Pero la obscuridad a mi alrededor se convierten en im?genes, tres dragones de color blanco y uno m?s grande detr?s, Nova la madre celestial, los elementos hielo, aire y luz combatiendo entre s?, uno se alza victorioso y reclama el poder de Nova.<br>
+          <p>Esta sensación, ¿Dónde estoy?, todo esta vacio y hace frio, no puedo ver nada a mi alrededor y creo que estoy cayendo.<br>
+              -Un segundo, ¿No estaré muerto verdad? - se me escapan esas palabras debido a la exaltación.<br>
+              Pero la obscuridad a mi alrededor se convierten en imágenes, tres dragones de color blanco y uno más grande detrás, Nova la madre celestial, los elementos hielo, aire y luz combatiendo entre sí, uno se alza victorioso y reclama el poder de Nova.<br>
               Es un ciclo de odio sin fin.<br>
           </p>
                       <p><show paragraph="parrafo12">continuar</show>.</p>
 
                    <paragraph id="parrafo12">
-                     <p>No recuerdo el resto del sue?o, pero no puedo olvidar ese sentimiento de odio y resentimiento, entre aquellos que combaten por el poder de Nova.<br>
-                         Despierto en la ma?ana, los p?jaros cantan con la misma alegr?a de siempre, y la torre es visible en el horizonte, voy a dejar el campamento armado para cuando regrese con la espada. Con eso dicho subo al caballo y retomo el viaje.<br>
-                         Finalmente llego a la torre, en la puerta de piedra negra est?n grabadas las siguientes palabras.<br>
+                     <p>No recuerdo el resto del sueño, pero no puedo olvidar ese sentimiento de odio y resentimiento, entre aquellos que combaten por el poder de Nova.<br>
+                         Despierto en la mañana, los pájaros cantan con la misma alegría de siempre, y la torre es visible en el horizonte, voy a dejar el campamento armado para cuando regrese con la espada. Con eso dicho subo al caballo y retomo el viaje.<br>
+                         Finalmente llego a la torre, en la puerta de piedra negra están grabadas las siguientes palabras.<br>
                       <p><show paragraph="parrafo13">leer la inscripción</show>.</p>
-
-
 
                    </paragraph>
 
                                       <paragraph id="parrafo13">
-                                        <h3>"He aqu? el Amnant, el templo del cielo y la tierra, aquellos que est?n en busca de tesoros de poder inimaginable y no teman a las sombras, entren y encuentren el poder que tanto anhelan."</h3>
-                                        <p>- muy exagerado en mi opini?n.</p>
+                                        <h3>"He aquí el Amnant, el templo del cielo y la tierra, aquellos que están en busca de tesoros de poder inimaginable y no teman a las sombras, entren y encuentren el poder que tanto anhelan."</h3>
+                                        <p>- muy exagerado en mi opinión.</p>
                                      <p><turn to="pag7">Página Siguiente</turn></p>
                                                         </paragraph>
 
