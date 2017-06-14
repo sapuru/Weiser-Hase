@@ -1,25 +1,29 @@
 html,
 body {
-    font-family      : Georgia, serif;
-    font-size        : 16px;
+    font-family: 'Josefin Slab', serif;
+    font-size        : 20px;
     color            : #000;
     margin           : 0;
     padding          : 0;
     height           : 100%;
-    overflow         : hidden;
+    overflow         : auto;
 }
+
+
 a {
-    color: #aaa;
+    font-family: 'Cinzel Decorative', cursive;
+    color: red;
     text-decoration : none;
     border-bottom   : 1px #aaa;
 }
 p {
     margin-top    : 15px;
     margin-bottom : 15px;
+    line-height: 25px;
 }
 
 #wrapper {
-    width          : 600px;
+    width          : 900px;
     margin-left    : auto;
     margin-right   : auto;
     padding-bottom : 100px;
@@ -34,12 +38,13 @@ p {
 }
 
 #host {
-    width            : 500px;
+    width            : 700px;
     margin-left      : auto;
     margin-right     : auto;
 }
 
 #title {
+    font-family: 'Cinzel Decorative', cursive;
     font-size     : 24px;
     font-weight   : bold;
     margin-bottom : 10px;
@@ -83,10 +88,11 @@ p {
     width       : 150px;
     float       : left;
     margin-left : 50%;
-    left        : 300px;
+    left        : 500px;
     position    : absolute;
 }
 #inventoryHostWrapper h2 {
+    font-family: 'Cinzel Decorative', cursive;
     font-size     : 18px;
     width         : 150px;
     text-align    : center;
@@ -103,3 +109,7 @@ p {
 #undoStageHost {
     display: none;
 }
+
+h3 {
+    font-family: 'Cinzel Decorative', cursive;
+  }

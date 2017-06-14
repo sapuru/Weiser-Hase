@@ -8,9 +8,11 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="../js/dedalus.js"></script>
     <script src="../js/dedalus-web.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Josefin+Slab" rel="stylesheet">
     <link rel="stylesheet" href="../css/story.css"> <!--estilo general del juego -->
     <script src="../js/Dados.js"></script><!--para llamar el script de los dados-->
     <link href="../css/Dados.css" rel="stylesheet" type="text/css"><!--llamamos a la carpeta css para los estilos de los dados-->
+
 
  </head>
 <body>
@@ -41,18 +43,55 @@
         <title>Capítulo 1 - Rastros del Legado Perdido</title>
 
         <!-- Objects -->
-        <obj id="dummyObject" inventoryName="An object">
-            <action id="Examine">
-                Something happens... who knows what?!
+        <obj id="cristalAlma" inventoryName="Cristal de Alma">
+            <action id="Examinar">
+                <span style="italic">"Los cristales de alma se unen a la persona que los toca, conservando su esencia, para que si en caso de que esa persona perezca darle otra oportunidad, y as? cambiar su destino, pero el cristal solo es capaz de devolver la vida dos veces. Por lo que recuerda posible usuario de piedra de alma, aprende de tu errores y no los repitas, no podr?s repetir tus errores eternamente."</span>
             </action>
 
-            <action id="Get">
-                <when>!story.isInInventory('dummyObject')</when>
-                As you try to get it... It is clear that the inventory works!
-                {{ story.putInInventory('dummyObject'); }}
+            <action id="Guardar">
+                <when>!story.isInInventory('cristalAlma')</when>
+                Mejor lo llevo, por las dudas!
+                {{ story.putInInventory('cristalAlma'); }}
             </action>
-
         </obj>
+
+        <obj id="llaveGemaRoja" inventoryName="Llave Gema Roja 'E'">
+            <action id="Examinar">
+                <span style="italic">Es un cofre con una llave de forma rara dentro, el diseño de la llave consiste en la parte trasera adornada con una pequeña gema roja dentro de lo que parece ser remolino tallado, mientras que la parte delantera parece una especie de E"</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('llaveGemaRoja')</when>
+                Guardo la llave, puede ser útil.
+                {{ story.putInInventory('llaveGemaRoja'); }}
+            </action>
+        </obj>
+
+
+        <obj id="llaveGemaAzul" inventoryName="Llave Gema Azul 'T'">
+            <action id="Examinar">
+                <span style="italic">La llave tiene una gema de color azul y la parte delantera tiene forma de T.</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('llaveGemaAzul')</when>
+                Guardo la llave, puede ser útil.
+                {{ story.putInInventory('llaveGemaAzul'); }}
+            </action>
+        </obj>
+
+        <obj id="mazoAntiguo" inventoryName="Mazo Antigüo">
+            <action id="Examinar">
+                <span style="italic">Tiene una inscripción que dice "Tu determinación será capaz de doblegar su espíritu y avanzar"</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('mazoAntiguo')</when>
+                Guardo el mazo, es un buen recordatorio.
+                {{ story.putInInventory('mazoAntiguo'); }}
+            </action>
+        </obj>
+
 
         <!-- Pages -->
         <page id="intro">
@@ -83,23 +122,23 @@
 
         <page id="pag2">
 
-          <p>Flora es mi hermana mayor la gran heredera del trono y siempre viste de morado, por alguna razón, es buena en esgrima y en lo que a la educaci?n se refiere, siempre act?a frente a los dem?s cambiando su forma de ser, pero es realmente aterradora cuando se enoja.<br>
-              Su personalidad no es el problema, sino su incre?ble sentido de la responsabilidad cumple y obliga a los dem?s a cumplir, o en este caso en particular me lo echa a la cara de un grito.<br>
+          <p>Flora es mi hermana mayor la gran heredera del trono y siempre viste de morado, por alguna razón, es buena en esgrima y en lo que a la educación se refiere, siempre actúa frente a los demás cambiando su forma de ser, pero es realmente aterradora cuando se enoja.<br>
+              Su personalidad no es el problema, sino su incre?ble sentido de la responsabilidad cumple y obliga a los demás a cumplir, o en este caso en particular me lo echa a la cara de un grito.<br>
               -Hoy es el aniversario de su muerte.<br>
-              -Oh realmente lo olvide ? no puedo creer q olvide algo tan importante.<br>
-              -Lo siento deb? prestar m?s atenci?n a la fecha.<br>
-              Hoy se cumplen 15 a?os desde la muerte de mi madre, muri? en la guerra en contra de Nicro, el drag?n de la muerte y las enfermedades, no se sabe con exactitud el porqu? Nicro se rebel? en contra de los dem?s dragones y trato de acabar con todo la vida en el continente, hay quienes dicen que trato de eliminar todo rastro de vida en el continente y adue?arse de los secretos r?nicos de los antiguos pueblo que habitaban Los Prados, pero ?para qu??<br>
-              En cualquier caso hoy se recuerda el d?a en que la guerra termino despu?s de tres a?os de muerte y desdicha, todos en el reino y en los pueblos vecinos honran a los que murieron a causa de esa guerra. Eso explicar?a el grito de Flora, ella conoci? a mi madre por m?s tiempo que yo.<br>
+              -Oh realmente lo olvidé! no puedo creer que olvide algo tan importante.<br>
+              -Lo siento debí prestar más atención a la fecha.<br>
+              Hoy se cumplen 15 años desde la muerte de mi madre. Murió en la guerra en contra de Nicro, el dragón de la muerte y las enfermedades, no se sabe con exactitud por qué Nicro se rebeló en contra de los demás dragones y trato de acabar con toda la vida en el continente. Hay quienes dicen que trató de eliminar todo rastro de vida en el continente y adueñarse de los secretos rúnicos de los antiguos pueblos que habitaban Los Prados, pero ¿Para qué?<br>
+              En cualquier caso hoy se recuerda el día en que la guerra termino después de tres años de muerte y desdicha, todos en el reino y en los pueblos vecinos honran a los que murieron a causa de esa guerra. Eso explicaría el grito de Flora, ella conoció a mi madre por más tiempo que yo.<br>
           </p>
                       <p><show paragraph="parrafo4">continuar</show>.</p>
 
                    <paragraph id="parrafo4">
-                     <p> -?Ahora entiendes porque nuestro padre te pidi? que fueras a verlo a la biblioteca en la ma?ana?<br>
-                         -La verdad no entiendo el porqu? ? No voy a mentirle, si lo descubre se alterara aun mas.<br>
-                         -Eres un imb?cil, pero por lo menos eres sincero al respecto ? Al final se enojo, pero supongo que no tanto.<br>
-                         -Tu palabras me hieren Flora, no sab?a que pod?as ser tan cruel conmigo ? hago un comentario en tono de broma, para relajar el ambiente y ver si su humor mejora pero?<br>
-                         -Debemos seguir con la b?squeda de la espada del guerrero que combati? junto a los dragones en la guerra contra Nicro ? me ignoro totalmente y contin?o con lo que ten?a que decirme.<br>
-                         Es cierto hace unos meses mi padre organizo una reuni?n en la que explicaba que deb?amos recuperar la armadura, el escudo y la espada del guerrero Drag?n, sinceramente no entiendo que tienen de especial, pero supongo que algo ser?.<br>
+                     <p> -¿Ahora entiendes porque nuestro padre te pidió que fueras a verlo a la biblioteca en la mañana?<br>
+                         -La verdad no entiendo el por qué. No voy a mentirle, si lo descubre se alterará aún mas.<br>
+                         -Eres un imbécil, pero por lo menos eres sincero al respecto - Al final se enojo, pero supongo que no tanto.<br>
+                         -Tu palabras me hieren Flora, no sabía que podías ser tan cruel conmigo - hago un comentario en tono de broma, para relajar el ambiente y ver si su humor mejora pero -<br>
+                         -Debemos seguir con la búsqueda de la espada del guerrero que combatió junto a los dragones en la guerra contra Nicro - me ignoró totalmente y continuó con lo que tenía que decirme.<br>
+                         Es cierto hace unos meses mi padre organizó una reunión en la que explicaba que debíamos recuperar la armadura, el escudo y la espada del guerrero Dragón, sinceramente no entiendo que tienen de especial, pero supongo que algo será.<br>
                          Hasta ahora recuperamos el escudo y gran parte de la armadura pero aun nos faltan los guantes de la armadura y la espada.  </p>
                   <p><turn to="pag3">Página Siguiente</turn></p>
                    </paragraph>
@@ -110,16 +149,27 @@
 
         <page id="pag3">
 
-            <p>Seg?n los reportes de los exploradores la torre esta a un d?a y medio del castillo y es posible armar un peque?o campamento en el templo Percusor, una edificaci?n de forma rectangular con una puerta que no da a ning?n cuarto, solo al horizonte.<br>
-                El viaje hacia a la torre no fue nada especial, al llegar a un peque?o poblado de camino hacia la torre com? un poco y rellene la cantimplora y contin?e mi viaje.<br>
-                Al acercarse la noche puedo alcanzar a ver el templo Precursor, al llegar al templo, dejo al caballo atado en donde pienso armar mi campamento, busco unas ramas y las ato de forma que al ponerles la manta encima cree un refugio para poder pasar la noche, para crear una fogata utilizo las semillas de flor ?gnea,
-                 dado que si pones varias sobre la madera esta se prendera fuego, con el campamento listo, ahora que solo queda descansar.<br>
+          <p>  Hay rumores de que la espada es tan fría que necesitas los guantes de su antiguo portador para poder usarla, yo no creo en esas historias pero por alguna razón la gran mayoría de las personas del reino s?.<br>
+              - Bueno mejor voy a la biblioteca a ve a nuestro pdre.<br>
+              -Si, mejor date prisa y no lo hagas esperar.<br>
+              Con eso dicho parto hacia la biblioteca a ver a mi padre, mi padre es Hercio Drac el rey de toda Altaria, nuestro castillo esta a los pies del monte Reinheit y se extiende mas all? del bosque Altum hacia el pueblo Feuer, despu?s se encuentra lo que la gente llama Los Prados una llanura casi infinita a la vista con cientos de lugares aun por descubrir, seg?n los libros de literatura antigua los pueblo r?nicos como los Militum un pueblo de guerreros que utilizaban las runas ancestrales como armas para su expansi?n, y los Meisters incre?bles arquitectos que maravillaron a los primero exploradores que llegaron al continente hace ya mucho tiempo, habitaban gran parte de Los Prados.<br>
+              Ahora mismo no se sabe que fue de aquellos pueblos ancestrales, solo quedan restos de su antiguo estilo de vida, aun se conservan algunas tradiciones del antiguo pueblo de los Zuerts lo que originalmente habitaban este sector antes de el reino de Altaria y de los que seg?n mi padre descendemos, El mago Wave dice que por mis venas corre la sangre de Velix el capit?n del nav?o de colonizaci?n de la corona imperial. <br>
+          </p>
                       <p><show paragraph="parrafo6">continuar</show>.</p>
 
                    <paragraph id="parrafo6">
-                     <p>Pero, no puedo evitar pensar lo que me espera en esa torre, que tipo de peligros habitaran el interior de la torre, la incesante cantidad de trampas y acertijos que me esperan.
-                        Perdido en mis pensamientos sobre la torre caigo dormido.</p>
-                     <p>Perdido en mis pensamientos sobre la torre caigo dormido.</p>
+                     <p> Al llegar a la puerta de la biblioteca puedo o?r a mi padre al otro lado conversando con Wave, aparentemente est?n hablando de la b?squeda de la espada.<br>
+                         -Sabes que es lo correcto y aun as? dudas - le dice Wave a mi padre con un tono de desaprobaci?n.<br>
+                         -Como no esperas que no dude, cuando estoy a punto de enviar a mi hijo en una b?squeda suicida ? reprocha mi padre ante la declaraci?n de Wave.<br>
+                         -Es su destino y t? lo sabes Hercio, no puedes seguir esquivando la verdad ? agrega Wave con un tono m?s firme.<br>
+                         -Lo s? y eso es lo que me preocupa, es el legado que ella dejo, pero es una gran carga para alguien que apenas cumpli? veinte a?os la semana pasada ? dice mi padre con un tono de tristeza. <br>
+                         -Mira Hercio se que lo que te preocupa es la Torre, pero el debe hacerlo, esa espada le perteneci? desde su nacimiento ahora debe reclamarla.<br>
+                         Al darme cuenta que el ambiente tenso que emana de la biblioteca se fue procedo a la misma.<br>
+                         -Buenos d?as padre, Wave ? saludo a mi padre y al mago real con naturalidad, tratando de ocultar el hecho que escuche la conversaci?n anterior.<br>
+                         Ah Draicon al fin llegas, ven si?ntate.
+
+
+                     </p>
 
                   <p><turn to="pag4">Página Siguiente</turn></p>
                    </paragraph>
@@ -129,60 +179,149 @@
 
         <page id="pag4">
 
-            <p>Seg?n los reportes de los exploradores la torre esta a un d?a y medio del castillo y es posible armar un peque?o campamento en el templo Percusor, una edificaci?n de forma rectangular con una puerta que no da a ning?n cuarto, solo al horizonte.<br>
-                El viaje hacia a la torre no fue nada especial, al llegar a un peque?o poblado de camino hacia la torre com? un poco y rellene la cantimplora y contin?e mi viaje.<br>
-                Al acercarse la noche puedo alcanzar a ver el templo Precursor, al llegar al templo, dejo al caballo atado en donde pienso armar mi campamento, busco unas ramas y las ato de forma que al ponerles la manta encima cree un refugio para poder pasar la noche, para crear una fogata utilizo las semillas de flor ?gnea,
-                 dado que si pones varias sobre la madera esta se prendera fuego, con el campamento listo, ahora que solo queda descansar.<br>
+          <p>Mi padre me invita a la mesa central de la biblioteca, una mesa de madera con un enorme mapa en el centro con todos los lugares de inter?s. Mientras me siento el mago Wave empieza con la explicaci?n del porque me citaron en la biblioteca.<br>
+              -Hoy te citamos en la biblioteca, por la naturaleza de la misi?n que te encomendaremos.<br>
+              - Como sabes hijo, aun nos faltan algunos fragmentos del equipo del guerrero drag?n ? agrega mi padre.<br>
+              -Si, los guanteletes y la espada ? prosigue Wave ? t? debes recuperar sus guantes y espada, que se encuentran en la torre Amnant.<br>
+              -No sabemos con exactitud que puedas encontrar dentro de la torre ? agrega Wave ? no te mentir? Draicon, es una misi?n peligrosa pero solo t? puedes llevarla a cabo.<br>
+              -Entender? sino puedes hacerlo Draicon ? dice mi padre con un tono de preocupaci?n ? si lo deseas puedo envi?<br>
+              -No, lo hare padre ? detengo a mi padre antes de que prosiga ? esto no ser? distinto a cuando ayude a buscar los dem?s fragmentos de la armadura.<br>
+              -De hecho, si lo ser? ? agrega Wave.<br>
+              -?A qu? te refieres Wave? ? no me gusta hacia d?nde va esto.<br>
+              -Debes ir solo Draicon.<br>
+          </p>
                       <p><show paragraph="parrafo8">continuar</show>.</p>
 
                    <paragraph id="parrafo8">
-                     <p>Pero, no puedo evitar pensar lo que me espera en esa torre, que tipo de peligros habitaran el interior de la torre, la incesante cantidad de trampas y acertijos que me esperan.
-                        Perdido en mis pensamientos sobre la torre caigo dormido.</p>
+                     <p>?Solo? No tengo la suficiente experiencia en batalla como para enfrentar lo que sea que este dentro de esa torre, pero ya dije que si .Por no mencionar lo que mi padre y Wave estaban discutiendo, debo hacerlo y lograr recuperar esa espada.<br>
+                         -No importa si debo ir solo, lo hare.<br>
+                         -Que no se hable mas entonces ? concluye Wave ? partir?s hacia la torre ahora mismo.<br>
+                         -Supongo que no hay nada m?s que decir al respecto ? agrega mi padre ? hay un caballo, ya listo, en el establo.<br>
+                         -Aqu? tienes un mapa, te deseo suerte Draicon ? concluye mi padre, aun preocupado.<br>
+                         Supongo que solo queda ponerme en marcha hacia la torre.<br>
+                         Pero primero busco el equipo necesario para el viaje, creo que para hacer una fogata necesito semillas de Flor ?gnea, una peque?a cantimplora, adem?s de un poco de cuerda y una manta lo suficientemente grande para improvisar un peque?o refugio y creo que llevare una espada de la armer?a, solo por si acaso.<br>
+
+                     </p>
 
 
                   <p><turn to="pag5">Página Siguiente</turn></p>
                    </paragraph>
         </page>
 
+
         <page id="pag5">
+
+            <p>Seg?n los reportes de los exploradores la torre esta a un d?a y medio del castillo y es posible armar un peque?o campamento en el templo Percusor, una edificaci?n de forma rectangular con una puerta que no da a ning?n cuarto, solo al horizonte.<br>
+                El viaje hacia a la torre no fue nada especial, al llegar a un peque?o poblado de camino hacia la torre com? un poco y rellene la cantimplora y contin?e mi viaje.<br>
+                Al acercarse la noche puedo alcanzar a ver el templo Precursor, al llegar al templo, dejo al caballo atado en donde pienso armar mi campamento, busco unas ramas y las ato de forma que al ponerles la manta encima cree un refugio para poder pasar la noche, para crear una fogata utilizo las semillas de flor ?gnea,
+                 dado que si pones varias sobre la madera esta se prendera fuego, con el campamento listo, ahora que solo queda descansar.<br>
+                      <p><show paragraph="parrafo10">continuar</show>.</p>
+
+                   <paragraph id="parrafo10">
+                     <p>Pero, no puedo evitar pensar lo que me espera en esa torre, que tipo de peligros habitaran el interior de la torre, la incesante cantidad de trampas y acertijos que me esperan.
+                        Perdido en mis pensamientos sobre la torre caigo dormido.</p>
+
+
+                  <p><turn to="pag6">Página Siguiente</turn></p>
+                   </paragraph>
+        </page>
+
+        <page id="pag6">
 
           <p>Esta sensaci?n, ?D?nde estoy?, todos esta vacio y hace frio, no puedo ver nada a mi alrededor y creo que estoy cayendo.<br>
               -Un segundo, ??no estar? muerto verdad!? ? se me escapan esas palabras debido a la exaltaci?n.<br>
               Pero la obscuridad a mi alrededor se convierten en im?genes, tres dragones de color blanco y uno m?s grande detr?s, Nova la madre celestial, los elementos hielo, aire y luz combatiendo entre s?, uno se alza victorioso y reclama el poder de Nova.<br>
               Es un ciclo de odio sin fin.<br>
           </p>
-                      <p><show paragraph="parrafo10">continuar</show>.</p>
+                      <p><show paragraph="parrafo12">continuar</show>.</p>
 
-                   <paragraph id="parrafo10">
+                   <paragraph id="parrafo12">
                      <p>No recuerdo el resto del sue?o, pero no puedo olvidar ese sentimiento de odio y resentimiento, entre aquellos que combaten por el poder de Nova.<br>
                          Despierto en la ma?ana, los p?jaros cantan con la misma alegr?a de siempre, y la torre es visible en el horizonte, voy a dejar el campamento armado para cuando regrese con la espada. Con eso dicho subo al caballo y retomo el viaje.<br>
                          Finalmente llego a la torre, en la puerta de piedra negra est?n grabadas las siguientes palabras.<br>
-                      <p><show paragraph="parrafo11">leer la inscripción</show>.</p>
+                      <p><show paragraph="parrafo13">leer la inscripción</show>.</p>
 
 
 
                    </paragraph>
 
-                                      <paragraph id="parrafo11">
+                                      <paragraph id="parrafo13">
                                         <h3>"He aqu? el Amnant, el templo del cielo y la tierra, aquellos que est?n en busca de tesoros de poder inimaginable y no teman a las sombras, entren y encuentren el poder que tanto anhelan."</h3>
                                         <p>- muy exagerado en mi opini?n.</p>
-                                     <p><turn to="pag6">Página Siguiente</turn></p>
+                                     <p><turn to="pag7">Página Siguiente</turn></p>
                                                         </paragraph>
 
 
         </page>
 
+        <page id="pag7">
+          <p>Al leer en voz alta las letras de la gran puerta de piedra negra brillan y la puerta se abre lentamente con un sonido de movimiento pesado, al abrirse la puerta puedo sentir el aire frio del apenas iluminado pasillo frente a mí, un limitado número de antorchas, tomo una antorcha encendida y procedo a investigar la torre, luego de avanzar por el pasillo llego a un salón circular mejor iluminado hay tres puertas, la central es la más grande de las tres y un es un tanto peculiar la demás puertas en la sala son de madera, pero esta puerta es de metal, es como si estuviera reforzada para mantener algo adentro, además de que tiene una palabra extraña cuyo significado no entiendo. Sin mencionar que en la palabra faltan algunas letras.
+        </p>
 
 
-            {{ story.endGame(); }}
-                   <p>Quite unsurprisingly, there is even an <interact with="dummyObject">object</interact> lying around.</p>
+                      <p><show paragraph="parrafo14">continuar explorando</show>.</p>
+      <paragraph id="parrafo14">
+        <p>No me da mucha confianza, junto a la puerta hay un cristal de color verde marino, creo que leí un poco acerca de ese cristal, es un <interact with="cristalAlma">cristal de alma</interact>, segn el libro: <br>
+            -Un cristal de alma ?eh? <br>
+        </p>
+                                             <p><turn to="pag8">Página Siguiente</turn></p>
+      </paragraph>
+    </page>
+
+      <page id="pag8">
+        <p> Antes de aventurarme por la puerta central investigo un poco... </p>
+
+        <p><show paragraph="puertaDerecha">Explorar puerta de la derecha</show>.</p>
+
+            <paragraph id="puertaDerecha">
+          <p>Al abrir la puerta de madera un extraño olor comienza a emanar.<br>
+            Cuando ingreso al cuarto no puedo distinguir nada debido a la obscuridad, cuando observo un poco puedo ver una antorcha al lado derecho de la puerta por la que ingresé a la habitación,
+            al prender la antorcha apagada que esta junto a la puerta puedo ver con más claridad en la obscura habitación y por fin descubro la fuente de ese extraño olor.</p>
+
+            <p>Es una extra?a masa de baba de color azul, un Limo, pese a la súbita iluminación del cuarto el Limo aun no se percata de mi presencia, y al observarlo bien puedo ver que tiene algo en su interior.
+              Pese a mi poca experiencia en batalla podría vencer al Limo para conseguir lo que sea que tenga en su interior, tal vez me sea de utilidad.<br>
+             El limo parece percatarse de mi presencia y empieza a retorcerse, a contraerse, como si me estuviera advirtiendo que no me acercara. Avanzo hacia el limo con mi espada en mano y *Scuash* al golpearlo el limo se retuerce, *Scuash* golpeo nuevamente, enseguida noto que mi espada se ve rara.<br>
+             Según parece el Limo derrite mi espada cada vez que esta lo golpea, pero el Limo se debilita perdiendo tamaño y consistencia, por lo que golpeo una vez más *Scuash*. <br>
+             El Limo se deshace, o mejor dicho se derrite, dejando tras de sí el <interact with="llaveGemaRoja">contenido de su estomago</interact>.
+                                                                                    </p>
+
+            </p>
+          </paragraph>
+                <p><show paragraph="puertaIzquierda">Explorar puerta de la izquierda</show>.</p>
+    <paragraph id="puertaIzquierda">
+      <p>al ingresar al cuarto y luego de encender la antorcha, compruebo que no haya alguna criatura dentro del cuarto.<br>
+      El cuarto de por si no tiene nada en especial salvo por una pequeña tablilla con un acertijo en ella, luego de resolver el acertijo oigo un sonido como de engranaje detrás de la tablilla.
+      <p> La tablilla se abre a medida que los engranajes giran, cuando la tablilla se detiene dentro <interact with="llaveGemaAzul">encuentro una llave</interact> y un <interact with="mazoAntiguo">mazo antiguo</interact> que parecía estar hecho de un material distinto al metal</p>
+    </p>
+    </paragraph>
+
+    <p><show paragraph="puertaCentral">Explorar puerta central</show>.</p>
+<paragraph id="puertaCentral">
+<p>Coloco las llaves en el orificio que corresponden (Aquí insertar un método usar llaves y si no las tiene que no pueda avanzar), pero sigo sin entender la palabra "Retav".
+<p> ¿Qué significa eso?<br>
+    Luego de pensar un poco, opte por acomodarlo al azar, sin conseguir nada.<br>
+    Seguí investigando para ver si conseguia algo, encontre una palabra en Latin escrita en la tablilla que abrí en la habitación izquierda, al pensar un poco y confirmar que ambas poseían las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves chaola la puerta finalmente cedió.</p>
+</p>
+<!-- INSERTAR AQUÍ EL CÓDIGO DEL ANAGRAMA -->
+
+     <p><turn to="pag9">Página Siguiente</turn></p>
+</paragraph>
+
+
+  </page>
+
+
+      <page id="pag8">
+
+      </page>
+      </p>
     </div>
 
     <div id="wrapper">
         <div id="title"></div>
 
         <div id="inventoryHostWrapper">
-            <h2>Inventory</h2>
+            <h2>Inventario</h2>
             <div id="inventoryHost"></div>
         </div>
 
@@ -216,3 +355,7 @@
     </script>
 </body>
 </html>
+
+<!--
+{{ story.endGame(); }}
+       <p>Quite unsurprisingly, there is even an <interact with="dummyObject">object</interact> lying around.</p> -->
