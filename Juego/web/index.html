@@ -4,9 +4,9 @@
 <title>Weißer Hase</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="imagetoolbar" content="no">
-<style type="text/css"> 
+<style type="text/css">
 
-    
+
 	html {
 		overflow: hidden;
 	}
@@ -90,7 +90,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	
+
 	#screen .submenutitle {
 		position: absolute;
 		top: -12px;
@@ -102,20 +102,20 @@
 		width: 100%;
 		top: 55px;
 	}
-	
+
 	#screen .submenuline {
 		position: relative;
 		height: 18px;
 		font-size: 14px;
 		margin-top: 1px;
 	}
-	
+
 	#screen .lineover {
 		background: #fff;
 		color: #0064a0;
 		font-weight: bold;
 	}
-	
+
 	#loader {
 		position:absolute;
 		left: 50%;
@@ -139,8 +139,8 @@
 		visibility: hidden;
 	}
 </style>
- 
-<script type="text/javascript"> 
+
+<script type="text/javascript">
 
 var dp = function ()
 {
@@ -153,7 +153,7 @@ var dp = function ()
 		scr, imagesPath, params, fullImage, loader,
 		P, Pn, Pt, lastMenuOver, pc, backgroundImage,
 		preload, mibar, nx, ny, nw, nh, sw, sh;
-	
+
 	/* ===== append HTML Element function ==== */
 	var appendHTML = function (p)
 	{
@@ -186,7 +186,7 @@ var dp = function ()
 		});
 		this.css = this.div.style;
 	};
-	
+
 	Text.prototype =
 	{
 		/* ==== start typewriter ==== */
@@ -194,7 +194,7 @@ var dp = function ()
 		{
 			this.k = 0;
 			this.html = t.id ? (
-				document.getElementById(t.id) ? 
+				document.getElementById(t.id) ?
 					document.getElementById(t.id).innerHTML : t.id + " undefined"
 			) : t.html + " ";
 			this.html = this.html.replace(/\n/g, "");
@@ -211,14 +211,14 @@ var dp = function ()
 				function () { self.typeLoop(); }
 			, 32);
 		},
-	
+
 		/* ==== skip HTML tag ==== */
 		skipTag: function()
 		{
 			if (this.html.charAt(this.k) === "<")
 				this.k += this.html.slice(this.k).indexOf(">") + 1;
 		},
-		
+
 		/* ==== typewriter loop ==== */
 		typeLoop: function ()
 		{
@@ -230,14 +230,14 @@ var dp = function ()
 				this.skipTag();
 				this.div.innerHTML = this.html.slice(0, this.k++);
 			}
-			else 
+			else
 			{
 				clearInterval(this.interval);
 				this.interval = false;
 			}
 		}
 	};
-	
+
 	/* ==== menu constructor ==== */
 	var Menu = function (n, p)
 	{
@@ -275,10 +275,10 @@ var dp = function ()
 				onmouseover: function () { this.parent.over(); }
 			}
 		});
-		
+
 		this.css = this.div.style;
 		this.pageTarget = p.target;
-	
+
 		// sub menu construction
 		if (p.submenu)
 		{
@@ -288,7 +288,7 @@ var dp = function ()
 				attributes: { className: "submenucontent" },
 				style: { visibility: "hidden" }
 			});
-	
+
 			// title
 			if (p.submenu.title)
 			{
@@ -308,14 +308,14 @@ var dp = function ()
 					}
 				});
 			}
-	
+
 			// submenu container
 			this.submenuContent = appendHTML({
 				parentNode: this.submenuDiv,
 				tagName: "div",
 				attributes: { className: "submenu" }
 			});
-	
+
 			// submenu lines
 			this.menuitem = [];
 			var i = 0, o;
@@ -327,7 +327,7 @@ var dp = function ()
 			}
 		}
 	};
-	
+
 	Menu.prototype =
 	{
 		/* ==== menu over ==== */
@@ -353,7 +353,7 @@ var dp = function ()
 				overflash();
 			}
 		},
-	
+
 		/* ==== menu click ==== */
 		click: function ()
 		{
@@ -368,7 +368,7 @@ var dp = function ()
 				displayPage();
 			}
 		},
-	
+
 		/* ==== target move ==== */
 		move: function (i)
 		{
@@ -389,7 +389,7 @@ var dp = function ()
 				function () { self.moving(); }
 			, 32);
 		},
-		
+
 		fadeColor: function (speed)
 		{
 			// transition
@@ -440,7 +440,7 @@ var dp = function ()
 			this.css.top  = Math.round(this.y * sh) + "px";
 			this.fadeColor(speed);
 		},
-		
+
 		/* ---- show menu items ---- */
 		displayMenuitem: function (visible)
 		{
@@ -460,8 +460,8 @@ var dp = function ()
 						o.div.style.visibility = "visible";
 						// complementary bar colors
 						o.bar.style.background = "RGB(" +
-							Math.round((256 - P.menuBackgroundColor.r) * 0.25) + "," + 
-							Math.round((256 - P.menuBackgroundColor.g) * 0.25) + "," + 
+							Math.round((256 - P.menuBackgroundColor.r) * 0.25) + "," +
+							Math.round((256 - P.menuBackgroundColor.g) * 0.25) + "," +
 							Math.round((256 - P.menuBackgroundColor.b) * 0.25) + ")";
 						setTimeout(displayMenuitem, 64);
 					}
@@ -471,7 +471,7 @@ var dp = function ()
 			} else this.submenuEnabled = false;
 		}
 	};
-	
+
 	/* ==== sub menu item constructor ==== */
 	var Submenuitem = function (parent, p)
 	{
@@ -515,7 +515,7 @@ var dp = function ()
 			}
 		});
 	};
-	
+
 	/* ---- menu items functions ---- */
 	Submenuitem.prototype =
 	{
@@ -524,7 +524,7 @@ var dp = function ()
 		{
 			resetLoops();
 			resetText();
-			Pt = this.text;	
+			Pt = this.text;
 			if (this.fullImage)
 			{
 				// display full image
@@ -534,7 +534,7 @@ var dp = function ()
 			// update text
 			else nextText();
 		},
-	
+
 		/* ---- bar left ---- */
 		over: function ()
 		{
@@ -553,7 +553,7 @@ var dp = function ()
 			};
 			barLeft();
 		},
-		
+
 		/* ---- bar right ---- */
 		out: function ()
 		{
@@ -571,7 +571,7 @@ var dp = function ()
 			}
 		}
 	};
-		
+
 	/* ==== cell constructor ==== */
 	var Cell = function (n, x, y)
 	{
@@ -580,12 +580,12 @@ var dp = function ()
 		this.y0 = y;
 		// next directions
 		this.dir = [
-			(x - 1 >= 0 ? n - ny : n), 
-			(x + 1 < nx - 1 ? n + ny : n), 
-			(y - 1 >= 0 ? n - 1 : n), 
+			(x - 1 >= 0 ? n - ny : n),
+			(x + 1 < nx - 1 ? n + ny : n),
+			(y - 1 >= 0 ? n - 1 : n),
 			(y + 1 < ny - 1 ? n + 1 : n)
 		];
-		
+
 		// fade in-out div
 		this.opc = appendHTML({
 			parentNode: scr,
@@ -606,7 +606,7 @@ var dp = function ()
 				height: Math.round(sh - 1) + "px"
 			}
 		});
-	
+
 		// white flash div
 		this.fla = appendHTML({
 			parentNode: scr,
@@ -622,7 +622,7 @@ var dp = function ()
 				height: Math.round(sh - 1) + "px"
 			}
 		});
-		
+
 		// grid horizontal
 		if (x == 0 && y > 0)
 		{
@@ -656,7 +656,7 @@ var dp = function ()
 	};
 
 	Cell.prototype =
-	{ 
+	{
 		/* ==== crossbrowser opacity function ==== */
 		opacity: function (alpha)
 		{
@@ -679,7 +679,7 @@ var dp = function ()
 				this.opacity(alpha);
 			}
 		},
-	
+
 		/* ==== display image ==== */
 		displayCell: function ()
 		{
@@ -693,7 +693,7 @@ var dp = function ()
 				function () { self.displayCellLoop(); }
 			, 32);
 		},
-	
+
 		/* ==== display cell loop ==== */
 		displayCellLoop: function ()
 		{
@@ -748,7 +748,7 @@ var dp = function ()
 			}
 		}
 	};
-	
+
 	/* ==== return random available cell ==== */
 	var startingCell = function ()
 	{
@@ -763,7 +763,7 @@ var dp = function ()
 			];
 		}
 	};
-	
+
 	/* ==== initialize cells ==== */
 	var initCell = function (p, fx, txt)
 	{
@@ -771,7 +771,7 @@ var dp = function ()
 		while (o = object.cell[i++])
 		{
 			// is Cell active
-			if (o.x0 >= p.x && o.x0 <= (p.x + p.w - 1) && 
+			if (o.x0 >= p.x && o.x0 <= (p.x + p.w - 1) &&
 				o.y0 >= p.y && o.y0 <= (p.y + p.h - 1))
 			{
 				// copy variables
@@ -784,7 +784,7 @@ var dp = function ()
 			}
 		}
 	};
-	
+
 	/* ==== reset text ==== */
 	var resetText = function ()
 	{
@@ -804,7 +804,7 @@ var dp = function ()
 			o.opacity(0);
 		}
 	};
-	
+
 	/* ==== display next bloc text ==== */
 	var nextText = function ()
 	{
@@ -817,7 +817,7 @@ var dp = function ()
 			o.displayCell();
 		}
 	};
-	
+
 	/* ==== menu mouse out ==== */
 	var hideLastMenu = function ()
 	{
@@ -827,7 +827,7 @@ var dp = function ()
 			lastMenuOver = false;
 		}
 	};
-	
+
 	/* ==== reset setIntervals ==== */
 	var resetLoops = function ()
 	{
@@ -911,7 +911,7 @@ var dp = function ()
 						o.opc.style.cursor = "default";
 						o.opc.onclick = null;
 					}
-				
+
 				}
 				// display background image
 				var css = backgroundImage.style;
@@ -924,7 +924,7 @@ var dp = function ()
 				}
 				else css.visibility = "hidden";
 				setTimeout(function() {
-					// display image			
+					// display image
 					initCell(
 						{
 							x: 0,
@@ -946,7 +946,7 @@ var dp = function ()
 				timeout--;
 				if (timeout < params.timeout - 3)
 				{
-					
+
 					loader.style.visibility = "visible";
 					loader.innerHTML = (params.timeout - timeout - 3);
 				}
@@ -955,7 +955,7 @@ var dp = function ()
 		};
 		preloading();
 	};
-	
+
 	/* ==== screen dimensions ==== */
 	var resize = function ()
 	{
@@ -964,7 +964,7 @@ var dp = function ()
 		sw = Math.round(nw / nx);
 		sh = Math.round(nh / ny);
 	};
-	
+
 	/* ==== init script ==== */
 	var init = function (p)
 	{
@@ -1028,14 +1028,14 @@ var dp = function ()
 	};
 	return {
 		// inicializa el script
-		init : init 
+		init : init
 	}
 }();
- 
+
 </script>
 
 </head>
- 
+
 <body>
 
 <div id="screen"></div>
@@ -1045,7 +1045,7 @@ var dp = function ()
 		<div class="wrapper">
                         <img src="imagenes/eve01.jpg">
                         <br><br>
-  
+
 		</div>
 	</div>
 
@@ -1077,21 +1077,21 @@ var dp = function ()
 			<img src="imagenes/graphicID_3215_grey.jpg">
 		</div>
 	</div>
-	
+
 	<div id="thumb1"> <!--guerrero-->
-		<a href="personajes/guerrero.jsp"><img src="imagenes/thu_eve04.jpg"></a>
+		<a href="personajes/guerrero.jsp"><img src="imagenes/guerrero.jpg"></a>
 	</div>
 	<div id="thumb2"> <!--mago-->
-		<a href="personajes/mago.jsp"><img src="imagenes/thu_eve05.jpg"></a>
+		<a href="personajes/mago.jsp"><img src="imagenes/mago.jpg"></a>
 	</div>
 	<div id="thumb3"> <!--arquera-->
 		<a href="personajes/arquera.jsp"><img src="imagenes/thu_eve02.jpg"></a>
 	</div>
-	
+
 </div>
 
-<script type="text/javascript"> 
- 
+<script type="text/javascript">
+
 /* ==== script parameters ==== */
 setTimeout(function ()
 {
@@ -1171,7 +1171,7 @@ setTimeout(function ()
 						},
 						{
 							html: 'Mapa',
-                                                       
+
 							fullImage: "eve06.jpg"//colocar las imagenes del reino
 						}
 					]
@@ -1292,7 +1292,7 @@ setTimeout(function ()
 }, 500);
 </script>
 <audio src ="musica/Medieval.mp3"  controls autoplay></audio>
-                                
+
 </script>
 </body>
 </html>
