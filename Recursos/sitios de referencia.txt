@@ -1,0 +1,15 @@
+
+Motores de elaboración de juegos de hipertexto 
+
+http://docs.textadventures.co.uk/squiffy/
+
+https://twinery.org
+
+https://www.choiceofgames.com/make-your-own-games/choicescript-intro/
+
+https://github.com/idmillington/undum
+
+
+Ejemplo de elaboración solamente con mensajes del navegador en javascript
+
+https://codepen.io/Soviet/pen/dPaLab
