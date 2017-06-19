@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weiser Hase</title>
+
+    <script src="http://olado.github.io/doT/doT.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="../js/dedalus.js"></script>
+    <script src="../js/dedalus-web.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Josefin+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="../css/story.css"> <!--estilo general del juego -->
+    <script src="../js/Dados.js"></script><!--para llamar el script de los dados-->
+    <link href="../css/Dados.css" rel="stylesheet" type="text/css"><!--llamamos a la carpeta css para los estilos de los dados-->
+
+
+ </head>
+<body>
+    <div id="story">
+
+        <initscript>
+        </initscript>
+
+        <beforeEveryThing>
+        </beforeEveryThing>
+
+        <beforeEveryPageTurn>
+        </beforeEveryPageTurn>
+
+        <beforeEveryParagraphShown>
+        </beforeEveryParagraphShown>
+
+        <afterEveryThing>
+        </afterEveryThing>
+
+        <afterEveryPageTurn>
+        </afterEveryPageTurn>
+
+        <afterEveryParagraphShown>
+        </afterEveryParagraphShown>
+
+        <!-- Novel -->
+        <title>Capitulo 2 - Hambre de Conocimiento. </title>
+
+        <!-- Objects -->
+
+        <obj id="mapa" inventoryName="Mapa">
+            <action id="Examinar">
+                <span style="italic">insertar aquí ilustración con el mapa</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('mapa')</when>
+                Guardo el mapa, me va a ser de utilidad.
+                {{ story.putInInventory('mapa'); }}
+            </action>
+        </obj>
+
+
+        <obj id="cristalAlma" inventoryName="Cristal de Alma">
+            <action id="Examinar">
+                <span style="italic">"Los cristales de alma se unen a la persona que los toca, conservando su esencia, para que si en caso de que esa persona perezca darle otra oportunidad, y as? cambiar su destino, pero el cristal solo es capaz de devolver la vida dos veces. Por lo que recuerda posible usuario de piedra de alma, aprende de tu errores y no los repitas, no podr?s repetir tus errores eternamente."</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('cristalAlma')</when>
+                Mejor lo llevo, por las dudas!
+                {{ story.putInInventory('cristalAlma'); }}
+            </action>
+        </obj>
+
+        <obj id="llaveGemaRoja" inventoryName="Llave Gema Roja 'E'">
+            <action id="Examinar">
+                <span style="italic">Es un cofre con una llave de forma rara dentro, el diseño de la llave consiste en la parte trasera adornada con una pequeña gema roja dentro de lo que parece ser remolino tallado, mientras que la parte delantera parece una especie de E"</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('llaveGemaRoja')</when>
+                Guardo la llave, puede ser útil.
+                {{ story.putInInventory('llaveGemaRoja'); }}
+            </action>
+        </obj>
+
+
+        <obj id="llaveGemaAzul" inventoryName="Llave Gema Azul 'T'">
+            <action id="Examinar">
+                <span style="italic">La llave tiene una gema de color azul y la parte delantera tiene forma de T.</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('llaveGemaAzul')</when>
+                Guardo la llave, puede ser útil.
+                {{ story.putInInventory('llaveGemaAzul'); }}
+            </action>
+        </obj>
+
+        <obj id="mazoAntiguo" inventoryName="Mazo Antigüo">
+            <action id="Examinar">
+                <span style="italic">Tiene una inscripción que dice "Tu determinación será capaz de doblegar su espíritu y avanzar"</span>
+            </action>
+
+            <action id="Guardar">
+                <when>!story.isInInventory('mazoAntiguo')</when>
+                Guardo el mazo, es un buen recordatorio.
+                {{ story.putInInventory('mazoAntiguo'); }}
+            </action>
+        </obj>
+
+
+        <!-- Pages -->
+        <page id="intro">
+            <p>
+              Una hermosa luna blanca me observa desde el cielo y es testigo de lo que ocurre, el rojo cubre mis manos y la cascara sin vida de varias pestes se encuentran tirados en el suelo.<br>
+ Cuatro cadáveres me rodean, cuatro animales que fueron castigados, cuatro miserables criaturas que se atrevieron a quitarme mi familia.<br>
+-	¡Valentino! ¡Craso! ¡Brema! ¡Al! ¿¡Donde están!? – la voz de una mujer llama a los animales sacrificados.<br>
+-	¡Chicos! ¿¡Donde están!? – la voz se acerca a donde me encuentro.<br>
+-	¡ah! – la mujer se percata de lo que ocurrió, al verme parado en el centro de la escena.<br>
+-	¡Tu! – grita mientras me señala - ¿Qué ocurrió aquí?<br>
+-	Yo los mate… - mientras respondo, no puedo evitar sonreír<br>
+ Luego de responder a la pregunta de la mujer, algo me golpea contra el suelo y cae sobre mi.<br>
+-	Piensa lo que dirás muchacho, si te equivocas te rebanare el cuello – Dice la mujer mientras coloca algo filoso contra mi cuello.<br>
+-	¿Por qué lo hiciste?<br>
+-	Era lo único que podía hacer – digo mientras la miro a los ojos y coloco mi mano en su estomago.<br>
+-	¿¡Pero que!? – solo eso puede decir antes de salir volando.<br>
+-	Era lo mas natural que alguien podía hacer en mi situación.<br>
+-	¿¡como hiciste eso!? – dice, mientras me mira con rabia.<br>
+-	Ellos me quitaron mi familia, mi hogar ¿No se merecían lo mismo?<br>
+ La mujer se lanza contra mi, recorriendo los 10 metros que habían entre nosotros en un parpadeo, golpeando mi estomago.<br>
+-	Tu lógica es retorcida, pero no careces de potencial, no te matare. Pero a cambio tu compensaras las perdidas de mi hermandad – la mujer dice eso mientras pierdo la conciencia.<br>
+-	No… decidas…. Eso tu sola…. – solo pude decir eso antes de quedar inconsciente.<br>
+
+            </p>
+        </page>
+
+        <page id="dummyPage" class="first">
+            <p><show paragraph="parrafo2">continuar</show>.</p>
+
+            <paragraph id="parrafo2">
+              <p>
+                Esto es simplemente un recuerdo sin sentido, el porqué repentinamente pienso en ello es un misterio incluso para mí.<br>
+Era un día frio, la luz de la luna iluminaba el patio del cuartel de los Centinelas, era mi primer año como miembro de la orden.<br>
+Salí al patio para tomar un poco de aire luego de pasar el día en la biblioteca de la orden, necesitaba un poco de aire helado para poder limpiar mi pulmones del polvo que los antiguos libros contenían, en mi busca de de conocimiento arcano me pasaba temporadas enteras encerrado en la biblioteca.<br>
+Tras leer todos los libros de la biblioteca, la gran mayoría sobre hechizos y alquimia, un libro en especial llamo mi atención. Un libro de tapa gastada que se encontraba oculto al final de uno de los estante de la biblioteca, hablaba de una extraña edificación que se encontraba en Los Prados, cerca del reino de Altaria.<br>
+Esta torre contenía un conocimiento y poder casi ilimitado.<br>
+Alquimia, nigromancia. Así como hechicerías que permitían invocar criaturas tan poderosas, que solo se creían mitos.<br>
+Necesitaba pensar sobre esa torre y como podría hacerme poseedor de sus conocimientos.<br>
+Inmerso en mis pensamientos escuche una voz que llamaba mi nombre.<br>
+-	Thraxor  ¿qué haces en el patio a estas horas de la noche muchacho?<br>
+
+                  <p><turn to="pag2">Página Siguiente</turn></p>
+            </paragraph>
+        </page>
+
+        <page id="pag2">
+
+          <p>
+            El gran maestre Veteris Duoq, líder de la orden, me pregunta eso con un tono de sorpresa.<br>
+            Veteris, es un anciano que siempre tiene una mirada amable, es una persona alta que siempre va vestido con una túnica roja y lleva puesto unos lentes redondos.<br>
+           -	Discúlpeme gran maestre Duoq, no era mi intención romper el toque de queda – mientras me disculpo hago una pequeña reverencia apoyando mi mano derecha en mi pecho.<br>
+           La orden de los Centinelas tiene su toque de queda a la media noche, usualmente los únicos que pueden ignorar el toque de queda son los integrantes de alto rango y el gran maestre Duoq por supuesto.<br>
+           -	Te has quedado en la biblioteca hasta tarde de nuevo, ¿Verdad?<br>
+           -	Si, le pido disculpas de nuevo, no era mi intención.<br>
+           Hago nuevamente una reverencia, a lo que el gran maestre ríe.<br>
+           -	Siempre has sido así joven Thraxor – dice el gran maestre mientras ríe – Jessie siempre se queja de que te la pasas todo el tiempo en la biblioteca de la orden.<br>
+           Mi tutora o maestra, Jessie es quien me incorporo a la orden y decidió entrenarme, es una mujer realmente problemática.<br>
+           Siempre me dice que no estoy aprovechando mi juventud y siempre me sacaba de la biblioteca, se paraba justo en frente de la puerta de la biblioteca y decía que si quería entrar primero debía vencerla.
+                    </p>
+                      <p><show paragraph="parrafo4">continuar</show>.</p>
+
+                   <paragraph id="parrafo4">
+                     <p> Al principio lo intentaba sin poder vencerla, luego cada vez que hacia eso me escabullía y ingresaba por el tomo luz del techo, nunca me descubrió o tal vez simplemente fingía que no me veía. Jamás lo supe.<br>
+-	¿Encontraste algo interesante en tu incesante lectura muchacho?<br>
+-	De hecho, si, algo me esta intrigando – respondo con franqueza.<br>
+-	mmm ¿Y de que se trata? Tal vez pueda ayudarte a descifrar lo que te intriga – realmente debe estar aburrido, para querer saber lo que lee un simple muchacho.<br>
+-	 Hace unas semanas encontré un libro que habla acerca de una torre extraña y las maravillas que contiene.<br>
+-	 ¿La torre maldita? Y dime muchacho, ¿qué es lo que sabes hasta ahora?<br>
+-	 Sé que fue construida por un arquitecto llamado David y que recibió ayuda de varios lugares para terminarla. Juntando gran cantidad de conocimiento y poniéndolo en una biblioteca enorme.<br>
+-	¿Y qué es lo que te intriga entonces? – pregunta el gran maestre mientras se toca la barbilla.<br>
+-	En primer lugar ¿cómo logro terminar una torre de esas proporciones en tan poco tiempo? A pesar de contar con tanta ayuda terminar una torre así en solo 5 años es imposible. Y en segundo lugar ¿donde guardo todo ese conocimiento? Si usted observa los dibujos hechos sobre la torre es imposible que tal cantidad de información entre en un cuarto de ese tamaño<br>
+-	¿Sabes muchacho? David no era un arquitecto normal – dice de forma calmada el gran maestre – Y su creación no tiene nada de normal tampoco.<br>
+-	Habían rumores del uso de magia negra, pero nunca creí que fueran reales – algunas notas en el libro hablaban de cadáveres construyendo la torre<br>
+-	Ciertamente, David utilizaba la nigromancia para resucitar a los trabajadores que murieran, así conseguía una mano de obra incansable. En cuanto a la biblioteca, bueno se podría decir que no se encuentra en nuestro plano existencial.<br>
+-	¿a que se refiere? Como es eso posible, el poder que se necesita para viajar a cualquier otra dimensión va mas allá de la simple nigromancia.<br>
+-	Como seguro sabrás, David no construyo esa torre solo. Magos de todo tipo y gran poder ayudaron a convertir la torre en una trampa mortal.<br>
+-	Entonces asi logro guardar toda esa información. Debo saber mas sobre esa torre, ¿gran maestre le importaría contarme mas sobre ese lugar?<br>
+-	En lo absoluto muchacho.
+                     </p>
+                  <p><turn to="pag3">Página Siguiente</turn></p>
+                   </paragraph>
+
+
+        </page>
+
+
+        <page id="pag3">
+
+          <p> Al principio lo intentaba sin poder vencerla, luego cada vez que hacia eso me escabullía y ingresaba por el tomo luz del techo, nunca me descubrió o tal vez simplemente fingía que no me veía. Jamás lo supe.
+-	¿Encontraste algo interesante en tu incesante lectura muchacho?
+-	De hecho, si, algo me esta intrigando – respondo con franqueza.
+-	mmm ¿Y de que se trata? Tal vez pueda ayudarte a descifrar lo que te intriga – realmente debe estar aburrido, para querer saber lo que lee un simple muchacho.
+-	 Hace unas semanas encontré un libro que habla acerca de una torre extraña y las maravillas que contiene.
+-	 ¿La torre maldita? Y dime muchacho, ¿qué es lo que sabes hasta ahora?
+-	 Sé que fue construida por un arquitecto llamado David y que recibió ayuda de varios lugares para terminarla. Juntando gran cantidad de conocimiento y poniéndolo en una biblioteca enorme.
+-	¿Y qué es lo que te intriga entonces? – pregunta el gran maestre mientras se toca la barbilla.
+-	En primer lugar ¿cómo logro terminar una torre de esas proporciones en tan poco tiempo? A pesar de contar con tanta ayuda terminar una torre así en solo 5 años es imposible. Y en segundo lugar ¿donde guardo todo ese conocimiento? Si usted observa los dibujos hechos sobre la torre es imposible que tal cantidad de información entre en un cuarto de ese tamaño
+-	¿Sabes muchacho? David no era un arquitecto normal – dice de forma calmada el gran maestre – Y su creación no tiene nada de normal tampoco.
+-	Habían rumores del uso de magia negra, pero nunca creí que fueran reales – algunas notas en el libro hablaban de cadáveres construyendo la torre
+-	Ciertamente, David utilizaba la nigromancia para resucitar a los trabajadores que murieran, así conseguía una mano de obra incansable. En cuanto a la biblioteca, bueno se podría decir que no se encuentra en nuestro plano existencial.
+-	¿a que se refiere? Como es eso posible, el poder que se necesita para viajar a cualquier otra dimensión va mas allá de la simple nigromancia.
+-	Como seguro sabrás, David no construyo esa torre solo. Magos de todo tipo y gran poder ayudaron a convertir la torre en una trampa mortal.
+-	Entonces asi logro guardar toda esa información. Debo saber mas sobre esa torre, ¿gran maestre le importaría contarme mas sobre ese lugar?
+-	En lo absoluto muchacho.
+          </p>
+                      <p><show paragraph="parrafo6">continuar</show>.</p>
+
+                   <paragraph id="parrafo6">
+                     <p>  Quien esta molestándome tan temprano por la mañana no es otra mas que Jessie mi maestra, vestida con su uniforme de la Orden que consiste en lo que pareciera ser abrigo rojo con bordes blancos que tiene capucha. <br>
+-	Vamos, como puedes decirle eso a la persona que te ah cuidado durante tanto tiempo y en tu momento de mayor necesidad te ofreció un hogar.<br>
+-	Que yo sepa fui traído a la fuerza, quien provoco mi “momento de mayor necesidad” fueron los asesinos que estaban bajo tu tutela. De hecho me extraña que en el momento en que me encontraste no me mataras.<br>
+-	Ciertamente, en el momento que te vi rodeado de los cuerpos de mis estudiantes pensé en diez maneras distintas de matarte. Pero al escuchar lo que dijiste, mis ganas de vengarme desaparecieron, aunque después de que me atacaras te golpee como castigo.<br>
+-	Si supuse eso, de cualquier forma a donde me dirijo no es de tu incumbencia -  le digo de forma directa lo que pienso.<br>
+-	Vamos no digas eso Jajaja – Jessie ignoró completamente lo que digo y palmea mi espalda – conociéndote de seguro vas a la biblioteca.<br>
+-	De ser cierto estaría yendo en la dirección opuesta.<br>
+-	De hecho tienes razón, si, en esta dirección solo hay tres posibles opciones. O vas hacia la armería, o a la sala de conferencias. Sinceramente no creo que vayas a la armería, siempre eres reacio a utilizar armas, y a la sala de conferencia solo asisten los integrantes de alto rango como yo.<br>
+-	¿Es necesario que lo pienses en voz alta? – debe sacarse esa mala costumbre.<br>
+-	Solo quedaría el estudio del gran maestre, pero ¿para que llamaría a un renacuajo como tú? – ríe mientras declara eso.<br>
+-	¿Porque no vas a tu cuarto y piensas sobre ello? – Hago señas con mi mano mientras digo “shu, shu”.<br>
+-	Sabes, a veces puedes ser muy grosero – dice eso mientras me mira seriamente.<br>
+-	Tu siempre eres grosera.<br>
+-	Uh, buen punto. En cualquier caso se respetuoso cuando hables con el gran maestre, por alguna razón te tiene mucha estima.
+
+                     </p>
+
+                  <p><turn to="pag4">Página Siguiente</turn></p>
+                   </paragraph>
+
+
+        </page>
+
+        <page id="pag4">
+
+          <p> No necesita ni mencionarlo, el gran maestre fue de mucha ayuda en mi búsqueda de conocimiento, ya sea histórico o arcano. <br>
+ Realmente le debo bastante y si me pidió que viniera a su estudio debe ser algo importante.<br>
+-	Como sea, pórtate bien Thraxor debo irme, aunque no lo parezca estoy muy ocupada – dice Jessie mientras se aleja haciendo un gesto de despedida con su mano.<br>
+ Seguramente va a asaltar la cocina como siempre, su comportamiento infantil a veces parece un mal chiste.<br>
+ En cualquier caso me encamino nuevamente hacia el estudio del gran maestre espero que no me haya retrasado por culpa de esa fastidiosa.<br>
+ *noc**noc*<br>
+ Golpeo la puerta del estudio.<br>
+-	Adelante – una voz familiar me autoriza a entrar<br>
+-	Con permiso.<br>
+ El gran maestre se encuentra sentado enfrente de su escritorio leyendo lo que parece ser un informe de alguna misión reciente.<br>
+          </p>
+                      <p><show paragraph="parrafo8">continuar</show>.</p>
+
+                   <paragraph id="parrafo8">
+                     <p>-	Ha pasado tiempo Thraxor, ¿Cómo has estado?<br>
+-	Podría decir que estuve pasando el tiempo con tranquilidad, pero le estaría mintiendo señor – digo eso con un tono algo irónico.<br>
+-	Ha ha ¿Jessie sigue llevándote a sus misiones?<br>
+-	Ciertamente, no entiendo el porqué pregunta si quiero acompañarla, si al fin y a cabo me llevara arrastrando.<br>
+-	Es una chica bastante enérgica, supongo que eres como el hermano que nunca tuvo.<br>
+-	Honestamente creo que solo se aburre y me lleva simplemente para molestarme – digo eso mientras dejo caer mis hombros.<br>
+-	Entonces realmente no te aburres – el gran maestre ríe mientras dice eso. <br>
+-	En cualquier caso, que necesita de mi – intentando terminar con esta charla sin sentido desvío la conversación.<br>
+-	Te he llamado, porque necesito que recuperes un objeto para mi – una petición de búsqueda, para eso están los novatos, no soy un mensajero.<br>
+-	Con todo respeto señor, no creo que sea un buen uso de mis habilidades el buscar un tesoro.<br>
+-	Ah pero ahí te equivocas muchacho, realmente querrás ir una vez sepas de que objeto estoy hablando, y te entusiasmaras aun mas al saber donde se encuentra.<br>
+-	El lugar al que iré es… - realmente espero que se refiera a ese lugar.<br>
+-	Ciertamente muchacho, la torre de Amnant. Y el objeto que necesito que recuperes se llama Paradigma de lo inamovible.<br>
+-	¿El objeto mágico que detiene el paso del tiempo de su portador? – un objeto tan poderoso como ese ¿realmente existe?<br>
+-	Si muchacho, según la información que reuní, el collar se encuentra en la torre maldita, resguardada por sus creadores. ¿Aun crees que este encargo es un desperdicio de tus habilidades?<br>
+-	En lo absoluto señor, le pido que disculpe mi anterior comentario – la próxima vez debo escuchar antes de hablar.<br>
+-	De acuerdo, necesito que salgas de inmediato, utiliza el portal hacia el bosque Altum y dirígete a la torre.<br>
+-	Entendido, me marcho entonces, lo veré de nuevo cuando regrese de la torre.<br>
+-	Eso espero muchacho, hasta entonces cuídate.
+
+                     </p>
+
+
+                  <p><turn to="pag5">Página Siguiente</turn></p>
+                   </paragraph>
+        </page>
+
+
+        <page id="pag5">
+
+            <p> Al salir del estudio del gran maestre, me dirijo rápidamente a mi habitación para reunir todo lo necesario.<br>
+ Finalmente podre explorar la torre que me ah tenido fascinado tanto tiempo, casi no puedo contener la emoción, mientras preparo mis cosas.<br>
+ Me llevare algo de beber, y algunos ingredientes alguna yerba Bardie y hongo negro. Algo de Mulainio y oxido de metal para poder crear un poco de Termita. <br>
+  Y me llevare un pequeño libro de hechizos, solo por si me olvido de alguno.<br>
+ Creo que eso será todo, la mayoría de mis cosas solo las llevare en el cinturón por lo que lo único que me ocuparía la mano será el libro de hechizos.<br>
+ Al terminar de alistarme, me dirijo rápidamente al patio central donde se encuentra la pequeña plataforma que me tele transportara al bosque Altum dejándome a unas horas de la torre.<br>
+Al acercarme a la plataforma soy interceptado por Jessie.<br>
+-	Oye Thraxor ¿hablaste con el gran maestre? – pregunta mi maestra, con una sonrisa habitual.<br>
+-	Si, de hecho ahora mismo voy camino a cumplir un encargo – al recordarlo la emoción me invade.<br>
+-	Oh. Vaya que interesan… - Jessie no termina su frase, pero por alguna razón se pone seria.<br>
+-	Thraxor, no quiero que te asustes, pero creo que algo malo le pasa a tu cara – diciendo eso, Jessie se acerca a mi.<br>
+-	Yo no siento nada raro ¿A que te refieres? – no puedo evitar sentir curiosidad.<br>
+-	Esto es algo realmente raro y da mal augurio, Thraxor – realmente parece algo serio, ¿estaré pálido? – creo….<br>
+-	¿Qué? Vamos dímelo – no puedo evitar ponerme nervioso.<br>
+-	¡Oh cielos no estaba equivocada! – exclama con vigor - ¡Estas sonriendo!<br>
+</p>
+
+                   <paragraph id="parrafo10">
+                     <p> Todo se detiene, realmente me siento estúpido al seguirle la corriente y preocuparme en vano.<br>
+ Realmente no se si golpearla en la cara o mandarla a volar con algún hechizo.<br>
+-	Jajajajajajajajajajajajajajaja – ríe la idiota de mi maestra – nunca te vi tan feliz, realmente el encargo debió ser algo de tu agrado.<br>
+-	Lastima que mi felicidad no duro mucho gracias a ti – realmente a veces la detesto tanto.<br>
+-	Ya enserio, realmente me sorprendió verte sonreír renacuajo – exclama la niña frente a mi – como sea no te pierdas camino a la torre.<br>
+-	¿Como sabes que me dirijo a la torre? – realmente me sorprende lo que dijo.<br>
+-	No es muy difícil saberlo, has pasado los últimos seis años obsesionado con esa torre y lo que oculta, lo único que te puede hacer sonreír así es finalmente poder ir e investigarla tu mismo.
+                     </p>
+
+
+                  <p><turn to="pag6">Página Siguiente</turn></p>
+                   </paragraph>
+        </page>
+
+        <page id="pag6">
+
+          <p> Quien lo diría, puede que su cabeza no este realmente vacía después de todo, pero nunca pensé que tomara en cuenta todo eso.<br>
+-	Que te diviertas en tu aventura intelectual – dice mi extraña maestra mientras se aleja rumbo a la patio de entrenamiento.<br>
+-	Realmente, eres una persona muy extraña – esas palabras se me escapan antes de ingresar al portal.<br>
+ Luego de un destello, llego al bosque Altum.<br>
+ Empiezo a dirigirme hacia la torre que se ve en el horizonte.<br>
+ Según recuerdo la torre tiene tres entradas y cada una dirige a una sección distinta de cada piso.<br>
+ Las horas pasaron y llegué a la base de la torre tras una larga caminata.<br>
+-	Finalmente, estoy aquí.<br>
+ Miro con fascinación la enorme edificación, tras admirarla por un rato veo como cada piso parece un anillo, desde el segundo piso hasta el cuarto es una simetría perfecta. Salvo el quinto piso que no se encuentra en nuestra dimensión están los siete pisos.<br>
+ Según el calendario, algunos anillos ya deberían estarse moviendo, cambiando los cuartos de lugar.
+          </p>
+                      <p><show paragraph="parrafo12">continuar</show>.</p>
+
+                   <paragraph id="parrafo12">
+                     <p> Si sigo admirando la torre solo perderé mas tiempo, por lo que me acerco a la puerta.
+ Hay una inscripción tallada en obsidiana que dice:
+</p>
+                      <p><show paragraph="parrafo13">leer la inscripción</show>.</p>
+
+                   </paragraph>
+
+                                      <paragraph id="parrafo13">
+                                        <h3>"He aquí el Amnant, el templo del cielo y la tierra, aquellos que están en busca de tesoros de poder inimaginable y no teman a las sombras, entren y encuentren el poder que tanto anhelan."</h3>
+                                        <img src="../imagenes/Entrada.jpg" style="width:800px;">
+                                        <p>- ciertamente increíble.</p>
+                                     <p><turn to="pag7">Página Siguiente</turn></p>
+                                                        </paragraph>
+
+
+        </page>
+
+        <page id="pag7">
+          <p>
+            Al leer la inscripción, la oración tallada comienza a brillar mientras la puerta comienza a abrirse.<br>
+ El aire frio que sale de la torre demuestra que no a sido abierta en mucho tiempo.<br>
+ El pasillo frente a mi esta en total obscuridad.<br>
+-	Licht… - un orbe de luz blanca se crea en la palma de mi mano, iluminando el pasillo a mi alrededor.<br>
+
+        </p>
+
+
+                      <p><show paragraph="parrafo14">continuar explorando</show>.</p>
+      <paragraph id="parrafo14">
+        <p>  Llego a un salón radial con tres puertas, hay dos habitaciones y una puerta central.<br>
+ La puerta de Tlaem es generalmente utilizada como contenedor de magia, crea una pequeña brecha dimensional y conecta este mundo con las pequeñas realidades de cada guardián de esta torre, en pocas palabras cada puerta lleva a un mundo distinto.<br>
+                </p>
+                                             <p><turn to="pag8">Página Siguiente</turn></p>
+      </paragraph>
+    </page>
+
+      <page id="pag8">
+        <p>  Creo que antes de enfrentar al guardián de este piso investigare un poco el salón. </p>
+
+        <p><show paragraph="puertaDerecha">Explorar puerta de la derecha</show>.</p>
+
+            <paragraph id="puertaDerecha">
+          <p> Abro la puerta y dentro encuentro un cuerno de Rags sobre lo que parece ser un pequeño pedestal sobre una mesa de piedra, sobre la mesa hay, pero antes de entrar para buscarlo noto algo extraño, el suelo a los pies del pequeño pedestal se levanta un poco.<br>
+ No hay duda bajo esa gran compuerta de metal hay algo que me mira fijamente esperando que me acerque lo suficiente para poder atraparme.<br>
+ Quedo paralizado, porque no podía ser otra cosa mas que una araña, realmente detesto eso, pero si quiero hacer una poción Bombarda necesito ese cuerno.<br>
+ Tengo que pensar cómo puedo lidiar con la araña, lo normal seria quemarla completamente junto con su nido, pero si me acerco lo suficiente me atrapará y será el fin de todo. Debo hacer que salga de ahí.<br>
+-	¿Sabes que? Al demonio esto – diciendo eso apunto con mi dedo hacia uno de los extremos de la baldosa - ¡Sarel!<br>
+ Acto seguido, una pequeña concentración de calor sale de la punta de mi dedo, la araña parece asustarse y se mete aun mas en su nido. No volverás a salir.<br>
+ El metal de la compuerta se derrite mientras trazo una línea con mi dedo, sellando la compuerta para siempre.<br>
+ Tomo el cuerno, la llave y salgo rápidamente.<br>
+¡Ralegnoc! – cubro la puerta del cuarto de hielo, ahora ese monstruo sin importar si logra o no romper la compuerta jamás volverá a salir.<br>
+                                                                                    </p>
+
+            </p>
+          </paragraph>
+                <p><show paragraph="puertaIzquierda">Explorar puerta de la izquierda</show>.</p>
+    <paragraph id="puertaIzquierda">
+      <p> Ingreso a la habitación izquierda, dentro de la pequeña habitación hay una tablilla con una palabra escrita, al leer lo que esta escrito me percato de que se trata de un anagrama.<br>
+ Luego de resolver el anagrama un ruido parecido a engranajes resuena en la pequeña habitación, al mismo tiempo la tablilla comienza a moverse, atrás de la tablilla a una especie de contenedor que en su interior tiene un <interact with="mazoAntiguo">mazo de aspecto antigûo</interact> y una <interact with="llaveGemaAzul">llave</interact> que tiene una U en su extremo delantero.<br>
+-	Letavi  - pronunciar esas palabras el libro y el mazo comienzan a levitar a la altura de mi cabeza.<br>
+-	El llevar cosas en mis manos solo retrasaría las cosas.
+    </p>
+    </paragraph>
+
+    <p><show paragraph="puertaCentral">Explorar puerta central</show>.</p>
+<paragraph id="puertaCentral">
+<p>Coloco las llaves en el orificio que corresponden (Aquí insertar un método usar llaves y si no las tiene que no pueda avanzar), pero sigo sin entender la palabra "Retav".
+<p> ¿Qué significa eso?<br>
+    Luego de pensar un poco, opte por acomodarlo al azar, sin conseguir nada.<br>
+    Seguí investigando para ver si conseguia algo, encontre una palabra en Latin escrita en la tablilla que abrí en la habitación izquierda, al pensar un poco y confirmar que ambas poseían las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves chaola la puerta finalmente cedió.</p>
+</p>
+<!-- INSERTAR AQUÍ EL CÓDIGO DEL ANAGRAMA -->
+
+     <p><turn to="pag9">Página Siguiente</turn></p>
+</paragraph>
+
+
+  </page>
+
+
+      <page id="pag9">
+
+      </page>
+      </p>
+    </div>
+
+    <div id="wrapper">
+        <div id="title"></div>
+
+        <div id="inventoryHostWrapper">
+            <h2>Inventario</h2>
+            <div id="inventoryHost"></div>
+        </div>
+
+        <div id="host"></div>
+    </div>
+
+    <div id="interactionHost"></div>
+
+    <div id="undoStageHost"></div>
+
+    <div id="footer">
+        <a id="undoHost" href="#">Deshacer</a> &bull; <a id="saveHost" href="#">Guardar</a> &bull; <a id="restoreHost" href="#">Restaurar</a> &bull; <a id="resetHost" href="#">Resetear</a>
+    </div>
+
+    <script>
+        $(function () {
+            new DedalusWeb({
+                domSource         : $('#story'),
+                domTarget         : $('#host'),
+                titleTarget       : $('#title'),
+                inventoryTarget   : $('#inventoryHost'),
+                interactionTarget : $('#interactionHost'),
+                undoTarget        : $('#undoHost'),
+                undoStageTarget   : $('#undoStageHost'),
+                saveTarget        : $('#saveHost'),
+                restoreTarget     : $('#restoreHost'),
+                resetTarget       : $('#resetHost'),
+            });
+        });
+
+    </script>
+</body>
+</html>
+
+<!--
+{{ story.endGame(); }}
+       <p>Quite unsurprisingly, there is even an <interact with="dummyObject">object</interact> lying around.</p> -->
