@@ -529,8 +529,22 @@
                     <p> -	¿Corazón? ¡Eso es!</p>
                     <p>Utilice mi demacrada espada para poder romper la cerradura del ataúd.</p>
                     <p>*¡Crash!* </p>
-                    <p> La espada se hace pedazos junto con la cerradura, al sacar la tapa del ataúd encuentro el esqueleto de David y en el pecho una extraña gema de color carmesí brillaba con intensidad, <<interact with="mazoAntiguo">Usar el mazo para golpear el corazón de David.</interact> <br>
-                        *Clanck**Clanck**Clanck* <br>
+                    <p> La espada se hace pedazos junto con la cerradura, al sacar la tapa del ataúd encuentro el esqueleto de David y en el pecho una extraña gema de color carmesí brillaba con intensidad, <interact with="mazoAntiguo">Usar el mazo para golpear el corazón de David.</interact> <br>
+                        
+                    
+                    </p>
+                    
+                                             <span id="die1" class="dice">0</span>
+                                                                            <span id="die2" class="dice">0</span>
+                                                                            <span id="die3" class="dice">0</span>
+                                                                            <span id="die4" class="dice">0</span>
+                                                                            <button id="boton">Tirar Dados</button><!--CONDICIONAMOS UN BOTON-->
+                                                                            <h1 id="status" style="clear:left;"></h1>
+                                                                            <h1 id="status2" style="clear:left;"></h1>
+                                                                            <h2 id="status3" style="clear:left;"></h2>
+                    
+                    <p>*Clanck**Clanck**Clanck* <br>
+                                                                            
                         Los golpes resonaban en toda la habitación pero la gema no se rompía, podía sentir el paso de los esqueletos por la escalera me pareció que su ritmo aumento dado que eran mas rápidos que hace un momento.<br>
                         *Clanck**Clanck**Clanck*<br>
                         Mi respiración se agitaba a medida que cada golpe parecía no ser efectivo.<br>
