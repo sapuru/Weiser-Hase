@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../css/story.css"> <!--estilo general del juego -->
         <script src="../js/Dados.js"></script><!--para llamar el script de los dados-->
         <link href="../css/Dados.css" rel="stylesheet" type="text/css"><!--llamamos a la carpeta css para los estilos de los dados-->
-
+        <script src="fade.js"></script>
 
     </head>
     <body>
@@ -55,7 +55,6 @@
                     {{ story.putInInventory('mapa'); }}
                 </action>
             </obj>
-
 
             <obj id="cristalAlma" inventoryName="Cristal de Alma">
                 <action id="Examinar">
@@ -118,13 +117,60 @@
                     Guardo el mazo, es un buen recordatorio.
                     {{ story.putInInventory('mazoAntiguo'); }}
                 </action>
+
                 <action id="Usar">
                 <when>story.isInInventory('mazoAntiguo')</when>
                 {{ story.removeFromInventory('mazoAntiguo'); }}
+                {{ story.disable('mazoAntiguo'); }}
                 </action>
-
             </obj>
 
+            <objt id="solo_una_nota" inventoryName="Nota">
+              <action id="Examinar">
+                <span style="italic">“El contenido del cofre, no te servirá a ti.”<br>
+                      ¿¡Pero que mie-demonios significa esto!? <br>
+                      ¿¡Es alguna clase de broma de mal gusto!? </span>
+              </action>
+            </objt>
+
+            <objt id="espada_curva" inventoryName="Espada Hoja Curva">
+              <action id="Examinar">
+                  <span style="italic">Es una espada con la hoja curva, la empuñadura de la espada cuenta con un cubre mano delgado, de color oxido.</span>
+              </action>
+
+              <action id="Guardar">
+                  <when>!story.isInInventory('espada_curva')</when>
+                  GQuedo fascinado por su aspecto, esta espada es perfecta, al menos hasta que encuentre la espada.
+                  {{ story.putInInventory('espada_curva'); }}
+              </action>
+
+              <action id="Usar">
+              <when>story.isInInventory('espada_curva')</when>
+              {{ story.removeFromInventory('espada_curva'); }}
+              {{ story.disable('espada_curva'); }}
+              </action>
+            </objt>
+
+            <objt id="lanza_de_la_justicia" inventoryName="Lanza de la Justicia">
+              <action id="Examinar">
+                                        <p>La caja tiene algo escrito: <br>
+                    <h3>“La lanza de la justicia brindara a su portador el poder para derrotar a las sombras y proteger la esperanza de todos, aun en la muerte tu espíritu guerrero te permitirá acabar con la maldad.”</h3>
+                  </p>
+              </action>
+
+              <action id="Guardar">
+                  <when>!story.isInInventory('lanza_de_la_justicia')</when>
+                  Es demasiado exagerado para mi gusto, pero la llevare en mano por si acaso.<br>
+                  Un arma es un arma después de todo y si es tan poderosa como dice en la inscripción me servirá.<br>
+                  {{ story.putInInventory('lanza_de_la_justicia'); }}
+              </action>
+
+              <action id="Usar">
+              <when>story.isInInventory('lanza_de_la_justicia')</when>
+              {{ story.removeFromInventory('lanza_de_la_justicia'); }}
+              {{ story.disable('lanza_de_la_justicia'); }}
+              </action>
+            </objt>
 
             <!-- Pages -->
             <page id="intro">
@@ -328,7 +374,7 @@
 
                 <p><show paragraph="puertaCentral">Explorar puerta central</show>.</p>
                 <paragraph id="puertaCentral">
-                    <p>Coloco las llaves en el orificio que corresponden (Aquí insertar un método usar llaves y si no las tiene que no pueda avanzar), pero sigo sin entender la palabra "Retav".
+                    <p>Coloco las llaves en el orificio que corresponden primero <interact with="llaveGemaAzul">coloco la llave con la gema azul</interact> y luego <interact with="llaveGemaRoja">la de gema roja</interact>, pero sigo sin entender la palabra "Retav".
                     <p> ¿Qué significa eso?<br>
                         Luego de pensar un poco, opte por acomodarlo al azar, sin conseguir nada.<br>
                         Seguí investigando para ver si conseguia algo, encontre una palabra en Latin escrita en la tablilla que abrí en la habitación izquierda, al pensar un poco y confirmar que ambas poseían las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves la puerta finalmente cedió.</p>
@@ -418,40 +464,36 @@
                 <p><show paragraph="puertaIzquierdaMadera">Explorar puerta de madera de la izquierda</show>.</p>
                 <paragraph id="puertaIzquierdaMadera">
                     <p>Al igual que la sala principal del segundo piso tiene buena iluminación pese a ser un cuarto pequeño,
-                        aquí hay un <interact with="solo una nota">cofre vacia abierto</interact> </p>
+                        aquí hay un <interact with="solo_una_nota">cofre vacío abierto</interact> </p>
                     <p><turn to="pag11">Salir de la habitacion</turn></p>
                 </paragraph>
                 <p><show paragraph="puertaDerechaMadera">Explorar puerta de madera de la derecha</show>.</p>
                 <paragraph id="puertaDerechaMadera">
-                    <p>Cuando entro a la habitación encuentro un armario, dentro encuentro una espada.</p>
+                    <p>Cuando entro a la habitación encuentro un armario, dentro encuentro una <interact with="espada_curva">espada</interact>.</p>
+
                     <p><turn to="pag11">Salir de la habitacion</turn></p>
 
                 </paragraph>
                 <p><show paragraph="puertaDerechaEbano">Explorar puerta de ebano de la derecha</show>.</p>
                 <paragraph id="puertaDerechaEbano">
                     <p>
-                        Algunas  secciones de la puerta parecen haber sido derretidas con alguna sustancia, la sala detrás de la puerta es exactamente igual.
-                        Al ingresar a la habitación de la derecha  veo que hay algunas botellas pequeñas y varios objetos de procedencia natural como, yerbas, hongos, y algunos de procedencia natural.
-                        Creo que lo que sea que elaboraron con esos ingredientes derritió la puerta de ébano, sorprendente, es un nivel de alquimia muy alto.
+                        Algunas  secciones de la puerta parecen haber sido derretidas con alguna sustancia, la sala detrás de la puerta es exactamente igual.<br>
+                        Al ingresar a la habitación de la derecha veo que hay algunas botellas pequeñas y varios objetos de procedencia natural como yerbas, hongos, y algunos de procedencia natural.<br>
+                        Creo que lo que sea que elaboraron con esos ingredientes derritió la puerta de ébano, ¡Sorprendente, es un nivel de alquimia muy alto!.
 
-                    </p><p><turn to="pag11">Salir de la habitacion</turn></p>
+                    </p>
+                    <p><turn to="pag11">Salir de la habitacion</turn></p>
 
 
                 </paragraph>
                 <p><show paragraph="puertaIzquierdaEbano">Explorar puerta de ebano de la izquierda</show>.</p>
                 <paragraph id="puertaIzquierdaEbano">
                     <p>
-                        Oigo un siseo, esto no me gusta abro un poco la puerta y eventualmente el origen del sonido está ahí. Una maldita serpiente, porque tenía que ser una serpiente.<br>
-                        La serpiente detecta mi presencia dado que sus ojos amarillos se centran en mí, la serpiente es bastante grande, es de un color negro, la esencia a muerte la rodea.<br>
+                        Oigo un siseo, esto no me gusta abro un poco la puerta y eventualmente el origen del sonido está ahí. Una maldita serpiente, por qué tenía que ser una serpiente !!??.<br>
+                        La serpiente detecta mi presencia dado que sus ojos amarillos se centran en mí. Es bastante grande, de un color negro, la esencia a muerte la rodea.<br>
                         La serpiente trata de atacarme, pero de alguna forma logro evitar ese ataque y la serpiente sale de la habitación.<br>
                         Tomo coraje y reviso la sala en busca de la serpiente, pero no la encuentro, creo que fue un golpe de suerte. <br>
-                        Nuevamente reviso la habitación en la que se encontraba la serpiente y encuentro un cofre largo, dentro hay una especie de lanza extraña de color azul.<br>
-                        La caja tiene algo escrito: <br>
-                    <h3>“La lanza de la justicia brindara a su portador el poder para derrotar a las sombras y proteger la esperanza de todos, aun en la muerte tu espíritu guerrero te permitirá acabar con la maldad.”</h3><br>
-                    Es demasiado exagerado para mi gusto, pero la llevare en mano por si acaso.<br>
-                    Un arma es un arma después de todo y si es tan poderosa como dice en la inscripción me servirá.<br>
-
-
+                        Nuevamente reviso la habitación en la que se encontraba la serpiente y encuentro un cofre largo, dentro hay una especie de <interact with="lanza_de_la_justicia">lanza extraña de color azul</interact>.<br>
                     </p>
                     <p><turn to="pag11">Salir de la habitacion</turn></p>
 
@@ -460,7 +502,7 @@
                 <paragraph id="puertaCentral">
                     <!--Acertijo-->
                     <p>
-                        Dentro hay una sala que a diferencia de las anteriores la única luz que entra es la de un toma luz en el techo de la sala que ilumina una armadura de color negro que esta sentando sobre un trono hay varias armas rota lanzas, espadas, hachas, mazas, restos de escudos sin mencionar los restos de los propietarios de las armas.
+                        Dentro hay una sala que a diferencia de las anteriores la única luz que entra es la de un toma luz en el techo de la sala que ilumina una armadura de color negro que esta sentando sobre un trono hay varias armas rotas: lanzas, espadas, hachas, mazas, restos de escudos, sin mencionar los restos de los propietarios de las armas.
                     </p>
                     <p>
                         Al ingresar al cuarto la puerta detrás de mí se cierra con un estruendo.
@@ -470,7 +512,6 @@
             </page>
             <page id="pag12">
                 <p>El aire dentro de la habitación se mueve con fuerza </p>
-
                 <p>
 
                     -	¡GOAHHHHHHHHHHHHHHHHHHHH!<br>
@@ -1488,6 +1529,7 @@
         <script>
 $(function () {
     new DedalusWeb({
+        onPrint : onPrintFade,
         domSource: $('#story'),
         domTarget: $('#host'),
         titleTarget: $('#title'),
