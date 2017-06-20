@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="../css/story.css"> <!--estilo general del juego -->
         <script src="../js/Dados.js"></script><!--para llamar el script de los dados-->
         <link href="../css/Dados.css" rel="stylesheet" type="text/css"><!--llamamos a la carpeta css para los estilos de los dados-->
-        <script src="fade.js"></script>
 
     </head>
     <body>
@@ -265,6 +264,25 @@
               </action>
             </objt>
 
+
+            <objt id="Abrigo_Nedmass" inventoryName="Abrigo Nedmass">
+              <action id="Examinar">
+                <p>Ya no necesitaré mi vieja capa de noche<br> <br>
+
+                  </p>
+              </action>
+
+              <action id="Guardar">
+                  <when>!story.isInInventory('Abrigo_Nedmass')</when>
+                  <p></p>
+                  {{ story.putInInventory('Abrigo_Nedmass'); }}
+              </action>
+
+              <action id="Usar">
+              <when>story.isInInventory('Abrigo_Nedmass')</when>
+              {{ story.removeFromInventory('capa'); }}
+              </action>
+            </objt>
 
 
 
@@ -1465,27 +1483,27 @@
             </page>
             <page id="pag34">
                 <p>
-                    -	Asi que ¿aun queda un último acertijo despues del guardián? – Nedmass me rebelo el último acertijo para salir de la torre.
+                    -	Asi que ¿aun queda un último acertijo despues del guardián? – Nedmass me reveló el último acertijo para salir de la torre.
                 </p>
                 <paragraph id="parrafo50">
                     <p>
-                        -	Bueno, esos es todo joven príncipe, pero eh aquí mi último regalo – luego de decir eso Nedmass empieza a brillar y se convierte en un abrigo blanco.
-                        -	Adiós compañero, fue por un corto periodo de tiempo, pero fue divertido – me quito la capa de la noche ya que no la necesitare mas, me quito mi saco está sucio y roto por todas partes. Y me coloco el abrigo Nedmass.
-                        -	De acuerdo hora de terminar con esto.
-                        Me dirijo al séptimo piso sin saber que me espera.
+                        -	Bueno, eso es todo joven príncipe, pero he aquí mi último regalo – luego de decir eso Nedmass empieza a brillar y se convierte en un abrigo blanco.<br>
+                        -	Adiós compañero, fue por un corto periodo de tiempo, pero fue divertido – me quito la capa de la noche ya que no la necesitare mas, me quito mi saco está sucio y roto por todas partes. Y me coloco el <interact with="abrigo_Nedmass">abrigo Nedmass</interact>.<br>
+                        -	De acuerdo hora de terminar con esto.<br>
+                        Me dirijo al séptimo piso sin saber que me espera.<br>
                         Al llegar al cumbre de la torre, se encuentra teñida por el atardecer, tengo una vista increíble de Los Prados, realmente extrañe el exterior y hubo casos en los que pensé que jamás volvería a verlos.
                     </p>
                     <p><show paragraph="parrafo51">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo51">
                     <p>
-                        Al dirigir la vista al centro de la torre veo una figura familiar arrodillada, y a una figura de gran tamaño y armadura verde obscuro sosteniendo un hacha parado justo enfrente de mi encapuchado amigo.
-                        Parece la escena de una ejecución, ahora que veo bien hay rastros de pelea por todo el lugar.
-                        -	Casi nos engañas, David – murmura la figura arrodillada con un tono burlón característico.
-                        -	…… - la figura negra no responde.
-                        -	Pensar que dejarías un cuerpo falso con un corazón de cristal para engañarnos.
-                        -	…… - la figura negra no muestra reacción alguna a las palabras de su víctima.
-                        La figura negra levanta su hacha lista para llevar a cabo la ejecución del intruso que invadió su torre.
+                        Al dirigir la vista al centro de la torre veo una figura familiar arrodillada, y a una figura de gran tamaño y armadura verde obscuro sosteniendo un hacha parado justo enfrente de mi encapuchado amigo.<br>
+                        Parece la escena de una ejecución, ahora que veo bien hay rastros de pelea por todo el lugar.<br>
+                        -	Casi nos engañas, David – murmura la figura arrodillada con un tono burlón característico.<br>
+                        -	…… - la figura negra no responde.<br>
+                        -	Pensar que dejarías un cuerpo falso con un corazón de cristal para engañarnos.<br>
+                        -	…… - la figura negra no muestra reacción alguna a las palabras de su víctima.<br>
+                        La figura negra levanta su hacha lista para llevar a cabo la ejecución del intruso que invadió su torre.<br>
                         *zuum*
                     </p>
                     <p><turn to="pag35">Página Siguiente</turn></p>
@@ -1493,22 +1511,22 @@
             </page>
             <page id="pag35">
                 <p>El hacha cae a gran velocidad, pero de alguna forma la intercepto con Paradoxia y el hacha que desafía a la muerte es destruida.</p>
-                <p>No sé cómo, pero pude correr con suficiente velocidad para cubrir los 6 metros que nos separaban en un instante.
-                    David retrocede y se prepara para atacar, su objetivo ahora soy yo, en este momento la mayor amenaza es quien destrozo su arma.
-                    Sé que Paradoxia no servirá contra David el nigromante, asique la coloco en mi espalda y desenfundo a Ice bite. Al sacar mi espada, me siento revitalizado.
-                    Sujeto con firmeza mi arma y avanzo a gran velocidad contra mi enemigo, este trata de golpearme pero lo esquivo.
+                <p>No sé cómo, pero pude correr con suficiente velocidad para cubrir los 6 metros que nos separaban en un instante.<br>
+                    David retrocede y se prepara para atacar, su objetivo ahora soy yo, en este momento la mayor amenaza es quien destrozo su arma.<br>
+                    Sé que Paradoxia no servirá contra David el nigromante, asique la coloco en mi espalda y desenfundo a Ice bite. Al sacar mi espada, me siento revitalizado.<br>
+                    Sujeto con firmeza mi arma y avanzo a gran velocidad contra mi enemigo, este trata de golpearme pero lo esquivo.<br>
                     *Zas**zas**zas*
                 </p>
                 <p><show paragraph="parrafo52">continuar</show>.</p>
                 <paragraph id="parrafo52">
                     <p>
-                        Un golpe, dos golpes, tres golpes
-                        Trato de golpear en el espacio que deja cada parte de la armadura.
-                        *zas**zas**zas*
-                        Cuatro golpes, cinco golpes, seis golpes
-                        Continúo esquivando los lentos ataques de David y continúo golpeando.
-                        *za-*
-                        En el momento que intente dar el séptimo golpe, David sujeta mi brazo y casi al instante comienza a apretar mi cuello.
+                        Un golpe, dos golpes, tres golpes<br>
+                        Trato de golpear en el espacio que deja cada parte de la armadura.<br>
+                        *zas**zas**zas*<br>
+                        Cuatro golpes, cinco golpes, seis golpes<br>
+                        Continúo esquivando los lentos ataques de David y continúo golpeando.<br>
+                        *za-*<br>
+                        En el momento que intente dar el séptimo golpe, David sujeta mi brazo y casi al instante comienza a apretar mi cuello.<br>
                         -	¡Gh!...
                     </p>
                     <p><turn to="pag36">Página Siguiente</turn></p>
@@ -1517,29 +1535,30 @@
             <page id="pag36">
                 <p> Con mi brazo izquierdo sujeto el brazo que estruja mi cuello, en un intento desesperado por liberarme.</p>
                 <p>
-                    -	¡Gah…!
-                    Debo liberarme….
-                    -	¡El tiempo ah llegado potador! ¡libérate de tus ataduras y destruye a tu enemigo!
-                    Esa voz. ¡Es Avalon! En ese mismo momento mi mano y antebrazo son cubiertos por hielo formando una especie de guante, eso pasa también en el brazo que sostiene la espada.
-                    Mi respiración se siente más fría, mi cuerpo está más ligero.
-                    El brazo que estoy sujetando con mi brazo izquierdo se empieza a congelar.
-                    Entonces aprieto con más fuerza y el brazo que sostenía mi cuello se hace pedazos.
-                    No sé si lo habré tomado por sorpresa pero David suelta mí otro brazo y estoy nuevamente libre.
-                    David o la coraza sin vida que solía ser David retrocede y se prepara para atacar.
+                    -	¡Gah…!<br>
+                    Debo liberarme….<br>
+                    <img src="imagenes/Pelea.jpg">
+                    -	¡El tiempo ah llegado portador! ¡libérate de tus ataduras y destruye a tu enemigo!<br>
+                    Esa voz. ¡Es Avalon! En ese mismo momento mi mano y antebrazo son cubiertos por hielo formando una especie de guante, eso pasa también en el brazo que sostiene la espada.<br>
+                    Mi respiración se siente más fría, mi cuerpo está más ligero.<br>
+                    El brazo que estoy sujetando con mi brazo izquierdo se empieza a congelar.<br>
+                    Entonces aprieto con más fuerza y el brazo que sostenía mi cuello se hace pedazos.<br>
+                    No sé si lo habré tomado por sorpresa pero David suelta mí otro brazo y estoy nuevamente libre.<br>
+                    David o la coraza sin vida que solía ser David retrocede y se prepara para atacar.<br>
                     Pero yo hago lo mismo y esta vez cortare todo de un solo tajo.
                 </p>
                 <p><show paragraph="parrafo53">continuar</show>.</p>
                 <paragraph id="parrafo53">
                     <p>
-                        Puedo sentir que la hoja de Ice Bite esta deprendiendo un frio antinatural, es como si me acompañara en la liberación de mi poder.
-                        David empieza a correr hacia mí y yo hago lo mismo, pero con más velocidad.
-                        *ZAS*
-                        El pecho de David está atravesado, 10 golpes en lo que pareció ser un instante, 9 cortes que desmembraron a David y una estocada que atravesó y destruyo el corazón de cristal que mantenía vivo a el cadáver de David.
-                        Extraigo mi espada del pecho de David, lo que queda de David cae al suelo con un ruido seco.
-                        -	Finalmente se termino – al caer la noche declaro mi victoria
-                        -	Bueno es hora de volver.
-                        Cuando me dispongo a resolver el acertijo que me llevara a los pies de la torre.
-                        Algo me toma del pie.
+                        Puedo sentir que la hoja de Ice Bite esta deprendiendo un frio antinatural, es como si me acompañara en la liberación de mi poder.<br>
+                        David empieza a correr hacia mí y yo hago lo mismo, pero con más velocidad.<br>
+                        *ZAS*<r>
+                        El pecho de David está atravesado, 10 golpes en lo que pareció ser un instante, 9 cortes que desmembraron a David y una estocada que atravesó y destruyo el corazón de cristal que mantenía vivo a el cadáver de David.<br>
+                        Extraigo mi espada del pecho de David, lo que queda de David cae al suelo con un ruido seco.<br>
+                        -	Finalmente se termino – al caer la noche declaro mi victoria<br>
+                        -	Bueno es hora de volver.<br>
+                        Cuando me dispongo a resolver el acertijo que me llevara a los pies de la torre.<br>
+                        Algo me toma del pie.<br>
                     </p>
                     <p><turn to="pag37">Página Siguiente</turn></p>
                 </paragraph>
@@ -1547,32 +1566,32 @@
             <page id="pag37">
                 <p>-	¡…..! – cuando veo que es lo que me sujeta es un brazo negro con un aura verde a su alrededor.</p>
                 <p>
-                    -	¡¡David!!
-                    De los restos del perforado pecho de David sale una extraña nube negra con forma de esqueleto que me arrastra hacia él.
-                    Al intentar cortar su brazo mi espada solo lo atraviesa.
-                    ¡Maldición! ¡Si no hago algo rápido moriré!
-                    -	El miedo es tu peor enemigo portador, enfréntate a él y triunfaras.
-                    La voz de Avalon resuena en mi cabeza.
-                    -	¿enfrentar mis miedos eh?  ¡De acuerdo!
-                    La energía inunda mi cuerpo.
-                    Un solo corte, un solo corte.
-                    Y esta pesadilla habrá acabado.
-                    *ZASSS*
-                    La hoja de mi espada brilla con la luz de la luna dibujando un arco blanco.
+                    -	¡¡David!!<br>
+                    De los restos del perforado pecho de David sale una extraña nube negra con forma de esqueleto que me arrastra hacia él.<br>
+                    Al intentar cortar su brazo mi espada solo lo atraviesa.<br>
+                    ¡Maldición! ¡Si no hago algo rápido moriré!<br>
+                    -	El miedo es tu peor enemigo portador, enfréntate a él y triunfaras.<br>
+                    La voz de Avalon resuena en mi cabeza.<br>
+                    -	¿enfrentar mis miedos eh?  ¡De acuerdo!<br>
+                    La energía inunda mi cuerpo.<br>
+                    Un solo corte, un solo corte.<br>
+                    Y esta pesadilla habrá acabado.<br>
+                    *ZASSS*<br>
+                    La hoja de mi espada brilla con la luz de la luna dibujando un arco blanco.<br>
                     Realmente no sé cómo, pero logre vencer a David.
                 </p>
                 <p><show paragraph="parrafo54">continuar</show>.</p>
                 <paragraph id="parrafo54">
                     <p>
-                        El hielo se desprende de mi cuerpo mientras observo al espíritu David partirse a la mitad con un corte vertical limpio.
-                        -	Gane, realmente, gane. Ja jaja jajajaja.
-                        Rio a carcajadas tas declarar mi victoria casi imposible.
-                        Pero mientras lo hago no puedo evitar sentirme cansado.
-                        Decido descansar antes de salir de la torre.
-                        No sé cuánto tiempo estuve sentado junto al pedestal que contenía el acertijo para salir. Pero luego de utilizar el pedestal, tras un destello estaba a los pies de la torre.
-                        El caballo con el que vine aun seguía ahí, creo que ah pasado un día desde que entre y salí.
-                        -	Hora de volver a casa muchacho – son las palabras que le digo al caballo al momento de subirme.
-                        -	Y así emprendí mi viaje de regreso a casa.
+                        El hielo se desprende de mi cuerpo mientras observo al espíritu David partirse a la mitad con un corte vertical limpio.<br>
+                        -	Gane, realmente, gane. Ja jaja jajajaja.<br>
+                        Rio a carcajadas tas declarar mi victoria casi imposible.<br>
+                        Pero mientras lo hago no puedo evitar sentirme cansado.<br>
+                        Decido descansar antes de salir de la torre.<br>
+                        No sé cuánto tiempo estuve sentado junto al pedestal que contenía el acertijo para salir. Pero luego de utilizar el pedestal, tras un destello estaba a los pies de la torre.<br>
+                        El caballo con el que vine aun seguía ahí, creo que ah pasado un día desde que entre y salí.<br>
+                        -	Hora de volver a casa muchacho – son las palabras que le digo al caballo al momento de subirme.<br>
+                        -	Y así emprendí mi viaje de regreso a casa.<br>
                     </p>
                     <p><turn to="pag38">Página Siguiente</turn></p>
                 </paragraph>
@@ -1580,12 +1599,12 @@
             <page id="pag38">
                 <h3>EPILOGO</h3>
                 <p>
-                    Cabalgue toda la noche hacia el reino y cuando llegue al castillo por la mañana, mi padre estaba esperándome.
-                    Ese día hubo una pequeña fiesta de bienvenida, aunque estaba realmente cansado por el viaje mi padre insistió tanto que tuve que participar. Incluso Flora a quien generalmente no le agradan las fiestas participio, el resto del día pasó con normalidad.
-                    Lo único extraño es que el paradigma de lo inamovible desapareció sin dejar rastro, no es que en realidad lo quiera, ese artilugio habría dado mucho problemas pero me extraño que desapareciera una noche sin más.
-                    Lo conté a Wave sobre el hechicero encapuchado, Wave dice que el hechicero pertenece a una antigua orden encargada de mantener el equilibrio en el continente, Los Centinelas.
-                    El me asegura que pese a que haya desaparecido durante la batalla contra el nigromante David lo más probable es que esté vivo en alguna parte.
-                    Mis días pasaron con tranquilidad, y por alguna razón me siento con más energía que antes, según dice Avalon en las charlas que tenemos a veces es por el hecho de estar completo al fin.
+                    Cabalgue toda la noche hacia el reino y cuando llegue al castillo por la mañana, mi padre estaba esperándome.<br>
+                    Ese día hubo una pequeña fiesta de bienvenida, aunque estaba realmente cansado por el viaje mi padre insistió tanto que tuve que participar. Incluso Flora a quien generalmente no le agradan las fiestas participio, el resto del día pasó con normalidad.<br>
+                    Lo único extraño es que el paradigma de lo inamovible desapareció sin dejar rastro, no es que en realidad lo quiera, ese artilugio habría dado mucho problemas pero me extraño que desapareciera una noche sin más.<br>
+                    Lo conté a Wave sobre el hechicero encapuchado, Wave dice que el hechicero pertenece a una antigua orden encargada de mantener el equilibrio en el continente, Los Centinelas.<br>
+                    El me asegura que pese a que haya desaparecido durante la batalla contra el nigromante David lo más probable es que esté vivo en alguna parte.<br>
+                    Mis días pasaron con tranquilidad, y por alguna razón me siento con más energía que antes, según dice Avalon en las charlas que tenemos a veces es por el hecho de estar completo al fin.<br>
                     Realmente no se la razón, pero espero que estos días de paz y quietud duren bastante tiempo.
                 </p>
                 <h3>FIN</h3>
@@ -1607,7 +1626,6 @@
         <script>
 $(function () {
     new DedalusWeb({
-        onPrint : onPrintFade,
         domSource: $('#story'),
         domTarget: $('#host'),
         titleTarget: $('#title'),
