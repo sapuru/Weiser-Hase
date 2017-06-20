@@ -172,6 +172,80 @@
               </action>
             </objt>
 
+            <objt id="capa" inventoryName="Capa">
+              <action id="Examinar">
+                <p>Está algo desgastada<br>
+
+                  </p>
+              </action>
+
+              <action id="Guardar">
+                  <when>!story.isInInventory('capa')</when>
+                  <p>Mejor la llevo.</p>
+                  {{ story.putInInventory('capa'); }}
+              </action>
+
+              <action id="Usar">
+              <when>story.isInInventory('capa')</when>
+              {{ story.removeFromInventory('capa'); }}
+              {{ story.disable('capa'); }}
+              </action>
+            </objt>
+
+            <objt id="Paradoxia" inventoryName="Paradoxia">
+              <action id="Examinar">
+                <p>No tiene imperfecciones pero a la vez esta exento de algún tipo de perfección.<br>
+                Es totalmente perfecto sin ninguna falla en su lisa superficie, pero es imperfecto porque carece de significado, nombre o historia por su falta de detalles, grabados o dibujos no es perfecta ya que no tiene significado.<br>
+                Sin significado, aun siendo un objeto tan poderoso es totalmente inútil para su portador.<br>
+                ¿Tiene algún sentido? Su perfección es la causa de su imperfección.<br>
+                Pese a no conocer el nombre del escudo, todos esos pensamientos y declaraciones sin sentido recorren mi mente y me arrastran hacia las profundidades de una contradicción interminable.<br>
+                -	¿Que acaba de pasar? – por un momento me perdí pensando en contradicciones y cosas sin algún sentido.<br>
+                -	Oh, parece que fuiste cautivado por Paradoxia – exclamada mi acompañante, mientras señala el escudo.<br>
+                -	¿Paradoxia? – Jamás escuche de un escudo que sea llamado Paradoxia.<br>
+                -	Un escudo que anula causa y efecto, mediante una contradicción lógica<br>
+                -	¿una contradicción dices? – en pocas palabras anulara el significado de lo que sea mediante una contradicción a su existencia.<br>
+                -	Es un articulo realmente poderoso joven Draicon, deberías conservarlo.
+                  </p>
+              </action>
+
+              <action id="Guardar">
+                  <when>!story.isInInventory('Paradoxia')</when>
+                  <p>          No soy un gran fanático de los escudo pero si es tan poderoso lo conservare. Oh otra contradicción.
+                              -	Je je – una pequeña risa se me escapa.
+                              -	Mm. ¿Sucede algo Draicon?
+                              -	Em. No realmente, simplemente algo me pareció gracioso..</p>
+                  {{ story.putInInventory('Paradoxia'); }}
+              </action>
+
+              <action id="Usar">
+              <when>story.isInInventory('Paradoxia')</when>
+
+              </action>
+            </objt>
+
+
+            <objt id="colgante" inventoryName="Colgante">
+              <action id="Examinar">
+                <p> Un colgante de estas características puede ser muy útil, dice Nedmass, simplemente me alivia que tú lo poseas.<br> <br>
+
+                  </p>
+              </action>
+
+              <action id="Guardar">
+                  <when>!story.isInInventory('colgante')</when>
+                  <p>Debo mantener el ojo encima de Nedmass y ocultar bien el pendiente, ya sé que podría suceder si Nedmass trama algo. No caeré en un cliché tan viejo.</p>
+                  {{ story.putInInventory('colgante'); }}
+              </action>
+
+              <action id="Usar">
+              <when>story.isInInventory('colgante')</when>
+              {{ story.removeFromInventory('colgante'); }}
+              {{ story.disable('colgante'); }}
+              </action>
+            </objt>
+
+
+
             <!-- Pages -->
             <page id="intro">
 
@@ -513,7 +587,6 @@
             <page id="pag12">
                 <p>El aire dentro de la habitación se mueve con fuerza </p>
                 <p>
-
                     -	¡GOAHHHHHHHHHHHHHHHHHHHH!<br>
                     La extraña armadura antes inmóvil dio un salto en mi dirección.<br>
                     -	¿¡….!?  <br>
@@ -530,7 +603,7 @@
                     Creo que utilizare la lanza servirá, hora del contraataque, tomo la lanza con ambas manos y me preparo para el ataque de la armadura.<br>
                     -	¡NO DEJARE QUE PASES! – proclama la armadura<br>
                     La armadura se lanza hacia mí nuevamente pero no huiré mas atravesare el pecho de la armadura, un solo golpe y todo se decidirá……<br>
-
+                    <img src="imagenes/Malvado.jpg">
                 </p>
                 <p><show paragraph="parrafo18">continuar</show>.</p>
                 </paragraph>
@@ -554,9 +627,10 @@
                         Repentinamente soy tomado del cuello desde atrás, jalado hacia la pared.<br>
                         ¡¡Es la maldita armadura que se niega a desaparecer!!<br>
                         Me sofoco……<br>
-                        Me ah levantado del suelo con solo una mano.<br>
+                        Me ha levantado del suelo con solo una mano.<br>
                         -	¡…Gah!<br>
                         Está aplicando aun más fuerza, me romperá el cuello si no pienso en algo rápido.<br>
+                        <img src="imagenes/Pelea.jpg">
 
                     </p>
                     <p><turn to="pag13">Página Siguiente</turn></p>
@@ -581,7 +655,6 @@
                         No perderé más tiempo reflexionando sobre la armadura mejor continuo hacia la siguiente sala.<br>
                         Atravieso la puerta hacia el tercer piso, y lo que veo no es nada normal.<br>
 
-
                     </p>
                     <p><turn to="pag14">Página Siguiente</turn></p>
                 </paragraph>
@@ -593,15 +666,14 @@
                 <p>
                     En contraste con los dos cuarto anteriores, el tercer piso es un lugar lleno de vegetación y vida.<br>
                     El diseño y tamaño de la sala es exactamente igual a los anteriores, pero en el centro hay una especie de fuente de mármol que expulsa agua.<br>
-                    Las puertas que dan a las otras salas son de roca caliza que tienen grabado  una persona y alguna especie de criatura con cuerpo de león, alas y rostro femenino.<br>
-                    La criatura parece decirle algo a la persona frente a ella, pero parece que la persona en cuestión dice algo que disgusta a la criatura y esta lo devora.<br>
-                    Que morboso.<br>
-
+                    Las puertas que dan a las otras salas son de roca caliza que tienen grabado una persona y alguna especie de criatura con cuerpo de león, alas y rostro femenino.<br>
+                    La criatura parece decirle algo a la persona frente a ella, pero parece que la persona en cuestión dice algo que disgusta a la criatura y ésta lo devora.<br>
+                    ¡Qué morboso!.
                 </p>
                 <p><show paragraph="puertaIzquierda">Explorar puerta de la izquierda</show>.</p>
                 <paragraph id="puertaIzquierda">
                     <p>
-                        encuentro lo que parece ser una especie de capa con capucha, está un poco desgatada, pero aun así decido tomarla.
+                        Encuentro lo que parece ser una especie de <interact with="capa">capa con capucha</interact>.
                     </p>
                     <p><turn to="pag14">Salir de la habitacion</turn></p>
 
@@ -628,10 +700,10 @@
                     -	¿Y cuál es tu nombre?, joven portador de la Lanza de Cetina – me pregunta Nedmass con una enorme sonrisa<br><br>
                     -	Mi nombre es Draicon.<br><br>
                     -	Y dime joven Draicon, ¿qué te trae al puente entre la tierra y el cielo?<br><br>
-                    -	Eh venido por la espada del guerrero dragon.<br><br>
-                    -	Hm… Espada, espada. ¿es una espada con escritura rúnica en su hoja y que la protección es, convenientemente, una boca de dragon? – Nedmass hace gestos con sus manos mientras describe, con una exactitud aterradora la espada que eh venido a buscar.<br><br>
-                    Acierto con la cabeza, lo que parece satisfacer a Nedmass el cual dibuja una gigante sonrisa en su rostro.<br><br>
-                    -	Ah, si la eh vistos joven muchacho, pero temo que aun  te falta un poco para encontrarla – exclama el peculiar ser.<br><br>
+                    -	He venido por la espada del guerrero dragon.<br><br>
+                    -	Hm… Espada, espada. ¿es una espada con escritura rúnica en su hoja y que la protección es, convenientemente, una boca de dragon? – Nedmass hace gestos con sus manos mientras describe, con una exactitud aterradora la espada que he venido a buscar.<br><br>
+                    Asiento con la cabeza, lo que parece satisfacer a Nedmass el cual dibuja una gigante sonrisa en su rostro.<br><br>
+                    -	Ah, si la he visto joven muchacho, pero temo que aun te falta un poco para encontrarla – exclama el peculiar ser.<br><br>
                     -	Me ayudarías mucho, si me dices en donde se encuentra.<br><br>
                     -	Oh por supuesto, mi querido amigo, nada me haría mas feliz.<br><br>
                     Realmente es un alivio poder conseguir algo de información clara, para variar.<br><br>
@@ -644,17 +716,17 @@
                     ¿Un acertijo? No suena muy difícil, si lo comparas con todo lo que pase anteriormente.<br><br>
                     -	Se lo que debes estar pensando muchacho. ‘Es solo un acertijo, nada que temer’, tal vez tengas razón pero, si por alguna extraña razón, llegases a responder de manera errónea. Ella no dudara ni por un segundo en devorarte.<br><br>
                     Nedmass dice todo eso con una sonrisa, no puedo evitar sentir un pequeño escalofrió subirme por la espalda.<br><br>
-                    -	¡Ha!, pero no debes temer muchacho. – agrega Nedmass con entusiasmo – yo el gran Nedmass te ayudare.<br><br>
+                    -	¡Ah!, pero no debes temer muchacho. – agrega Nedmass con entusiasmo – yo el gran Nedmass te ayudare.<br><br>
                     -	¿Me ayudaras? – no puedo evitar sentirme sorprendido.<br><br>
                     -	Pero por supuesto muchacho, la esfinge y yo somos muy buenos amigos – proclama Nedmass con orgullo en su voz.<br><br>
-                    -	¿ cómo lo harás? <br><br>
+                    -	¿Cómo lo harás? <br><br>
                     -	¿Hacer que joven muchacho?<br><br>
                     -	¿Cómo me ayudaras?<br><br>
                     -	Ah por supuesto, yo, joven muchacho, te diré el acertijo y la respuesta.<br><br>
                     ¿El acertijo y su respuesta? Increíble, eso es más que una simple ayuda, prácticamente me está salvando de una muerte segura.<br><br>
                     -	¿Estas listo?<br><br>
                     -	Si, por supuesto que si – no puedo evitar emocionarme por esto.<br><br>
-                    -	Aquí va, ‘¿que es, lo que el que lo fabrica no lo necesita, el que lo compra no lo usa y a quien se lo regalan duerme en el?’<br><br>
+                    -	Aquí va, ‘¿Que es, lo que el que lo fabrica no lo necesita, el que lo compra no lo usa y a quien se lo regalan duerme en el?’<br><br>
                     -	¿Qué es eso?<br><br>
                     -	Un ataúd, joven muchacho, el fabricante no lo necesita, puesto que aun esta vivo. El que lo compra no lo utiliza porque efectivamente sigue vivo, y el difunto dormirá en el eternamente.<br><br>
                     -	Es bastante simple, una vez lo piensas bien, ¿no lo crees joven?<br><br>
@@ -708,8 +780,8 @@
                         *chiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiss**Clanck*<br>
                         Ahora solo queda silencio.<br>
                         -	Disculpa, joven Draicon, ¿Qué haces?<br>
-                        -	¿eh? ¿Que parece que hago? Sostengo la puerta, en caso de que halla una explosión dentro.<br>
-                        -	Hm ,ciertamente eso parece, pero en el hipotético caso de que hubiera una explosión. Eso de sostener la puerta con tu espalda es peligroso, te podrías haber lastima, joven Draicon.<br>
+                        -	¿eh? ¿Que parece que hago? Sostengo la puerta, en caso de que haya una explosión dentro.<br>
+                        -	Hm ,ciertamente eso parece, pero en el hipotético caso de que hubiera una explosión. Eso de sostener la puerta con tu espalda es peligroso, te podrías haber lastimado, joven Draicon.<br>
                         De hecho, si lo pienso mejor, realmente eso fue una mala idea.<br>
                         No es como si mi cuerpo hubiera sido suficiente para resistir la fuerza de la explosión.<br>
                         -	Em.. mejor veo que paso con la lanza<br>
@@ -735,55 +807,54 @@
 
                 <paragraph id="parrafo20">
                     <p>
-                        -	¿Quién se atreve a entrar a la torre maldita? – una bella pero imponente voz, preguntando quien soy.
-                        -	Oh bella esfinge, tan bella y feroz como siempre
-                        -	¿Nedmass? ¿Qué quieres ahora, no te basta con molestarme con tus charlas sin sentido?
-                        -	Vamos no digas eso, ¿Acaso no te divierte el charlar conmigo?
-                        -	Te lo eh dicho miles de veces y te lo repetiré ahora, no lo disfruto. Asique deja de molestarme con tus balbuceos.
-                        -	Oh que cruel eres y yo que lo hacía por ti.
-                        -	¿Por mi? No necesito nada de un bufón charlatán como tú. ¿Y que crees que estás haciendo abriendo las puertas hacia los pisos superiores?
-                        Creo que esto se está saliendo de control, mejor intervengo.
-                        -	De hecho yo abrí la puerta.
-                        -	Mmm. ¿y quién eres tú?
-                        -	Mi nombre es Draicon.
-                        Trato de responder con confianza.
-                        -	Entonces, Draicon. ¿Qué es lo que quieres?
-                        -	Quiero que me dejes pasar al siguiente piso
-                        -	¿Qué? ¿No es obvio? – Nedmass hace un pregunta totalmente fuera de lugar.
-                        Los ojos de la esfinge se ensanchan con disgusto, pero no se si por mi declaración, o por el comentario de Nedmass.
-                        -	Que así sea joven aventurero. Si al siguiente piso deseas ingresar, la respuesta a mi acertijo deberás acertar.
-                        -	Ohh – exclama Nedmass, mientras aplaude a la esfinge – sabes muchacho, ella lleva practicando eso desde hace bastante tiempo.
-                        -	¡Cierra el hocico, maldito gusano repugnante! – no se si su voz esta llena de ira o de vergüenza por lo que dijo mi acompañante.
-                        La esfinge, al recuperarse, dirige su mirada hacia mi y recita el acertijo.
-                        Pero no puedo evitar notar algo raro en el acertijo.
+                        -	¿Quién se atreve a entrar a la torre maldita? – una bella pero imponente voz, preguntando quien soy.<br>
+                        -	Oh bella esfinge, tan bella y feroz como siempre<br>
+                        -	¿Nedmass? ¿Qué quieres ahora, no te basta con molestarme con tus charlas sin sentido?<br>
+                        -	Vamos no digas eso, ¿Acaso no te divierte el charlar conmigo?<br>
+                        -	Te lo he dicho miles de veces y te lo repetiré ahora, no lo disfruto. Asique deja de molestarme con tus balbuceos.<br>
+                        -	Oh que cruel eres y yo que lo hacía por ti.<br>
+                        -	¿Por mi? No necesito nada de un bufón charlatán como tú. ¿Y que crees que estás haciendo abriendo las puertas hacia los pisos superiores?<br>
+                        Creo que esto se está saliendo de control, mejor intervengo.<br>
+                        -	De hecho yo abrí la puerta.<br>
+                        -	Mmm. ¿y quién eres tú?<br>
+                        -	Mi nombre es Draicon.<br>
+                        Trato de responder con confianza.<br>
+                        -	Entonces, Draicon. ¿Qué es lo que quieres?<br>
+                        -	Quiero que me dejes pasar al siguiente piso<br>
+                        -	¿Qué? ¿No es obvio? – Nedmass hace un pregunta totalmente fuera de lugar.<br>
+                        Los ojos de la esfinge se ensanchan con disgusto, pero no se si por mi declaración, o por el comentario de Nedmass.<br>
+                        -	Que así sea joven aventurero. Si al siguiente piso deseas ingresar, la respuesta a mi acertijo deberás acertar.<br>
+                        -	Ohh – exclama Nedmass, mientras aplaude a la esfinge – sabes muchacho, ella lleva practicando eso desde hace bastante tiempo.<br>
+                        -	¡Cierra el hocico, maldito gusano repugnante! – no se si su voz esta llena de ira o de vergüenza por lo que dijo mi acompañante.<br>
+                        La esfinge, al recuperarse, dirige su mirada hacia mi y recita el acertijo.<br>
+                        Pero no puedo evitar notar algo raro en el acertijo.<br>
                     </p>
                     <p><show paragraph="parrafo21">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo21">
                     <p>
-
-                        -	Disculpa esfinge. ¿Podrías repetirlo?
-                        -	Solo lo diré una vez mas.
-                        Mi proceso mental se detiene.
-                        Luego de que la esfinge repite el acertijo mi sospechas se confirman.
-                        El acertijo que me dijo Nedmass es totalmente distinto al que acaba de recitar la esfinge.
-                        Veo de reojo a Nedmass quien me guiña el ojo con confianza.
-                        La respuesta es…
-                        Luego de darle mi respuesta a la esfinge esta queda en silencio un    momento. Y luego dice.
-                        -	Han pasado muchos años desde que alguien dijo la respuesta correcta al acertijo. Bien muchacho puedes continuar.
-                        Al momento de decir eso la esfinge desaparece en un pequeño tornado de arena.
-                        *cof**cof**cof*
-                        Nedmass y yo tosemos, debido a la cantidad de arena que se levanta.
-                        En cuanto el pequeño tornado desaparece puedo oír a Nedmass.
-                        -	¡Puagh! Realmente detesto cuando hace eso, realmente a veces es tan desconsiderada. Ni siquiera se despidió.
-                        -	Sabes Nedmass.
-                        -	Dime joven Draicon.
-                        -	El acertijo que dijo la esfinge era totalmente distinto al que me dijiste tu.
-                        -	¿Tu crees? Para mi eran lo mismo, de cualquier forma cada cierto tiempo cambia el acertijo. ¿Tal vez fue eso? ¿no lo crees?
-                        -	Sabes, podría haber mencionado eso antes. ¿No te parece?
-                        -	Debo pedirte disculpas joven Draicon – dice Nedmass mientras hace una pequeña reverencia – pero la emoción de tener un compañero, después de tanto tiempo me hizo olvidar algo tan importante.
-                        Creo que realmente lo lamenta, por suerte el acertijo fue sencillo, por lo que no creo que deba darle tanta importancia.
-                        Aceptando las disculpas de Nedmass procedo al siguiente cuarto.
+                        -	Disculpa esfinge. ¿Podrías repetirlo?<br>
+                        -	Solo lo diré una vez mas.<br>
+                        Mi proceso mental se detiene.<br>
+                        Luego de que la esfinge repite el acertijo mi sospechas se confirman.<br>
+                        El acertijo que me dijo Nedmass es totalmente distinto al que acaba de recitar la esfinge.<br>
+                        Veo de reojo a Nedmass quien me guiña el ojo con confianza.<br>
+                        La respuesta es…<br>
+                        Luego de darle mi respuesta a la esfinge esta queda en silencio un momento. Y luego dice.<br>
+                        -	Han pasado muchos años desde que alguien dijo la respuesta correcta al acertijo. Bien muchacho puedes continuar.<br>
+                        Al momento de decir eso la esfinge desaparece en un pequeño tornado de arena.<br>
+                        *cof**cof**cof*<br>
+                        Nedmass y yo tosemos, debido a la cantidad de arena que se levanta.<br>
+                        En cuanto el pequeño tornado desaparece puedo oír a Nedmass.<br>
+                        -	¡Puagh! Realmente detesto cuando hace eso, realmente a veces es tan desconsiderada. Ni siquiera se despidió.<br>
+                        -	Sabes Nedmass.<br>
+                        -	Dime joven Draicon.<br>
+                        -	El acertijo que dijo la esfinge era totalmente distinto al que me dijiste tu.<br>
+                        -	¿Tu crees? Para mi eran lo mismo, de cualquier forma cada cierto tiempo cambia el acertijo. ¿Tal vez fue eso? ¿no lo crees?<br>
+                        -	Sabes, podría haber mencionado eso antes. ¿No te parece?<br>
+                        -	Debo pedirte disculpas joven Draicon – dice Nedmass mientras hace una pequeña reverencia – pero la emoción de tener un compañero, después de tanto tiempo me hizo olvidar algo tan importante.<br>
+                        Creo que realmente lo lamenta, por suerte el acertijo fue sencillo, por lo que no creo que deba darle tanta importancia.<br>
+                        Aceptando las disculpas de Nedmass procedo al siguiente cuarto.<br>
 
                     </p>
                     <p><turn to="pag16">Página Siguiente</turn></p>
@@ -794,18 +865,17 @@
                     El cuarto piso golpea mis ojos con una luz demasiado brillante.
                 </p>
                 <p>
-                    Tal vez es el hecho de que estoy en el cuarto piso, pero la luz es mas brillante que en los pisos anteriores, sin mencionar que hace mas calor aquí.
-                    Las paredes son de un blanco que refleja la luz y hace mas difícil ver con claridad, es como un cuarto con espejos en sus paredes que reflejan la luz entrante hacia mis ojos.
-                    Realmente cambia demasiado, las puertas que separan esta sala de las demás son de un granito solido con dibujos tallados.
-                    Trato de ver lo que los dibujos tallados en el granito, pero debido al desgaste que sufrieron no puedo reconocer nada.
-
+                    Tal vez es el hecho de que estoy en el cuarto piso, pero la luz es mas brillante que en los pisos anteriores, sin mencionar que hace mas calor aquí.<br>
+                    Las paredes son de un blanco que refleja la luz y hace mas difícil ver con claridad, es como un cuarto con espejos en sus paredes que reflejan la luz entrante hacia mis ojos.<br>
+                    Realmente cambia demasiado, las puertas que separan esta sala de las demás son de un granito solido con dibujos tallados.<br>
+                    Trato de ver lo que los dibujos tallados en el granito, pero debido al desgaste que sufrieron no puedo reconocer nada.<br>
                 </p>
                 <p>
-                    -	El Tiempo es inestable en este cuarto, es como si tuviera voluntad propia – dice Nedmass, como si estuviera leyendo algo – Los hermanos abayomi y abise, guardianes del tiempo protegerán el paso a los archivos y al conocimiento prohibido que contienen.
-                    -	¿Estás leyendo eso Nedmass? – pregunto, realmente me da curiosidad.
-                    -	Ah, pido disculpas. Es que parecía no poder comprender los grabados.
-                    -	No necesitas disculparte, ciertamente está demasiado degastado. Y no puedo diferenciar que es lo que está grabado.
-                    Supongo que quitando el accidente del acertijo, el que pueda entender las diferentes lenguas, grabados en este caso es de mucha utilidad.
+                    -	El Tiempo es inestable en este cuarto, es como si tuviera voluntad propia – dice Nedmass, como si estuviera leyendo algo – Los hermanos abayomi y abise, guardianes del tiempo protegerán el paso a los archivos y al conocimiento prohibidos que contienen.<br>
+                    -	¿Estás leyendo eso Nedmass? – pregunto, realmente me da curiosidad.<br>
+                    -	Ah, pido disculpas. Es que parecía no poder comprender los grabados.<br>
+                    -	No necesitas disculparte, ciertamente está demasiado degastado. Y no puedo diferenciar que es lo que está grabado.<br>
+                    Supongo que quitando el accidente del acertijo, el que pueda entender las diferentes lenguas grabadas en este caso es de mucha utilidad.<br>
 
                 <p><show paragraph="parrafo22">continuar</show>.</p>
                 </p>
@@ -815,66 +885,51 @@
                     <paragraph id="puertaDerecha">
                         <p>
                             Al mover, con algo de dificultad, la puerta de la habitación de la derecha,
-                            En su interior encuentro un pedestal oxidado y encima de el reposa una  espada un tanto desgastada a primera vista.
-                            Realmente no estaría nada mal un arma secundaria luego de perder la lanza, una segunda arma estaría genial para enfrentar cualquier adversidad que se pueda presentar.
-                            Al intentar tomar la espada, la hoja de la misma cruje y se desmorona lo único que puedo hacer es mirar mis esperanza de facilitar todo hacerse pedazos ante mis ojos.
-                            -	Que mala suerte que tengo – hago esa declaración ante lo sucedido.
-                            -	Realmente no es mala suerte, el tiempo hizo estragos sobre la espada. Aunque la hubieras podido tomar, no te habría servido de nada.
-                            Aunque las palabras de Nedmass tienen sentido, no puedo evitar sentirme deprimido por lo ocurrido.
-                            -	Como sea, mejor continúo – siento que si sigo pensando mucho al respecto me deprimiré mas
-
+                            en su interior encuentro un pedestal oxidado y encima de el reposa una  espada un tanto desgastada a primera vista.<br>
+                            Realmente no estaría nada mal un arma secundaria luego de perder la lanza, una segunda arma estaría genial para enfrentar cualquier adversidad que se pueda presentar.<br>
+                            Al intentar tomar la espada, la hoja de la misma cruje y se desmorona lo único que puedo hacer es mirar mis esperanzas de facilitar todo hacerse pedazos ante mis ojos.<br>
+                            -	Que mala suerte que tengo – hago esa declaración ante lo sucedido.<br>
+                            -	Realmente no es mala suerte, el tiempo hizo estragos sobre la espada. Aunque la hubieras podido tomar, no te habría servido de nada.<br>
+                            Aunque las palabras de Nedmass tienen sentido, no puedo evitar sentirme deprimido por lo ocurrido.<br>
+                            -	Como sea, mejor continúo – siento que si sigo pensando mucho al respecto me deprimiré mas<br>
                         </p>
                     </paragraph>
 
                     <p><show paragraph="puertaIzquierda">Explorar puerta de la izquierda</show>.</p>
                     <paragraph id="puertaIzquierda">
                         <p>
-                            La atmosfera cambia del lado izquierdo de la sala, mientras que en la parte derecha de la sala todo esta desgastado o destrozado por el paso del tiempo.
-                            En al lado izquierdo todo parece nuevo, los grabados en la puerta se ven claramente y la puerta de la habitación realmente es de madera, y no de una madera que parece más piedra que otra cosa.
-                            Al ingresar a la habitación encuentro sobre una mesa de madera un escudo un tanto peculiar.
-                            No tiene imperfecciones pero a la vez esta exento de algún tipo de perfección.
-                            Es totalmente perfecto sin ninguna falla en su lisa superficie, pero es imperfecto porque carece de significado, nombre o historia por su falta de detalles, grabados o dibujos no es perfecta ya que no tiene significado.
-                            Sin significado, aun siendo un objeto tan poderoso es totalmente inútil para su portador.
-                            ¿Tiene algún sentido? Su perfección es la causa de su imperfección.
-                            Pese a no conocer el nombre del escudo, todos esos pensamientos y declaraciones sin sentido recorren mi mente y me arrastran hacia las profundidades de una contradicción interminable.
-                            -	¿Que acaba de pasar? – por un momento me perdí pensando en contradicciones y cosas sin algún sentido.
-                            -	Oh, parece que fuiste cautivado por Paradoxia – exclamada mi acompañante, mientras señala el escudo.
-                            -	¿Paradoxia? – Jamás escuche de un escudo que sea llamado Paradoxia.
-                            -	Un escudo que anula causa y efecto, mediante una contradicción lógica
-                            -	¿una contradicción dices? – en pocas palabras anulara el significado de lo que sea mediante una contradicción a su existencia.
-                            -	Es un articulo realmente poderoso joven Draicon, deberías conservarlo.
-                            No soy un gran fanático de los escudo pero si es tan poderoso lo conservare. Oh otra contradicción.
-                            -	Je je – una pequeña risa se me escapa.
-                            -	Mm. ¿Sucede algo Draicon?
-                            -	Em. No realmente, simplemente algo me pareció gracioso.
+                            La atmosfera cambia del lado izquierdo de la sala, mientras que en la parte derecha de la sala todo esta desgastado o destrozado por el paso del tiempo.<br>
+                            En al lado izquierdo todo parece nuevo, los grabados en la puerta se ven claramente y la puerta de la habitación realmente es de madera, y no de una madera que parece más piedra que otra cosa.<br>
+                            Al ingresar a la habitación encuentro sobre una mesa de madera un <interact with="Paradoxia">escudo</interact> un tanto peculiar.<br>
+
 
                         </p>
                     </paragraph>
                     <p><show paragraph="puertaCentral">Explorar puerta central</show>.</p>
                     <paragraph id="puertaCentral">
                         <p>
-                            Bajo lo que parece ser la cabeza de un animal tallado en metal obscuro hay un anagrama en un idioma que nunca eh visto antes.
-                            -	Dime Nedmass. ¿Sabes que idioma es este? – Tal vez Nedmass sepa algo.
-                            -	Déjeme ver…
-                            Nedmass hecha un vistazo a el anagrama, luego de un rato voltea hacia mi y dice
-                            -	Es un antiguo idioma de un pueblo de otro mundo, que hace cientos de años visito nuestro mundo.
-                            Quedo boquiabierto. ¿Cómo esperan que resuelva esto? ¿Si ni siquiera entiendo el idioma?
-                            -	¿De otro mundo dices?
-                            Realmente no se si pueda creer que una civilización de otro mundo, vino y desapareció así sin mas.
-                            -	Si, ese pueblo ayudo a construir esta torre.
-                            Eso explicaría como la arquitectura del cuarto cambiase tanto, con respecto a los pisos anteriores.
-                            -	Y. ¿Cómo llegaron a nuestro mundo? – creo que lo que mas me importa ahora, es saber como es posible que llegaran a nuestro mundo.
-                            -	Nadie sabe con certeza, joven muchacho. Hay legendas que dicen que en una isla lejana había unas edificaciones de diseño particular que apuntaban al cielo conectando su mundo con el nuestro. Otros dicen que simplemente aparecieron en nuestro mundo un día, y así como aparecieron, desaparecieron sin dejar rastro.
-                            Ciertamente hay libros de historia que mencionan islas hundiéndose, pero jamás escuche de edificaciones como las que menciona Nedmass.
-                            -	Dime una última cosa Nedmass, como se llamaba el pueblo.
-                            -	Creo que era algo como: Edicios o tal vez Eticios. Era algo así, joven muchacho.
-                            -	¿Entiendes su idioma? – si Nedmass es capaz de entender el idioma de ese pueblo, será de gran ayuda.
-                            -	Creo recordar algo de su idioma, si no es problema intentare leerlo.
-                            Haciendo un gesto de “Procede” dejo que Nedmass se acerque a la puerta y pueda leer mejor lo que allí esta escrito.
-                            Luego de leer y meditar por un momento Nedmass se voltea haci mi y me dice.
-                            -	Apartemente es una palabra clave al ordenarla y pronunciarla en nuestro idioma la puerta cederá.
-                            -	Entonces no solo debo ordenar una palabra que no entiendo sino que además ¿debo traducirla?
-                            -	Ciertamente, pero no te preocupes muchacho, yo el Gran Nedmass, conocedor de la lengua Epicia te ayudare a superar este difícil obstáculo.
+                            Bajo lo que parece ser la cabeza de un animal tallado en metal obscuro hay un anagrama en un idioma que nunca he visto antes.<br>
+                            -	Dime Nedmass. ¿Sabes que idioma es este? – Tal vez Nedmass sepa algo.<br>
+                            -	Déjeme ver…<br>
+                            Nedmass hecha un vistazo a el anagrama, luego de un rato voltea hacia mi y dice<br>
+                            -	Es un antiguo idioma de un pueblo de otro mundo, que hace cientos de años visito nuestro mundo.<br>
+                            Quedo boquiabierto. ¿Cómo esperan que resuelva esto? ¿Si ni siquiera entiendo el idioma?<br>
+                            -	¿De otro mundo dices?<br>
+                            Realmente no se si pueda creer que una civilización de otro mundo, vino y desapareció así sin mas.<br>
+                            -	Si, ese pueblo ayudó a construir esta torre.<br>
+                            Eso explicaría como la arquitectura del cuarto cambiase tanto, con respecto a los pisos anteriores.<br>
+                            -	Y. ¿Cómo llegaron a nuestro mundo? – creo que lo que mas me importa ahora, es saber como es posible que llegaran a nuestro mundo.<br>
+                            -	Nadie sabe con certeza, joven muchacho. Hay leyendas que dicen que en una isla lejana había unas edificaciones de diseño particular que apuntaban al cielo conectando su mundo con el nuestro. Otros dicen que simplemente aparecieron en nuestro mundo un día, y así como aparecieron, desaparecieron sin dejar rastro.<br>
+                            Ciertamente hay libros de historia que mencionan islas hundiéndose, pero jamás escuche de edificaciones como las que menciona Nedmass.<br>
+                            -	Dime una última cosa Nedmass, como se llamaba el pueblo.<br>
+                            -	Creo que era algo como: Edicios o tal vez Eticios. Era algo así, joven muchacho.<br>
+                            -	¿Entiendes su idioma? – si Nedmass es capaz de entender el idioma de ese pueblo, será de gran ayuda.<br>
+                            -	Creo recordar algo de su idioma, si no es problema intentare leerlo.<br>
+                            Haciendo un gesto de “Procede” dejo que Nedmass se acerque a la puerta y pueda leer mejor lo que allí esta escrito.<br>
+                            Luego de leer y meditar por un momento Nedmass se voltea haci mi y me dice.<br>
+                            -	Apartemente es una palabra clave al ordenarla y pronunciarla en nuestro idioma la puerta cederá.<br>
+                            -	Entonces no solo debo ordenar una palabra que no entiendo sino que además ¿debo traducirla?<br>
+                            -	Ciertamente, pero no te preocupes muchacho, yo el Gran Nedmass, conocedor de la lengua Epicia te ayudare a superar este difícil obstáculo.<br>
 
                         </p>
                         <p><turn to="pag17">Página Siguiente</turn></p>
@@ -890,33 +945,33 @@
 
                 <paragraph id="parrafo23">
                     <p>
-                        Parece que me quede parado con cara de pasmado un buen rato ya que puedo escuchar a Nedmass apurándome para que entre en la sala que lleva al quinto piso.
-                        -	Joven Draicon, no es momento de quedarse parado admirando la sala, hay que seguir adelante. O de lo contrario el le arrebatara el objeto que  “” protege.
-                        Eso ultimo es lago raro, ese alguien que me arrebatara lo que sea que el guardián de este piso proteja. ¿Sera el mismo que dejo la nota en aquel cofre?
-                        Avanzo al interior de la sala.
-                        A diferencia de la sala anterior esta no esta tan bien iluminada, salvo por cinco toma luces y varias antorchas todos puestos a lo largo de la sala que esta claramente destrozada por el pasa del tiempo.
-                        Pero hay algo extraño en esta sala, la puerta de acceso al siguiente piso o el guardián de la misma, no están.
-                        -	¿Y la puerta? – no puedo evitar preguntar eso en voz alta.
-                        -	Es curioso, según recuerdo una puerta llena de grabados debería estar ahí – dice Nedmass señalando hacia el suelo en el centro de la sala.
+                        Parece que me quede parado con cara de pasmado un buen rato ya que puedo escuchar a Nedmass apurándome para que entre en la sala que lleva al quinto piso.<br>
+                        -	Joven Draicon, no es momento de quedarse parado admirando la sala, hay que seguir adelante. O de lo contrario el le arrebatara el objeto que te protege.<br>
+                        Eso ultimo es lago raro, ese alguien que me arrebatara lo que sea que el guardián de este piso proteja. ¿Sera el mismo que dejo la nota en aquel cofre?<br>
+                        Avanzo al interior de la sala.<br>
+                        A diferencia de la sala anterior esta no esta tan bien iluminada, salvo por cinco toma luces y varias antorchas todos puestos a lo largo de la sala que esta claramente destrozada por el paso del tiempo.<br>
+                        Pero hay algo extraño en esta sala, la puerta de acceso al siguiente piso o el guardián de la misma, no están.<br>
+                        -	¿Y la puerta? – no puedo evitar preguntar eso en voz alta.<br>
+                        -	Es curioso, según recuerdo una puerta llena de grabados debería estar ahí – dice Nedmass señalando hacia el suelo en el centro de la sala.<br>
 
                     </p>
                     <p><show paragraph="parrafo24">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo24">
                     <p>
-                        Esto es malo, si no puedo encontrar la puerta, no podre avanzar hacia el piso donde se encuentra.
-                        Pero, como es posible que la puerta este en el suelo
-                        -	¿Estas seguro que la puerta estaba ahí?
-                        -	Claro, ¿Por qué lo preguntas?
-                        -	Es que, si esta en el piso, como lleva hacia arriba. ¿No es contradictorio?
-                        -	Joven Draicon. ¿No te estará afectando el escudo?
-                        No creo que realmente el escudo me este afectando tanto, creo.
-                        En cualquier caso necesito encontrar la entrada al siguiente piso.
-                        *Boom*
-                        -	¡…..!
-                        Todo se empieza a mover de un lado al otro, como si de un terremoto se tratara.
-                        -	Eso sonó como una explosión y vino del piso de abajo.
-                        Cuando me dirijo a la sala anterior el polvo levantado por la explosión, y entre el polvo y escombro esta una silueta encapuchada.
+                        Esto es malo, si no puedo encontrar la puerta, no podre avanzar hacia el piso donde se encuentra.<br>
+                        Pero, como es posible que la puerta este en el suelo<br>
+                        -	¿Estas seguro que la puerta estaba ahí?<br>
+                        -	Claro, ¿Por qué lo preguntas?<br>
+                        -	Es que, si esta en el piso, como lleva hacia arriba. ¿No es contradictorio?<br>
+                        -	Joven Draicon. ¿No te estará afectando el escudo?<br>
+                        No creo que realmente el escudo me este afectando tanto, creo.<br>
+                        En cualquier caso necesito encontrar la entrada al siguiente piso.<br>
+                        *Boom*<br>
+                        -	¡…..!<br>
+                        Todo se empieza a mover de un lado al otro, como si de un terremoto se tratara.<br>
+                        -	Eso sonó como una explosión y vino del piso de abajo.<br>
+                        Cuando me dirijo a la sala anterior el polvo levantado por la explosión, y entre el polvo y escombro está una silueta encapuchada.<br>
 
                     </p>
                     <p><turn to="pag18">Página Siguiente</turn></p>
@@ -925,42 +980,42 @@
             </page>
             <page id="pag18">
                 <p>
-                    -	Hm, realmente lograste llegaste tan lejos – realmente siento sorpresa en sus palabras, no es ironía, realmente me dio por muerto.
+                    -	Hm, realmente lograste llegar tan lejos – realmente siento sorpresa en sus palabras, no es ironía, realmente me dio por muerto.
                 </p>
                 <paragraph id="parrafo25">
                     <p>
-                        -	¿Quien se supones que eres tu?
-                        -	Mi identidad no es de tu incumbencia, pero lo que si puedes saber es que puedo ayudarte en el piso del tiempo – expresa la figura encapuchada con soberbia en sus palabras.
-                        Realmente no me agrada.
-                        -	Apresúrate, en esta torre el tiempo es demasiado valioso como para desperdiciarlo – me apresura el extraño individuo mientras procede a la sala sin puerta.
-                        -	¿Qué opinas Nedmass? – le pregunto a mi compañero que, por alguna razón, permaneció en silencio.
-                        -	En mi humilde opinión, yo diría que debes escucharlo, parece conocer más de esta torre que nosotros – declara mi compañero mientras se rasca la cabeza.
-                        -	Realmente el sabrá mas de la torre que tu, que has vivido todo durante no se cuanto en la torre.
-                        -	De hecho, joven Draicon, mi existencia inicio en cuanto la torre se vio su construcción finalizada – mentiría si dijera que no lo supuse – conozco la torre de arriba abajo, ya que yo puedo moverme entre sus niveles con total libertad. Jamás tuve la necesidad de abrir puertas o resolver acertijos, por lo que no conozco cómo funciona la torre. Salvo por algunos casos particulares que descifre por aburrimiento.
-                        -	Pero, entonces. ¿Como conocías el idioma de la puerta? – si dice que no tuvo necesidad de utilizar las puertas. ¿Cómo supo sobre la civilización ayudo en la construcción de la torre?, si para ese momento el no existía.
+                        -	¿Quien se supones que eres tu?<br>
+                        -	Mi identidad no es de tu incumbencia, pero lo que si puedes saber es que puedo ayudarte en el piso del tiempo – expresa la figura encapuchada con soberbia en sus palabras.<br>
+                        Realmente no me agrada.<br>
+                        -	Apresúrate, en esta torre el tiempo es demasiado valioso como para desperdiciarlo – me apresura el extraño individuo mientras procede a la sala sin puerta.<br>
+                        -	¿Qué opinas Nedmass? – le pregunto a mi compañero que, por alguna razón, permaneció en silencio.<br>
+                        -	En mi humilde opinión, yo diría que debes escucharlo, parece conocer más de esta torre que nosotros – declara mi compañero mientras se rasca la cabeza.<br>
+                        -	Realmente el sabrá mas de la torre que tu, que has vivido todo durante no se cuanto en la torre.<br>
+                        -	De hecho, joven Draicon, mi existencia inicio en cuanto la torre se vio su construcción finalizada – mentiría si dijera que no lo supuse – conozco la torre de arriba abajo, ya que yo puedo moverme entre sus niveles con total libertad. Jamás tuve la necesidad de abrir puertas o resolver acertijos, por lo que no conozco cómo funciona la torre. Salvo por algunos casos particulares que descifre por aburrimiento.<br>
+                        -	Pero, entonces. ¿Como conocías el idioma de la puerta? – si dice que no tuvo necesidad de utilizar las puertas. ¿Cómo supo sobre la civilización ayudo en la construcción de la torre?, si para ese momento el no existía.<br>
 
                     </p>
                     <p><show paragraph="parrafo26">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo26">
                     <p>
-                        -	¿Recuerdas que te comente que la espada estas buscando se encuentra en el quinto piso de la torre?
-                        Con un movimiento de la cabeza le respondo que si a Nedmass.
-                        -	Bueno en la quinta planta de la torre se encuentran los archivos de la torre, una biblioteca que contiene el conocimiento antiguo y tesoros de un poder increíble.
-                        -	Entonces tiene sentido.
-                        Eso explicaría el porqué esta extraña persona quiere cooperar conmigo.
-                        Si es el responsable de derretir la puerta de ébano y hacer volar gran parte de la puerta de este piso. Entonces lo que está buscando es el conocimiento de los archivos de la torre.
-                        Pero su ayuda me beneficiara también a mí, si con su ayuda consigo llegar al quinto piso, podre recuperar la espada del guerrero dragón y salir de esta torre.
-                        Voy a la sala donde mi extraño colaborador me espera. Quien al percatarse de que estoy ahí voltea en mi dirección y dice:
-                        -	Te tomaste tu tiempo – Exclama el encapuchado.
+                        -	¿Recuerdas que te comente que la espada estas buscando se encuentra en el quinto piso de la torre?<br>
+                        Con un movimiento de la cabeza le respondo que si a Nedmass.<br>
+                        -	Bueno en la quinta planta de la torre se encuentran los archivos de la torre, una biblioteca que contiene el conocimiento antiguo y tesoros de un poder increíble.<br>
+                        -	Entonces tiene sentido.<br>
+                        Eso explicaría el porqué esta extraña persona quiere cooperar conmigo.<br>
+                        Si es el responsable de derretir la puerta de ébano y hacer volar gran parte de la puerta de este piso. Entonces lo que está buscando es el conocimiento de los archivos de la torre.<br>
+                        Pero su ayuda me beneficiara también a mí, si con su ayuda consigo llegar al quinto piso, podre recuperar la espada del guerrero dragón y salir de esta torre.<br>
+                        Voy a la sala donde mi extraño colaborador me espera. Quien al percatarse de que estoy ahí voltea en mi dirección y dice:<br>
+                        -	Te tomaste tu tiempo – Exclama el encapuchado.<br>
 
                     </p>
                     <p>
-                        -	Me quede pensando algo.
-                        -	Bien es hora de encontrarnos con el guardián de esta sala – declara, mientras voltea hacia adelante.
-                        -	Pero como lo haremos no hay ninguna puerta aquí.
-                        -	No se a que te refieres, la “puerta” esta justo aquí – dice mientras señala a una plataforma circular que sobresale del suelo de la sala.
-                        -	¿A que te refieres?
+                        -	Me quede pensando algo.<br>
+                        -	Bien es hora de encontrarnos con el guardián de esta sala – declara, mientras voltea hacia adelante.<br>
+                        -	Pero como lo haremos no hay ninguna puerta aquí.<br>
+                        -	No se a que te refieres, la “puerta” esta justo aquí – dice mientras señala a una plataforma circular que sobresale del suelo de la sala.<br>
+                        -	¿A que te refieres?<br>
 
                     </p>
                     <p><turn to="pag19">Página Siguiente</turn></p>
@@ -969,37 +1024,37 @@
             </page>
             <page id="pag19">
                 <p>
-                    -	Veo que aun no lo descifras, enserio. ¿Realmente viniste a esta torre sin saber nada de ella?
+                    -	Veo que aun no lo descifras, enserio. ¿Realmente viniste a esta torre sin saber nada de ella?<br>
                     -	….
                 </p>
                 <paragraph id="parrafo27">
                     <p>
-                        No puedo discutir su declaración ya que no ha dicho nada que sea falso, en mi apuro por recuperar la espada, no investigue nada sobre la torre.
-                        -	Sabes, al menos. ¿hacia dónde lleva la puerta?
-                        -	Si, lleva a los archivos de la torre.
-                        -	Correcto, pero dime. ¿al menos pensaste cual grande es la habitación de los archivos?
-                        -	Realmente no, pero debe ser como las demás salas. ¿No?
-                        -	 Error, la cantidad de información almacenada en los archivos de la torre no puede ser almacenada en una sala tan pequeña – Eso es raro, cuando vi por primera vez la torre desde el Templo Precursor, no vi una sección que fuera más grande que las demás.
-                        -	¿Entonces qué? ¿Fue llevada a otra dimensión? – hago una pregunta irónica a mi tutor.
-                        -	Exacto, esta plataforma no llevara a una dimensión conocida como el quinto piso de la torre, allí encontraremos los archivos.
-                        -	….. – quedo sin palabras ante la declaración de mi colega encapuchado.
-                        -	Si no me crees, pregúntale al espíritu que te acompaña.
-                        -	¿Espíritu?
+                        No puedo discutir su declaración ya que no ha dicho nada que sea falso, en mi apuro por recuperar la espada, no investigue nada sobre la torre.<br>
+                        -	Sabes, al menos. ¿hacia dónde lleva la puerta?<br>
+                        -	Si, lleva a los archivos de la torre.<br>
+                        -	Correcto, pero dime. ¿al menos pensaste cual grande es la habitación de los archivos?<br>
+                        -	Realmente no, pero debe ser como las demás salas. ¿No?<br>
+                        -	 Error, la cantidad de información almacenada en los archivos de la torre no puede ser almacenada en una sala tan pequeña – Eso es raro, cuando vi por primera vez la torre desde el Templo Precursor, no vi una sección que fuera más grande que las demás.<br>
+                        -	¿Entonces qué? ¿Fue llevada a otra dimensión? – hago una pregunta irónica a mi tutor.<br>
+                        -	Exacto, esta plataforma no llevara a una dimensión conocida como el quinto piso de la torre, allí encontraremos los archivos.<br>
+                        -	….. – quedo sin palabras ante la declaración de mi colega encapuchado.<br>
+                        -	Si no me crees, pregúntale al espíritu que te acompaña.<br>
+                        -	¿Espíritu?<br>
                     </p>
                     <p><show paragraph="parrafo28">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo28">
                     <p>
-                        Nedmass quien estaba en silencio haciendo movimientos de nado en el aire se percata que lo estoy mirando.
-                        -	Es cierto, joven Draicon – exclama Nedmass, mientras continua con los movimientos en dirección a mí – el quinto piso se encuentra en otro plano existencial.
-                        -	¿Y porque no me lo dijiste antes Nedmass? – le pregunto a Nedmass con enojo.
-                        -	Por un sencillo motivo, joven, nunca preguntaste – dice Nedmass mientras se acerca y toca la punta de mi nariz con su dedo índice.
-                        -	¡Tu…!
-                        -	Oye niño, cubre tus ojos.
-                        Justo cuando estaba por decirle algunas verdades a Nedmass el encapuchado me dice que me cubra, antes de que un destello de luz llene la sala entera.
-                        Al momento en que la luz de disipa la plataforma en el suelo expulsa una columna de luz hacia el techo, la cual es de un color azulado y expulsa extrañas imágenes pequeñas.
-                        -	Bien. ¿A qué esperas? Aparece de una vez – grita mi encapuchado acompañante a la columna de luz.
-                        -	HM, ESA IMPAZIENCIA TE LLEVARA A TU DESTRUCCION
+                        Nedmass quien estaba en silencio haciendo movimientos de nado en el aire se percata que lo estoy mirando.<br>
+                        -	Es cierto, joven Draicon – exclama Nedmass, mientras continua con los movimientos en dirección a mí – el quinto piso se encuentra en otro plano existencial.<br>
+                        -	¿Y porque no me lo dijiste antes Nedmass? – le pregunto a Nedmass con enojo.<br>
+                        -	Por un sencillo motivo, joven, nunca preguntaste – dice Nedmass mientras se acerca y toca la punta de mi nariz con su dedo índice.<br>
+                        -	¡Tu…!<br>
+                        -	Oye niño, cubre tus ojos.<br>
+                        Justo cuando estaba por decirle algunas verdades a Nedmass el encapuchado me dice que me cubra, antes de que un destello de luz llene la sala entera.<br>
+                        Al momento en que la luz se disipa la plataforma en el suelo expulsa una columna de luz hacia el techo, la cual es de un color azulado y expulsa extrañas imágenes pequeñas.<br>
+                        -	Bien. ¿A qué esperas? Aparece de una vez – grita mi encapuchado acompañante a la columna de luz.<br>
+                        -	HM, ESA IMPACIENCIA TE LLEVARA A TU DESTRUCCION<br>
 
                     </p>
                     <p><turn to="pag20">Página Siguiente</turn></p>
@@ -1008,12 +1063,13 @@
             </page>
             <page id="pag20">
                 <p>Una voz con eco se escucha en toda la sala.</p>
+                                    <p><show paragraph="parrafo29">continuar</show>.</p>
                 <paragraph id="parrafo29">
                     <p>
-                        -	¿QUE ES LO QUE QUIEREN? ¿QUE VALE TANTO PARA SACRIFICAR SUS VIDAS? – pregunta la extraña voz, mientras una sombra empieza a aparecer dentro de la columna.
-                        -	Lo único que debe interesarte es el hecho de que si no te apartas acabaremos con tu existencia, guardián de los archivos.
-                        Yo solo puedo guardar silencio, estoy perplejo ante lo que mis ojos contemplan.
-                        El propietario de esa silueta dentro del portal hacia el quinto piso es una criatura de forma humana, su cara esta desfigurada es como si hubieran tomado dos rostros y los hubieran presionado uno contra el otro, hasta que esto se fundieran, su cuerpo está cubierto por una extraña manta de un color blanco gastado, además posee un collar circular con lo que parece ser un reloj de arena. Y en su ante brazo se encuentra restos de una mano, como si esta hubiera querido salir a la superficie por la fuerza.
+                        -	¿QUE ES LO QUE QUIEREN? ¿QUE VALE TANTO PARA SACRIFICAR SUS VIDAS? – pregunta la extraña voz, mientras una sombra empieza a aparecer dentro de la columna.<br>
+                        -	Lo único que debe interesarte es el hecho de que si no te apartas acabaremos con tu existencia, guardián de los archivos.<br>
+                        Yo solo puedo guardar silencio, estoy perplejo ante lo que mis ojos contemplan.<br>
+                        El propietario de esa silueta dentro del portal hacia el quinto piso es una criatura de forma humana, su cara esta desfigurada es como si hubieran tomado dos rostros y los hubieran presionado uno contra el otro, hasta que esto se fundieran, su cuerpo está cubierto por una extraña manta de un color blanco gastado, además posee un collar circular con lo que parece ser un reloj de arena. Y en su ante brazo se encuentra restos de una mano, como si esta hubiera querido salir a la superficie por la fuerza.<br>
                         Al hablar pareciera que se escuchan dos voces y sus ojos nos observan a ambos mientras hablan.
 
                     </p>
@@ -1021,55 +1077,56 @@
                 </paragraph>
                 <paragraph id="parrafo30">
                     <p>
-                        -	HM HM JAJAJAJAJA – la criatura ríe.
-                        -	VALIENTES PALABRAS PARA ALGUIEN QUE ESTA APUNTO DE COMBERTIRCE EN POLVO.
-                        -	De acuerdo niño, aquí entras tu – dice el encapuchado mientras me mira.
-                        -	¿eh? ¿a qué te refieres con eso?
-                        -	El escudo, Paradoxia, utilízalo contra el – exclama en repuesta mientras señala mi recién adquirido escudo.
-                        -	¿cómo?
-                        -	En cuanto exhale su aliento en contra de nosotros, apuntalo en su dirección.
-                        Luego de darme esas instrucciones, el encapuchado retrocede y se pone a cubierto.
+                        -	HM HM JAJAJAJAJA – la criatura ríe.<br>
+                        -	VALIENTES PALABRAS PARA ALGUIEN QUE ESTA APUNTO DE CONVERTIRSE EN POLVO.<br>
+                        -	De acuerdo niño, aquí entras tu – dice el encapuchado mientras me mira.<br>
+                        -	¿eh? ¿a qué te refieres con eso?<br>
+                        -	El escudo, Paradoxia, utilízalo contra el – exclama en repuesta mientras señala mi recién adquirido escudo.<br>
+                        -	¿cómo?<br>
+                        -	En cuanto exhale su aliento en contra de nosotros, apuntalo en su dirección.<br>
+                        Luego de darme esas instrucciones, el encapuchado retrocede y se pone a cubierto.<br>
                         -	REGRESEN AL POLVO ESCORIAS – la criatura grita eso mientras se inclina en nuestra dirección y exhala lo que pareciera ser una tormenta de arena.
-                        -	¡Ahora!
+                        -	¡Ahora! --
 
                     </p>
                     <p><turn to="pag21">Página Siguiente</turn></p>
                 </paragraph>
             </page>
             <page id="pag21">
-                <p>  El encapuchado me da la señal y sostengo a Paradoxia en dirección al ataque de la criatura.</p>
+                <p>  El encapuchado me da la señal y sostengo a <interact with="paradoxia">paradoxia</interact> en dirección al ataque de la criatura.</p>
+                                    <p><show paragraph="parrafo31">...</show>.</p>
                 <paragraph id="parrafo31">
                     <p>
-                        Cuando la tormenta de arena toca la superficie de mi escudo, esta desaparece, como si de una ilusión se tratara.
-                        -	¡¿Cómo ES ESTO POSIBLE?! ¡¿QUE TIPO DE TRUCO DE MAL GUSTO ES ESTE?!
-                        -	¡Es nuestra oportunidad! – luego de decir eso el encapuchado apunta su mano abierta hacia la criatura, y luego de recitar algo en una lengua extraña lanza un destello que golpea a la criatura.
-                        -	¡GAAH! – la criatura grita de dolor mientras retrocede.
-                        Palpitar. Palpitar.
-                        Mi Ritmo cardiaco se acelera.
-                        No se si será el miedo o la emoción, pero no puedo moverme
-                        Mi piernas no quieren moverse.
-                        Una voz en mi interior me grita que corra. Que olvide todo y CORRA
-                        Esta criatura no es nada parecido a los guardianes anteriores.
+                        Cuando la tormenta de arena toca la superficie de mi escudo, ésta desaparece, como si de una ilusión se tratara.<br>
+                        -	¡¿Cómo ES ESTO POSIBLE?! ¡¿QUE TIPO DE TRUCO DE MAL GUSTO ES ESTE?!<br>
+                        -	¡Es nuestra oportunidad! – luego de decir eso el encapuchado apunta su mano abierta hacia la criatura, y luego de recitar algo en una lengua extraña lanza un destello que golpea a la criatura.<br>
+                        -	¡GAAH! – la criatura grita de dolor mientras retrocede.<br>
+                        Palpitar. Palpitar.<br>
+                        Mi Ritmo cardiaco se acelera.<br>
+                        No se si será el miedo o la emoción, pero no puedo moverme<br>
+                        Mi piernas no quieren moverse.<br>
+                        Una voz en mi interior me grita que corra. Que olvide todo y CORRA<br>
+                        Esta criatura no es nada parecido a los guardianes anteriores.<br>
                         Corre ¡CORREEEEE!
                     </p>
                     <p><show paragraph="parrafo32">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo32">
                     <p>
-                        -	¿¡A que esperas!? ¡ataca!
-                        El grito del mago a mi lado me devuelve a la realidad.
-                        Tomo la espada que conseguí con anterioridad y me posiciono para abalanzarme sobre la criatura.
-                        -	¡¡¡DESAPAREZCAN!!! – la criatura grita con rabia y se prepara para repetir su ataque.
-                        -	¡Detrás de mi! – le doy la orden al mago con capucha
-                        -	¡¡¡MUERAN!!!
-                        La criatura ataca nuevamente con lo que parece ser una tormenta de arena.
-                        Repito el proceso anterior y disipo la tormenta de arena con el toque de mi escudo.
-                        -	Dale el golpe de gracia y acabemos con esto – murmura el mago detrás de mí.
-                        El mago lanza una pequeña botella hacia la criatura y al golpear el piso explota lanzando una nube de humo negro.
-                        Con la vista de la criatura obstruida, corro hacia ella y le atravieso el pecho con la espada.
-                        -	NO….NO….
-                        La criatura niega lo que acaba de pasar, pero lo raro es que no es un tono de desesperación, sino mas de sorpresa.
-                        -	NO… ¡NO PUEDO CREER LO ESTUPIDO QUE ERES!
+                        -	¿¡A que esperas!? ¡ataca!<br>
+                        El grito del mago a mi lado me devuelve a la realidad.<br>
+                        Tomo la espada que conseguí con anterioridad y me posiciono para abalanzarme sobre la criatura.<br>
+                        -	¡¡¡DESAPAREZCAN!!! – la criatura grita con rabia y se prepara para repetir su ataque.<br>
+                        -	¡Detrás de mi! – le doy la orden al mago con capucha<br>
+                        -	¡¡¡MUERAN!!!<br>
+                        La criatura ataca nuevamente con lo que parece ser una tormenta de arena.<br>
+                        Repito el proceso anterior y disipo la tormenta de arena con el toque de <interact with="paradoxia">mi escudo</interact>.<br>
+                        -	Dale el golpe de gracia y acabemos con esto – murmura el mago detrás de mí.<br>
+                        El mago lanza una pequeña botella hacia la criatura y al golpear el piso explota lanzando una nube de humo negro.<br>
+                        Con la vista de la criatura obstruida, corro hacia ella y le atravieso el pecho con la espada.<br>
+                        -	NO….NO….<br>
+                        La criatura niega lo que acaba de pasar, pero lo raro es que no es un tono de desesperación, sino mas de sorpresa.<br>
+                        -	NO… ¡NO PUEDO CREER LO ESTUPIDO QUE ERES!<br>
 
                     </p>
                     <p><turn to="pag22">Página Siguiente</turn></p>
@@ -1077,78 +1134,77 @@
             </page>
             <page id="pag22">
                 <p>
-                    Tras gritar esas palabras la criatura me golpea haciéndome retroceder por el impacto.
-                    -	¿¡Pero qué!? Como puede seguir vivo, cuando le atravesé el pecho.
+                    Tras gritar esas palabras la criatura me golpea haciéndome retroceder por el impacto.<br>
+                    -	¿¡Pero qué!? Cómo puede seguir vivo cuando le atravesé el pecho.<br>
 
                 </p>
+                          <p><show paragraph="parrafo33">continuar</show>.</p>
                 <paragraph id="parrafo33">
                     <p>
-                        Pero al mirar la espada, noto que la parte que toco el cuerpo de la criatura, se está fragmentando hasta que solo queda el mango.
-                        -	¡Demonios! Pensé que solo era una exageración – con un chasquido de su lengua el mago que se encuentra a mi lado se queja.
-                        -	¿A qué te refieres?
-                        -	Las leyendas dicen que el guardián del tiempo, es una existencia etérea, es decir que no tiene cuerpo físico.
-                        -	Entonces. ¿Es una especie de fantasma? – Si ese es el caso esto será mucho más complicado.
-                        -	 De hecho no, es una singularidad temporal. Es un ente que quedo atrapado en el flujo del tiempo presente, pasado y futuro.
-                        -	Eso es mucho más complejo que solo un fantasma entonces.
-                        Debo pensar rápido o todo este viaje habrá sido para nada.
-                        No es un fantasma, sino una singularidad temporal atrapada entre el pasado el presente y el futuro, y todo lo que toca es atrapado por la ley temporal y hecho añicos.
-                        Ley temporal…. ¡Eso es!
+                        Pero al mirar la espada, noto que la parte que toco el cuerpo de la criatura, se está fragmentando hasta que solo queda el mango.<br>
+                        -	¡Demonios! Pensé que solo era una exageración – con un chasquido de su lengua el mago que se encuentra a mi lado se queja.<br>
+                        -	¿A qué te refieres?<br>
+                        -	Las leyendas dicen que el guardián del tiempo, es una existencia etérea, es decir que no tiene cuerpo físico.<br>
+                        -	Entonces. ¿Es una especie de fantasma? – Si ese es el caso esto será mucho más complicado.<br>
+                        -	 De hecho no, es una singularidad temporal. Es un ente que quedo atrapado en el flujo del tiempo presente, pasado y futuro.<br>
+                        -	Eso es mucho más complejo que solo un fantasma entonces.<br>
+                        Debo pensar rápido o todo este viaje habrá sido para nada.<br>
+                        No es un fantasma, sino una singularidad temporal atrapada entre el pasado el presente y el futuro, y todo lo que toca es atrapado por la ley temporal y hecho añicos.<br>
+                        Ley temporal…. ¡Eso es!<br>
                     </p>
                     <p><show paragraph="parrafo34">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo34">
                     <p>
-                        -	Dime. ¿tienes alguna otra detracción? – necesito acercarme de nuevo para poder llevar a cabo mi plan.
-                        -	Me quede sin nada, pero puedo crear un destello que lo ciegue por unos segundos.
-                        -	Eso sirve también, hazlo a mi señal.
-                        Moviendo la cabeza a modo de respuesta, mi compañero se prepara para lanzar el hechizo de luz.
-                        -	Sabes, joven Draicon – dice Nedmass quien permaneció en silencio toda la batalla – si harás lo que creo que harás, puede que el tesoro que el guardián posee sea destruido también.
-                        ¿Tesoro? ¿Se refiere al colgante que posee la criatura?
-                        No hay tiempo para eso, ahora mismo mi prioridad es acabar con este obstáculo y encontrar la espada. Ese collar no vale nada para mí.
-                        -	ES HORA DE QUE ACABEMOS CON ESTO. ¡DESAPAREZCAN! – grita la criatura preparando una vez más su ataque.
-                        -	¡Ahora! – doy la señal a mi compañero para que realice la distracción.
-                        Luego con un “haaaaa” el mago crea un destello de luz que aturde a la criatura y deja una oportunidad para que me acerque.
-                        -	¡Ahora sí!
-                        Corro hacia la criatura que cubre su rostro con su brazo y salto hacia ella.
-                        -	¿PERO QUE?
+                        -	Dime. ¿tienes alguna otra detracción? – necesito acercarme de nuevo para poder llevar a cabo mi plan.<br>
+                        -	Me quede sin nada, pero puedo crear un destello que lo ciegue por unos segundos.<br>
+                        -	Eso sirve también, hazlo a mi señal.<br>
+                        Moviendo la cabeza a modo de respuesta, mi compañero se prepara para lanzar el hechizo de luz.<br>
+                        -	Sabes, joven Draicon – dice Nedmass quien permaneció en silencio toda la batalla – si harás lo que creo que harás, puede que el tesoro que el guardián posee sea destruido también.<br>
+                        ¿Tesoro? ¿Se refiere al colgante que posee la criatura?<br>
+                        No hay tiempo para eso, ahora mismo mi prioridad es acabar con este obstáculo y encontrar la espada. Ese collar no vale nada para mí.<br>
+                        -	ES HORA DE QUE ACABEMOS CON ESTO. ¡DESAPAREZCAN! – grita la criatura preparando una vez más su ataque.<br>
+                        -	¡Ahora! – doy la señal a mi compañero para que realice la distracción.<br>
+                        Luego con un “haaaaa” el mago crea un destello de luz que aturde a la criatura y deja una oportunidad para que me acerque.<br>
+                        -	¡Ahora sí!<br>
+                        Corro hacia la criatura que cubre su rostro con su brazo y salto hacia ella.<br>
+                        -	¿PERO QUE?<br>
 
                     </p>
                     <p><turn to="pag23">Página Siguiente</turn></p>
                 </paragraph>
             </page>
             <page id="pag23">
-                <p>La criatura no puede decir nada más, ya que atravesé su cuello con mi escudo separando casi completamente su cabeza del cuerpo.
+                <p>La criatura no puede decir nada más, ya que atraviezo su cuello con mi <interact with="escudo">escudo</interact> separando casi completamente su cabeza del cuerpo.<br>
                     Si esta criatura esta en un espacio temporal que la hace intangible, simplemente debo anular ese hecho y destruir su significado.
                 </p>
                 <paragraph id="parrafo35">
                     <p>
-                        -	¿Eh? – puedo oír la sorpresa en la voz de mi colaborador, mientras observa lo que acaba de ocurrir.
-                        -	Date prisa y desaparece. – digo eso mientras observo los ojos de la criatura que están abiertos completamente.
-                        Como sucedió con su ataque de arena, la criatura se convierte en polvo y desaparece.
-                        Cuando la criatura desaparece oigo el sonido de algo golpeando el suelo.
-                        Al mirar de donde provenía el sonido puedo ver el collar que la criatura portaba.
-                        -	Oye. ¿Qué es esto?
-                        -	La causa de la existencia de esa criatura – responde el mago encapuchado mientras se acerca al portal del que salió la criatura – el porqué averígualo en los archivos.
-                        -	Haciendo un gesto de despedida con la mano, el encapuchado entra al portal.
-                        Mientras observo su silueta desaparecer, Nedmass se acerca y dice.
+                        -	¿Eh? – puedo oír la sorpresa en la voz de mi colaborador, mientras observa lo que acaba de ocurrir.<br>
+                        -	Date prisa y desaparece. – digo eso mientras observo los ojos de la criatura que están abiertos completamente.<br>
+                        Como sucedió con su ataque de arena, la criatura se convierte en polvo y desaparece.<br>
+                        Cuando la criatura desaparece oigo el sonido de algo golpeando el suelo.<br>
+                        Al mirar de donde provenía el sonido puedo ver el collar que la criatura portaba.<br>
+                        -	Oye. ¿Qué es esto?<br>
+                        -	La causa de la existencia de esa criatura – responde el mago encapuchado mientras se acerca al portal del que salió la criatura – el porqué averígualo en los archivos.<br>
+                        -	Haciendo un gesto de despedida con la mano, el encapuchado entra al portal.<br>
+                        Mientras observo su silueta desaparecer, Nedmass se acerca y dice.<br>
 
                     </p>
                     <p><show paragraph="parrafo36">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo36">
                     <p>
-                        -	Por un momento creí que harías pedazos el colgante.
-                        -	Sabes pareciera que tienes mucho interés en el – realmente sospechoso.
-                        -	Al contrario, un objeto con cualidades como las de ese colgante son muy raros hoy en día. Simplemente me alivia que tú lo poseas.
-                        Debo mantener el ojo encima de Nedmass y ocultar bien el pendiente, ya sé que podría suceder si Nedmass trama algo. No caeré en un cliché tan viejo.
-                        -	De acuerdo, hora de seguir con esto.
-                        Dicho eso avanzo hacia el portal.
-
+                        -	Por un momento creí que harías pedazos el colgante.<br>
+                        -	Sabes pareciera que tienes mucho interés en el – realmente sospechoso.<br>
+                        -	Al contrario, un objeto con cualidades como las de ese <interact with="colgante">colgante</interact> son muy raros hoy en día.<br>
+                        -	De acuerdo, hora de seguir con esto.<br>
+                        Dicho eso avanzo hacia el portal.<br>
                     </p>
                     <p>
-                        Una sensación de relajamiento y picazón me invade mientras soy tele transportado al quinto piso, el lugar donde se encuentra lo que eh venido a buscar.
-                        Un destello de luz, seguido de un sonido de *Zip* es lo que me recibe al entrar en el quinto piso
-                        Como dijo el mago encapuchado en aquel momento es algo totalmente distinto a lo que vi anteriormente.
+                        Una sensación de relajamiento y picazón me invade mientras soy tele transportado al quinto piso, el lugar donde se encuentra lo que he venido a buscar.<br>
+                        Un destello de luz, seguido de un sonido de *Zip* es lo que me recibe al entrar en el quinto piso<br>
+                        Como dijo el mago encapuchado en aquel momento, es algo totalmente distinto a lo que vi anteriormente.
                     </p>
                     <p><turn to="pag24">Página Siguiente</turn></p>
                 </paragraph>
@@ -1156,51 +1212,50 @@
             <page id="pag24">
                 <paragraph id="parrafo37">
                     <p>
-                        Es un lugar lleno de estanterías de gran tamaño repletas de pergaminos y libros, mesas de marfil con objetos que solo puede ver en libros y otros que jamás vi. Esferas con lo que parece ser energía dentro, dan la sensación de que al mínimo roce estas explotarían liberando la energía que traen dentro.
-                        No hay techo, en su lugar hay un vacio marino infinito con puntos blancos que parecen constelaciones, el suelo en mis pies parece cristal por el cual se puede ver un vacio obscuro, es como si el mundo se acabase a mis pies.
+                        Es un lugar lleno de estanterías de gran tamaño repletas de pergaminos y libros, mesas de marfil con objetos que solo pude ver en libros y otros que jamás vi. Esferas con lo que parece ser energía dentro, dan la sensación de que al mínimo roce estas explotarían liberando la energía que traen dentro.<br>
+                        No hay techo, en su lugar hay un vacio marino infinito con puntos blancos que parecen constelaciones, el suelo en mis pies parece cristal por el cual se puede ver un vacio obscuro, es como si el mundo se acabase a mis pies.<br>
                         No se cuán grande es este lugar, pero creo que tardaría años en poder recorrerlo todo.
-
                     </p>
                     <p><show paragraph="parrafo38">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo38">
                     <p>
-                        -	Es un lugar increíble. ¿no lo crees Nedmass?
-                        Pero no hay respuesta, al buscar a Nedmass noto que desapareció.
-                        -	¿Dónde estarás?
-                        Decido esperar unos minutos a que Nedmass aparezca o regrese de donde haya ido.
-                        -	…
-                        Pero no hay rastro de él. Por lo que decido continuar, Nedmass es capaz de volar por lo que me encontrara fácilmente una vez que termine lo que sea que esté haciendo.
+                        -	Es un lugar increíble. ¿no lo crees Nedmass?<br>
+                        Pero no hay respuesta, al buscar a Nedmass noto que desapareció.<br>
+                        -	¿Dónde estarás?<br>
+                        Decido esperar unos minutos a que Nedmass aparezca o regrese de donde haya ido.<br>
+                        -	…<br>
+                        Pero no hay rastro de él. Por lo que decido continuar, Nedmass es capaz de volar por lo que me encontrara fácilmente una vez que termine lo que sea que esté haciendo.<br>
                         Camino un buen rato por la biblioteca casi infinita y al ver de reojo un libro leo “Colgante del tiempo”, por lo que decido leerlo.
-
                     </p>
                     <p><turn to="pag25">Página Siguiente</turn></p>
                 </paragraph>
             </page>
             <page id="pag25">
-                <h3>“Durante la construcción del Amnant, el templo del cielo y la tierra, la gran creación de David Corazón de Cristal. Estallo un conflicto entre los encargados de custodiar el salón del tiempo, Abayomi y Abise, los gemelos que descubrieron los secretos para controlar el manto del tiempo.
-                    Ambos hermanos, en conjunto crearon un artefacto capaz de desafiar el paso del tiempo, lucharon entre ellos por el collar. El collar fue nombrado ‘Paradigma de lo inamovible’ ya que el tiempo de su portador se detenía completamente y nada podía ponerlo en marcha.
-                    A menos que el portador del collar se lo quitase, el efecto duraría eternamente, ambos hermanos querían poseer tan magnífico artefacto.   Pero su conflicto estaba interfiriendo con la construcción del templo, El señor de la forja creo dos artículos que superaban al Paradigma de lo inamovible, Paradoxia el escudo capas de anular el significado o la existencia de cualquier singularidad, magia o invocación y la espada del Escorpión cuya fuerza era capaz de romper la tela de la realidad misma.
-                    Pero los gemelos rechazaron el regalo, aun querían el fruto del trabajo de toda una vida, los hermanos siguieron disputándose el artefacto temporal. Hasta que un día, mientras los hermanos peleaban por el collar, Cetina quien estaba cansada de las disputas de los hermanos, les arrojo el escudo de Abayomi. Paradoxia reacciono al colgante que los hermanos sostenían y al comenzar a suprimir el significado del objeto los hermanos se vieron envueltos en un torbellino espacio temporal fundiendo sus cuerpos y volviéndose una abominación.
-                    David al saber lo ocurrido, confino a los hermanos ahora conocidos como Paradox a permanecer encerrados en la biblioteca dimensional para buscar una solución a su prisión temporal. Vigilando la entrada a la biblioteca de la torre y mantener alejado el Paradigma de lo inamovible lejos de las manos de los mortales.”
+                <h3><span class="font-style:italic">“Durante la construcción del Amnant, el templo del cielo y la tierra, la gran creación de David Corazón de Cristal, estalló un conflicto entre los encargados de custodiar el salón del tiempo, Abayomi y Abise, los gemelos que descubrieron los secretos para controlar el manto del tiempo.<br>
+                    Ambos hermanos, en conjunto crearon un artefacto capaz de desafiar el paso del tiempo, lucharon entre ellos por el collar. El collar fue nombrado ‘Paradigma de lo inamovible’ ya que el tiempo de su portador se detenía completamente y nada podía ponerlo en marcha.<br>
+                    A menos que el portador del collar se lo quitase, el efecto duraría eternamente, ambos hermanos querían poseer tan magnífico artefacto.   Pero su conflicto estaba interfiriendo con la construcción del templo. <br>
+                    El señor de la forja creo dos artículos que superaban al Paradigma de lo inamovible, Paradoxia el escudo capaz de anular el significado o la existencia de cualquier singularidad, magia o invocación y la espada del Escorpión cuya fuerza era capaz de romper la tela de la realidad misma.<br>
+                    Pero los gemelos rechazaron el regalo, aun querían el fruto del trabajo de toda una vida. Los hermanos siguieron disputándose el artefacto temporal. Hasta que un día, mientras los hermanos peleaban por el collar, Cetina quien estaba cansada de las disputas de los hermanos, les arrojo el escudo de Abayomi.
+                    Paradoxia reacciono al colgante que los hermanos sostenían y al comenzar a suprimir el significado del objeto los hermanos se vieron envueltos en un torbellino espacio temporal fundiendo sus cuerpos y volviéndose una abominación.<br>
+                    David al saber lo ocurrido, confino a los hermanos ahora conocidos como Paradox a permanecer encerrados en la biblioteca dimensional para buscar una solución a su prisión temporal. Vigilando la entrada a la biblioteca de la torre y mantener alejado el "Paradigma de lo inamovible" lejos de las manos de los mortales.”</span>
                 </h3>
                 <p><turn to="pag26">Página Siguiente</turn></p>
             </page>
             <page id="pag26">
-                <p>-	Whoa, realmente eso fue karma – se me escapan las palabras luego de leer eso.
+                <p>-	Whoa, realmente eso fue karma – se me escapan las palabras luego de leer eso.<br>
                     Al dejar el libro en su lugar junto a este se encuentra un libro que se titula “El templo de la tierra y el cielo”
                 </p>
                 <paragraph id="parrafo39">
-                    <p> Al leer un poco noto que es un libro que explica cómo funciona la torre, según el libro cada cierto tiempo los pisos de la torre se mueven cambiando de posición. Entonces eso significa que de haber venido en otro momento la torre no sería igual a como la encontré.
+                    <p> Al leer un poco noto que es un libro que explica cómo funciona la torre, según el libro cada cierto tiempo los pisos de la torre se mueven cambiando de posición. Entonces eso significa que de haber venido en otro momento la torre no sería igual a como la encontré.<br>
                         Es realmente interesante. Aunque siento que estoy distrayéndome demasiado, mejor sigo buscando la espada.
                     </p>
                     <p><show paragraph="parrafo40">continuar</show>.</p>
                 </paragraph>
                 <paragraph id="parrafo40">
                     <p>
-                        Al continuar caminando por la biblioteca luego de un rato de caminata, diviso una espada que concuerda perfectamente con la descripción de la espada del guerrero Dragón.
+                        Al continuar caminando por la biblioteca luego de un rato de caminata, diviso una espada que concuerda perfectamente con la descripción de la espada del guerrero Dragón.<br>
                         La espada está en su funda y descansa en un pedestal dentro de una caja de cristal, el pedestal tiene una placa con una inscripción en ella y un libro abierto que flota sobre el pedestal.
-
                     </p>
                     <p><turn to="pag27">Página Siguiente</turn></p>
                 </paragraph>
@@ -1208,21 +1263,21 @@
             <page id="pag27">
                 <p>La placa de metal dice lo siguiente:</p>
                 <h3>“Aquí reposa La Hoja Celestial y luego renombrada Ice Bite para su siguiente portador, el arma que utilizo Jazmín la campeona de los Dragones en la guerra contra Nicro el Dragón de la muerte.
-                    Elegida de Nova la Madre Celestial. Y la que sello con su propia muerta la alianza entre las bestias y humanos”</h3>
-                <p>El tiempo se congela.
-                    -	J-Jazmín…  - es el nombre de mi madre….
+                    Elegida de Nova la Madre Celestial. Y la que selló con su propia muerte la alianza entre las bestias y humanos”</h3>
+                <p>El tiempo se congela.<br>
+                    -	J-Jazmín…  - es el nombre de mi madre….<br>
                     -	Eso significa que el guerrero que vi en mis sueños era mi madre….
                 </p>
                 <p><show paragraph="parrafo41">continuar</show>.</p>
                 <paragraph id="parrafo41">
                     <p>
-                        Esto….esto no puede ser verdad, mi madre jamás lucho…. Ella murió de una enfermedad al corazón… ¿cómo es posible?
-                        -	Ice bite, Mordedura de Hielo…
-                        Eso me recuerda algo que mi hermana me conto cuando era niño…
-                        -	Flora, flora – generalmente cada vez que encontraba algo en un libro se lo mostraba a mi hermana.
-                        -	¿Hm? ¿Qué sucede enano? – ella siempre me llamaba así, recuerdo que eso siempre me molestaba, pero ella siempre decía que era con cariño.
-                        -	Oye no me llames así, no soy tan enano.
-                        -	¿Enserio? Desde mi punto de vista eres como una hormiga.
+                        Esto….esto no puede ser verdad, mi madre jamás lucho…. Ella murió de una enfermedad al corazón… ¿cómo es posible?<br>
+                        -	Ice bite, Mordedura de Hielo…<br>
+                        Eso me recuerda algo que mi hermana me conto cuando era niño…<br>
+                        -	Flora, flora – generalmente cada vez que encontraba algo en un libro se lo mostraba a mi hermana.<br>
+                        -	¿Hm? ¿Qué sucede enano? – ella siempre me llamaba así, recuerdo que eso siempre me molestaba, pero ella siempre decía que era con cariño.<br>
+                        -	Oye no me llames así, no soy tan enano.<br>
+                        -	¿Enserio? Desde mi punto de vista eres como una hormiga.<br>
                         -	¡Cállate! – decía eso mientras agitaba mis brazos.
                     </p>
                     <p><turn to="pag28">Página Siguiente</turn></p>
@@ -1230,13 +1285,14 @@
             </page>
             <page id="pag28">
                 <p>-	Entonces, ¿Qué querías?</p>
+                                <p><show paragraph="parrafo42">continuar</show>.</p>
                 <paragraph id="parrafo42">
                     <p>
-                        -	¡Ah sí! Dime que es una Mordedura de Hielo. ¿Duele mucho?
-                        -	Jajaja, no tonto, no es una mordedura de alguien. Mordedura de Hielo es el título que le dan los guerreros dragon a su arma, en este caso sería el arma de un guerrero Dragón que porta a Avalon el dragón del hielo.
-                        -	Entonces. ¿cómo le llamarías a tu arma?
-                        -	Yo soy la portadora de Niven El dragon veneno, lo anteriores portadores de Niven nunca pusieron un nombre en especial a sus armas, pero en mi caso sería Estoque toxico, por mi estilo de pelea.
-                        -	¡¡¡WHOA!!!! Espero tener un arma como Mordedura de Hielo algún día – Realmente jamás imagine que se haría real ese sueño.
+                        -	¡Ah sí! Dime que es una Mordedura de Hielo. ¿Duele mucho?<br>
+                        -	Jajaja, no tonto, no es una mordedura de alguien. Mordedura de Hielo es el título que le dan los guerreros dragon a su arma, en este caso sería el arma de un guerrero Dragón que porta a Avalon el dragón del hielo.<br>
+                        -	Entonces. ¿cómo le llamarías a tu arma?<br>
+                        -	Yo soy la portadora de Niven El dragon veneno, lo anteriores portadores de Niven nunca pusieron un nombre en especial a sus armas, pero en mi caso sería Estoque toxico, por mi estilo de pelea.<br>
+                        -	¡¡¡WHOA!!!! Espero tener un arma como Mordedura de Hielo algún día – Realmente jamás imagine que se haría real ese sueño.<br>
                         -	Seguro que si Draicon, algún día tal vez.
 
                     </p>
