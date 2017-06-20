@@ -560,7 +560,7 @@
     } while (cont != 3);
 %>
 
-            <form method="Post" action="anagrama.jsp" autocomplete="off">
+            <form method="Post" action="guerreroDos.jsp" autocomplete="off">
                 <label>Ordene el anagrama</label><br><br><!--TITULO-->
                 <label><%=palabraFinal%></label><!--NOS MUESTRA LA PALABRA DESORDENADA pero no puedo ponerla jejejje-->
 
