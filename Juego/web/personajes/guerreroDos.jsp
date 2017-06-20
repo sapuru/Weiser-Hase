@@ -4,6 +4,8 @@
     Author     : aymara
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Random"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
