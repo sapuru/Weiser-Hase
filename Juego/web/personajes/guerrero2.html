@@ -67,6 +67,11 @@
                     Mejor lo llevo, por las dudas!
                     {{ story.putInInventory('cristalAlma'); }}
                 </action>
+                <action id="Usar">
+                <when>story.isInInventory('cristalAlma')</when>
+                {{ story.removeFromInventory('cristalAlma'); }}
+                <p><turn to="pag2">Utiliza la nueva oportunidad sabiamente</turn></p>
+                </action>
             </obj>
 
             <obj id="llaveGemaRoja" inventoryName="Llave Gema Roja 'E'">
@@ -78,6 +83,10 @@
                     <when>!story.isInInventory('llaveGemaRoja')</when>
                     Guardo la llave, puede ser útil.
                     {{ story.putInInventory('llaveGemaRoja'); }}
+                </action>
+                <action id="Usar">
+                <when>story.isInInventory('llaveGemaRoja')</when>
+                {{ story.removeFromInventory('llaveGemaRoja'); }}
                 </action>
 
             </obj>
@@ -93,6 +102,10 @@
                     Guardo la llave, puede ser útil.
                     {{ story.putInInventory('llaveGemaAzul'); }}
                 </action>
+                <action id="Usar">
+                <when>story.isInInventory('llaveGemaAzul')</when>
+                {{ story.removeFromInventory('llaveGemaAzul'); }}
+                </action>
             </obj>
 
             <obj id="mazoAntiguo" inventoryName="Mazo Antigüo">
@@ -105,6 +118,11 @@
                     Guardo el mazo, es un buen recordatorio.
                     {{ story.putInInventory('mazoAntiguo'); }}
                 </action>
+                <action id="Usar">
+                <when>story.isInInventory('mazoAntiguo')</when>
+                {{ story.removeFromInventory('mazoAntiguo'); }}
+                </action>
+
             </obj>
 
 
@@ -313,7 +331,7 @@
                     <p>Coloco las llaves en el orificio que corresponden (Aquí insertar un método usar llaves y si no las tiene que no pueda avanzar), pero sigo sin entender la palabra "Retav".
                     <p> ¿Qué significa eso?<br>
                         Luego de pensar un poco, opte por acomodarlo al azar, sin conseguir nada.<br>
-                        Seguí investigando para ver si conseguia algo, encontre una palabra en Latin escrita en la tablilla que abrí en la habitación izquierda, al pensar un poco y confirmar que ambas poseían las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves chaola la puerta finalmente cedió.</p>
+                        Seguí investigando para ver si conseguia algo, encontre una palabra en Latin escrita en la tablilla que abrí en la habitación izquierda, al pensar un poco y confirmar que ambas poseían las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves la puerta finalmente cedió.</p>
                     </p>
                     <!-- INSERTAR AQUÍ EL CÓDIGO DEL ANAGRAMA -->
 
@@ -344,7 +362,7 @@
                     <p> -	¿Corazón? ¡Eso es!</p>
                     <p>Utilice mi demacrada espada para poder romper la cerradura del ataúd.</p>
                     <p>*¡Crash!* </p>
-                    <p> La espada se hace pedazos junto con la cerradura, al sacar la tapa del ataúd encuentro el esqueleto de David y en el pecho una extraña gema de color carmesí brillaba con intensidad, saco el mazo antiguo que recogí de la habitación y lo utilizo para golpear el corazón de David.<br>
+                    <p> La espada se hace pedazos junto con la cerradura, al sacar la tapa del ataúd encuentro el esqueleto de David y en el pecho una extraña gema de color carmesí brillaba con intensidad, <<interact with="mazoAntiguo">Usar el mazo para golpear el corazón de David.</interact> <br>
                         *Clanck**Clanck**Clanck* <br>
                         Los golpes resonaban en toda la habitación pero la gema no se rompía, podía sentir el paso de los esqueletos por la escalera me pareció que su ritmo aumento dado que eran mas rápidos que hace un momento.<br>
                         *Clanck**Clanck**Clanck*<br>
