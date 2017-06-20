@@ -245,6 +245,28 @@
             </objt>
 
 
+            <objt id="Espada_Avalon" inventoryName="Espada de Avalon">
+              <action id="Examinar">
+                <p> Al tomar la espada, todo se desvanece..<br> <br>
+
+                  </p>
+              </action>
+
+              <action id="Guardar">
+                  <when>!story.isInInventory('Espada_Avalon')</when>
+                  <p></p>
+                  {{ story.putInInventory('Espada_Avalon'); }}
+              </action>
+
+              <action id="Usar">
+              <when>story.isInInventory('Espada_Avalon')</when>
+              {{ story.removeFromInventory('Espada_Avalon'); }}
+              {{ story.disable('Espada_Avalon'); }}
+              </action>
+            </objt>
+
+
+
 
             <!-- Pages -->
             <page id="intro">
@@ -1300,45 +1322,46 @@
                 </paragraph>
                 <paragraph id="parrafo43">
                     <p>
-                        Entonces a eso se refería Wave cuando dijo que ahora me pertenecía, realmente soy un portador de Avalon. Nunca sentí algo raro en mi o una voz que me hablase, aunque eso ultimo habría sido perturbador.
-                        Al acercarme al pedestal de cristal siento un sentimiento extraño en mi pecho, pareciera que la espada me estuviera llamando.
-                        Tomo el libro que esta flotando enzima del pedestal y leo la pagina que está ahí.
-
+                        Entonces a eso se refería Wave cuando dijo que ahora me pertenecía, realmente soy un portador de Avalon. Nunca sentí algo raro en mi o una voz que me hablase, aunque eso ultimo habría sido perturbador.<br>
+                        Al acercarme al pedestal de cristal siento un sentimiento extraño en mi pecho, pareciera que la espada me estuviera llamando.<br>
+                        Tomo el libro que esta flotando encima del pedestal y leo la pagina que está ahí.<br>
                     </p>
-                    <h3>“Jazmín quien sacrifico su propia vida para derrotar al dragón renegado Nicro, para preservar la de todos en el mundo, aseguro una vida de paz y prosperidad tanto como para las Bestias Divinas.
-                        Las Bestias divinas se ofrecieron en cuerpo y alma, para recompensar el sacrificio de Jazmín, a aquellos que posteriormente serian llamado
+                    <h3>“Jazmín quien sacrificó su propia vida para derrotar al dragón renegado Nicro, para preservar la de todos en el mundo, aseguró una vida de paz y prosperidad tanto como para las Bestias Divinas.
+                        Las Bestias divinas se ofrecieron en cuerpo y alma, para recompensar el sacrificio de Jazmín, a aquellos que posteriormente serian llamados
                         ‘Portadores’ guerreros que contarían con la bendición y el obsequio de poder de la bestia que los escogieran.”</h3>
+                        <img src="imagenes/Dragones.jpg">
                     <p><turn to="pag29">Página Siguiente</turn></p>
                 </paragraph>
             </page>
             <page id="pag29">
                 <p>
-                    El resto es simplemente un relato de cómo la Hermandad del Fénix trato de apoderarse de la torre y fallaron. Decayendo en número y pasando a ser no más que un mito.
-                    De acuerdo no lo pospondré mas, hora de recuperar el arma de mi madre.
-                    Al tocar el cristal del pedestal este destella mostrando lo que parece ser un grupo de números, de ceros y unos para ser más preciso.
-                    -	Eso es una palabra escrita en código binario joven Draicon.
-                    -	¡Hiiiii...! – hago un ruido extraño ante las sorpresivas palabras que alguien murmura en mi oído.
-                    -	Oh. De ja vu – dice el extraviado Nedmass mientras ríe.
-                    -	¿¡Podrías dejar de hacer eso!? ¡Casi me da un infarto!
-                    -	Oh lo lamento, pero parecías no saber bien lo que era este acertijo.
-                    De hecho debo darle la razón a Nedmass, esto realmente se siente como un de ja vu.
+                    El resto es simplemente un relato de cómo la Hermandad del Fénix trato de apoderarse de la torre y fallaron. Decayendo en número y pasando a ser no más que un mito.<br>
+                    De acuerdo no lo pospondré mas, hora de recuperar el arma de mi madre.<br>
+                    Al tocar el cristal del pedestal éste destella mostrando lo que parece ser un grupo de números, de ceros y unos para ser más preciso.<br>
+                    -	Eso es una palabra escrita en código binario joven Draicon.<br>
+                    -	¡Hiiiii...! – hago un ruido extraño ante las sorpresivas palabras que alguien murmura en mi oído.<br>
+                    -	Oh. Deja vu – dice el extraviado Nedmass mientras ríe.<br>
+                    -	¿¡Podrías dejar de hacer eso!? ¡Casi me da un infarto!<br>
+                    -	Oh lo lamento, pero parecías no saber bien lo que era este acertijo.<br>
+                    De hecho debo darle la razón a Nedmass, esto realmente se siente como un deja vu.
 
                 </p>
                 <p><show paragraph="parrafo44">continuar</show>.</p>
                 <paragraph id="parrafo44">
                     <p>
-                        -	Trata de decirme que estas cerca antes de hablarme, o de lo contrario me mataras del susto.
-                        -	Realmente lo siento joven Draicon.
-                        -	¿Código binario dices?
-                        -	Exactamente. ¿Ves que cada cierta cantidad de numero hay un espacio?
-                        -	Si
-                        -	Ahí está escrita una palabra, que al pronunciarla abrirá el sello que tiene la caja de cristal.
-                        -	Mm. De acuerdo lo intentare, pero antes de eso. ¿En dónde estabas Nedmass?
-                        -	Oh si, estuve siguiendo al mago con capucha, mientras avanzaba por la biblioteca. Por cierto el ya resolvió el acertijo para avanzar al sexto piso y derroto al forjador en su prueba. por lo que, cuando termines aquí, te guiare hacia el portal para que lo atravieses
-                        -	Entiendo gracias por la información Nedmass.
-                        -	No hay porque.
-                        Tras decir la palabra escrita en código binario y liberar el sello el cristal alrededor de la caja desaparece, como si de una ilusión se tratase.
-                        Al tomar la espada, todo se desvanece.
+                        -	Trata de decirme que estas cerca antes de hablarme, o de lo contrario me mataras del susto.<br>
+                        -	Realmente lo siento joven Draicon.<br>
+                        -	¿Código binario dices?<br>
+                        -	Exactamente. ¿Ves que cada cierta cantidad de numero hay un espacio?<br>
+                        -	Si<br>
+                        -	Ahí está escrita una palabra, que al pronunciarla abrirá el sello que tiene la caja de cristal.<br>
+                        -	Mm. De acuerdo lo intentare, pero antes de eso. ¿En dónde estabas Nedmass?<br>
+                        -	Oh si, estuve siguiendo al mago con capucha, mientras avanzaba por la biblioteca. Por cierto el ya resolvió el acertijo para avanzar al sexto piso y derroto al forjador en su prueba. por lo que, cuando termines aquí, te guiare hacia el portal para que lo atravieses<br>
+                        -	Entiendo gracias por la información Nedmass.<br>
+                        -	No hay porque.<br>
+                        Tras decir la palabra escrita en código binario y liberar el sello el cristal alrededor de la caja desaparece, como si de una ilusión se tratase.<br>
+
+                        <interact with="espada_Avalon">Espada de Avalon</interact>
 
                     </p>
                     <p><turn to="pag30">Página Siguiente</turn></p>
@@ -1350,10 +1373,10 @@
                 </p>
                 <paragraph id="parrafo45">
                     <p>
-                        -	Te preguntas ¿Quién soy? – la voz lee mis pensamientos mientras sigue hablando.
-                        -	Soy Avalon El Dragon de Hielo y te escogí a ti desde antes de tu nacimiento como el portador de mi poder – la voz se presenta y dice el propósito de su presencia.
-                        -	 Finalmente has despertado, ahora es el momento de sacar todo tu potencial – ¿yo acabo de despertar? ¿A qué se refiere?
-                        -	Tu/Nuestro poder siempre estuvo latente, pero necesitabas algo que encendiera la chispa, la espada, Ice Bite – entonces ahora que desperté este poder ¿Qué sigue?
+                        -	Te preguntas ¿Quién soy? – la voz lee mis pensamientos mientras sigue hablando.<br>
+                        -	Soy Avalon El Dragon de Hielo y te escogí a ti desde antes de tu nacimiento como el portador de mi poder – la voz se presenta y dice el propósito de su presencia.<br>
+                        -	 Finalmente has despertado, ahora es el momento de sacar todo tu potencial – ¿yo acabo de despertar? ¿A qué se refiere?<br>
+                        -	Tu/Nuestro poder siempre estuvo latente, pero necesitabas algo que encendiera la chispa, la espada, Ice Bite – entonces ahora que desperté este poder ¿Qué sigue?<br>
 
 
                     </p>
@@ -1361,9 +1384,9 @@
                 </paragraph>
                 <paragraph id="parrafo46">
                     <p>
-                        -	En la cumbre de esta torre se encuentra un gran peligro para toda la existencia, debemos eliminar ese peligro – pero soy solo una persona, si esa amenaza es tan peligrosa como dices ¿Qué podre hacer yo al respecto?
-                        -	Se ve que aun no lo entiende, tu poder antes casi nulo, aumento con tu despertar y en el momento dado “Liberaras” todo tu potencial – Entonces solo queda ir al séptimo piso y acabar con este mal de una vez por todas.
-                        -	Continúa con tu viaje, y demuéstrales a todos el poder de un dragon.
+                        -	En la cumbre de esta torre se encuentra un gran peligro para toda la existencia, debemos eliminar ese peligro – pero soy solo una persona, si esa amenaza es tan peligrosa como dices ¿Qué podre hacer yo al respecto?<br>
+                        -	Se ve que aun no lo entiendes, tu poder antes casi nulo, aumentó con tu despertar y en el momento dado “Liberaras” todo tu potencial – Entonces solo queda ir al séptimo piso y acabar con este mal de una vez por todas.<br>
+                        -	Continúa con tu viaje, y demuéstrales a todos el poder de un dragon.<br>
                     </p>
                     <p><turn to="pag31">Página Siguiente</turn></p>
                 </paragraph>
@@ -1373,43 +1396,42 @@
                     Cuando despierto me encuentro en un lugar totalmente extraño, no es la dimensión de los archivos de la torre, sino que parece más el mundo del que vengo.
                 </p>
                 <p>
-                    Pero soy recibido pero una visión aterradora. En el suelo de la sala se encuentran varios cuerpos de lo que parecen ser lagartijas humanoides.
-                    Hay restos de lo que parecen ser puntas de flechas y un cuchillo de diseño extraño roto.
+                    Pero soy recibido pero una visión aterradora. En el suelo de la sala se encuentran varios cuerpos de lo que parecen ser lagartijas humanoides.<br>
+                    Hay restos de lo que parecen ser puntas de flechas y un cuchillo de diseño extraño roto.<br>
 
                 </p>
                 <p><show paragraph="parrafo47">continuar</show>.</p>
                 <paragraph id="parrafo47">
                     <p>
-                        -	Pero ¿Quién las venció?
-                        -	Joven Draicon. ¿Ah vuelto en sí? – Nedmass me hace una pregunta extraña.
-                        -	¿Hm? ¿A qué te refieres Nedmass?
-                        -	 Luego de tomar la espada, simplemente caminaste hasta el portal dimensional y al llegar aquí te deshiciste de los Lezards guardianes del sexto piso.
+                        -	Pero ¿Quién las venció?<br>
+                        -	Joven Draicon. ¿Ha vuelto en sí? – Nedmass me hace una pregunta extraña.<br>
+                        -	¿Hm? ¿A qué te refieres Nedmass?<br>
+                        -	 Luego de tomar la espada, simplemente caminaste hasta el portal dimensional y al llegar aquí te deshiciste de los Lezards guardianes del sexto piso.<br>
                         -	¿¡Hablas enserio!? – Nedmass me mira con impresión.
-
                     </p>
                     <p><turn to="pag32">Página Siguiente</turn></p>
                 </paragraph>
             </page>
             <page id="pag32">
                 <p>
-                    -	Si, hablo enserio, realmente fue aterrador presenciar la facilidad con la que los derrotaste. Incluso salvaste a una muchacha que se encontraba rodeada.
-                    -	¿Una chica? – entonces eso explicaría él porque hay restos de flechas y el cuchillo roto.
-                    -	Aparentemente lo Lezards no se percataron de su presencia al principio, por lo que los tomo por sorpresa.
-                    -	¿Cómo no me notaron? – eso es extraño
-                    -	Antes de cruzar el portal, te pusiste la capucha que activo por completo la Capa de la Noche, que te volvió indetectable.
-                    -	Asique eso es lo que esta capa con capucha hace.
+                    -	Si, hablo enserio, realmente fue aterrador presenciar la facilidad con la que los derrotaste. Incluso salvaste a una muchacha que se encontraba rodeada.<br>
+                    -	¿Una chica? – entonces eso explicaría él porque hay restos de flechas y el cuchillo roto.<br>
+                    -	Aparentemente los Lezards no se percataron de su presencia al principio, por lo que los tomo por sorpresa.<br>
+                    -	¿Cómo no me notaron? – eso es extraño<br>
+                    -	Antes de cruzar el portal, te pusiste la capucha que activo por completo la Capa de la Noche, que te volvió indetectable.<br>
+                    -	Asique eso es lo que esta capa con capucha hace.<br>
                     -	Pensé que eso ya lo sabías joven Draicon. Por lo que no dije nada al respecto
                 </p>
                 <p><show paragraph="parrafo48">continuar</show>.</p>
                 <paragraph id="parrafo48">
                     <p>
-                        -	Oye Nedmass – noto algo extraño en la sala por lo que decido preguntarle a Nedmass.
-                        -	¿Si? ¿Qué es lo que necesitas?
-                        -	Este salón no es como los demás – después de inspeccionar todo el salón. Noto no solo que no hay cuarto con puertas de madera, sino además que esta todo conectado, no hay puertas que separen los salones, solo hay tres plataformas un poco elevadas en el suelo y una puerta que seguro lleva al séptimo piso.
-                        -	Ciertamente, no es como los demás, es el final. Joven Draicon, detrás de esa puerta está la cumbre de la torre.
-                        -	Entonces la gran amenaza para la humanidad está justo ahí.
-                        -	¿Sabes que paso con la chica?
-                        -	Luego de agradecerte la chica dijo algo como: “Ya arriesgue demasiado mi pellejo, tomare lo que pueda de esa biblioteca y me marchare. Hasta nunca.”
+                        -	Oye Nedmass – noto algo extraño en la sala por lo que decido preguntarle a Nedmass.<br>
+                        -	¿Si? ¿Qué es lo que necesitas?<br>
+                        -	Este salón no es como los demás – después de inspeccionar todo el salón. Noto no solo que no hay cuarto con puertas de madera, sino además que esta todo conectado, no hay puertas que separen los salones, solo hay tres plataformas un poco elevadas en el suelo y una puerta que seguro lleva al séptimo piso.<br>
+                        -	Ciertamente, no es como los demás, es el final. Joven Draicon, detrás de esa puerta está la cumbre de la torre.<br>
+                        -	Entonces la gran amenaza para la humanidad está justo ahí.<br>
+                        -	¿Sabes que paso con la chica?<br>
+                        -	Luego de agradecerte la chica dijo algo como: “Ya arriesgue demasiado mi pellejo, tomare lo que pueda de esa biblioteca y me marchare. Hasta nunca.”<br>
                         -	Es un alivio – realmente me alivia que la chica no pusiera en riesgo su vida en la cumbre de la torre, aunque creo que me alivia mas el hecho de que podre luchar solo contra la criatura y poner a prueba mis nuevas habilidades.
 
                     </p>
@@ -1418,25 +1440,25 @@
             </page>
             <page id="pag33">
                 <p>
-                    -	¿Sabes que paso con el mago encapuchado?
-                    -	El si subió al séptimo piso y no lo eh vuelto a ver.
-                    -	Entiendo, entonces mejor me apresuro y subo al séptimo piso.
-                    -	Entonces este es el adiós joven Draicon.
-                    -	¿Ah que te refieres Nedmass?
-                    -	Yo ya cumplí mi labor ahora simplemente me queda desaparecer
-                    -	¿Pero porque? – no entiendo la razón por la que Nedmass deba irse.
-                    -	Yo fui creado con el propósito de ayudarte en esta misión joven príncipe.
-                    -	¿¡Joven príncipe!? ¿¡Tu sabias quien era yo desde el principio verdad!? – ¿pero como sabia quien soy yo o el porqué fue creado específicamente para ayudarme, si el existe desde que la torre se construyo?
+                    -	¿Sabes que paso con el mago encapuchado?<br>
+                    -	El si subió al séptimo piso y no lo he vuelto a ver.<br>
+                    -	Entiendo, entonces mejor me apresuro y subo al séptimo piso.<br>
+                    -	Entonces este es el adiós joven Draicon.<br>
+                    -	¿Ah que te refieres Nedmass?<br>
+                    -	Yo ya cumplí mi labor ahora simplemente me queda desaparecer<br>
+                    -	¿Pero porque? – no entiendo la razón por la que Nedmass deba irse.<br>
+                    -	Yo fui creado con el propósito de ayudarte en esta misión joven príncipe.<br>
+                    -	¿¡Joven príncipe!? ¿¡Tu sabias quien era yo desde el principio verdad!? – ¿pero como sabia quien soy yo o el porqué fue creado específicamente para ayudarme, si el existe desde que la torre se construyó?<br>
 
                 </p>
                 <p><show paragraph="parrafo49">continuar</show>.</p>
                 <paragraph id="parrafo49">
                     <p>
-                        -	Su llegada a la torre fue predicha hace mucho tiempo, el antiguo mago de la familia real Diavoni, predijo tu llegada en busca de la espada y me creo a mi Nedmass para ayudarte a completar esa misión. Durante el tiempo que espere tu llegada aprendí de la torre y sus acertijos.
-                        -	Entonces por eso te ofreciste a ayudarme, pero ¿porque te preocupabas tanto por el Paradigma de lo inamovible? Pensé que lo querías para ti.
-                        -	Debido a su capacidad para detener el tiempo y su historia, supuse que lo mejor sería que usted lo poseyera joven príncipe.
-                        -	¿Entonces qué harás ahora? ¿Simplemente desaparecerás?
-                        -	De hecho tengo un último consejo joven príncipe – mientras Nedmass dice eso una enorme sonrisa se dibuja en su rostro.
+                        -	Su llegada a la torre fue predicha hace mucho tiempo, el antiguo mago de la familia real Diavoni, predijo tu llegada en busca de la espada y me creo a mi Nedmass para ayudarte a completar esa misión. Durante el tiempo que espere tu llegada aprendí de la torre y sus acertijos.<br>
+                        -	Entonces por eso te ofreciste a ayudarme, pero ¿porque te preocupabas tanto por el Paradigma de lo inamovible? Pensé que lo querías para ti.<br>
+                        -	Debido a su capacidad para detener el tiempo y su historia, supuse que lo mejor sería que usted lo poseyera joven príncipe.<br>
+                        -	¿Entonces qué harás ahora? ¿Simplemente desaparecerás?<br>
+                        -	De hecho tengo un último consejo joven príncipe – mientras Nedmass dice eso una enorme sonrisa se dibuja en su rostro.<br>
                     </p>
                     <p><turn to="pag34">Página Siguiente</turn></p>
                 </paragraph>
