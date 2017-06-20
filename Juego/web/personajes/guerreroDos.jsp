@@ -500,7 +500,78 @@
                         Luego de pensar un poco, opte por acomodarlo al azar, sin conseguir nada.<br>
                         Seguí investigando para ver si conseguia algo, encontre una palabra en Latin escrita en la tablilla que abrí en la habitación izquierda, al pensar un poco y confirmar que ambas poseían las mismas letras intente acomodar las letras en la puerta de metal para formar la misma palabra y al girar las llaves la puerta finalmente cedió.</p>
                     </p>
-                    <!-- INSERTAR AQUÍ EL CÓDIGO DEL ANAGRAMA -->
+                    
+                    <%
+    Random aleatorio = new Random();
+    String[] palabra = {"mitologia", "coca cola", "casa"};
+    String palabraActual = null;
+    ArrayList entrada = new ArrayList();
+    ArrayList salida = new ArrayList();
+    for (int i = 0; i < palabra.length; i++) {
+        Random ran = new Random();
+        int a = ran.nextInt(3);
+        palabraActual = palabra[0];
+
+    }
+    String palabraFinal = "";
+    int cont = 0;
+    int num = 0;
+    while (true) {
+        try {
+            entrada.add(palabraActual.charAt(num));
+            num++;
+
+        } catch (Exception e) {
+            //out.print("error2");
+            break;
+        }
+    }
+    int tamano = entrada.size();
+    while (salida.size() != tamano) {
+        int numal = aleatorio.nextInt(entrada.size());
+        salida.add(entrada.remove(numal));
+    }
+    for (Object l : salida) {
+        palabraFinal += l;
+
+    }
+    do {
+        String ana;
+        ana = request.getParameter("palabraFinal");
+        //palabraFinal = request.getParameter("palabraFinal");
+        //ana = palabraFinal;
+        //palabraFinal = request.getParameter("palabraFinal");
+        // out.print(palabraFinal);
+        //ana = JOptionPane.showInputDialog(palabraFinal);
+        if (palabraActual.equals(ana)) {
+
+            out.print("ok");
+
+            //JOptionPane.showMessageDialog(null, "Perfecto");
+            cont = 3;
+        } else {
+
+            //out.print("mall");
+            //JOptionPane.showMessageDialog(null, "Mal, Intente pensar mas, usted puede");
+            cont++;
+        }
+    } while (cont != 3);
+%>
+
+            <form method="Post" action="anagrama.jsp" autocomplete="off">
+                <label>Ordene el anagrama</label><br><br><!--TITULO-->
+                <label><%=palabraFinal%></label><!--NOS MUESTRA LA PALABRA DESORDENADA pero no puedo ponerla jejejje-->
+
+                <p><input name ="palabraFinal" type="text" id="palabraFinal"></p><!--PALABRA INGRESADA CORRECTAMENTE-->
+                
+                
+                
+                <input type="submit" value="Ingresar palabra">
+               
+                <!--<script> alert('bien');</script>-->
+                <br><!--BOTON VALIDAR-->
+            </form>
+
 
                     <p><turn to="pag9">Página Siguiente</turn></p>
                 </paragraph>
